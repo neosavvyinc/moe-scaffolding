@@ -4,7 +4,7 @@
 * Defines a menu item.
 */
 
-Application.Directives
+MOE.Directives
 	.directive('menuItem', function() {
 	  return {
 	  	restrict : 'E',
