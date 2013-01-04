@@ -1,6 +1,6 @@
 'use strict'
 
-Application.Controllers.controller('error', ['$scope', function($scope){
+MOE.Controllers.controller('error', ['$scope', function($scope){
 	
 	
 }]);

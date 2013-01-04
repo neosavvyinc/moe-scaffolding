@@ -5,16 +5,16 @@
 * creating namespaces and moduled for controllers, filters, services, and directives. 
 */
 
-var Application = Application || {};
+var MOE = MOE || {};
 
-Application.Constants = angular.module('application.constants', []);
-Application.Services = angular.module('application.services', []);
-Application.Controllers = angular.module('application.controllers', []);
-Application.Filters = angular.module('application.filters', []);
-Application.Directives = angular.module('application.directives', []);
+MOE.Constants = angular.module('moe.constants', []);
+MOE.Services = angular.module('moe.services', []);
+MOE.Controllers = angular.module('moe.controllers', []);
+MOE.Filters = angular.module('moe.filters', []);
+MOE.Directives = angular.module('moe.directives', []);
 
 
-angular.module('application', ['application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers']).
+angular.module('moe', ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers']).
   config(['$routeProvider', function($routeProvider) {
     
     $routeProvider.

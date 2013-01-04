@@ -8,7 +8,7 @@
 *	@return {Date} The formatted date.
 */
 
-Application.Filters.filter('toDateString', function() {
+MOE.Filters.filter('toDateString', function() {
 	return function(timeStamp) {
 		var date;
 		
