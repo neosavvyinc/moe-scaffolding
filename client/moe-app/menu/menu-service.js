@@ -4,7 +4,7 @@
 * Defines the service that performs CRUD operations on menu items
 */
 
-Application.Services.factory('menu', function(configuration, $q, $rootScope, $http) { 
+MOE.Services.factory('menu', function(configuration, $q, $rootScope, $http) {
 		return {
 		
 			/**
