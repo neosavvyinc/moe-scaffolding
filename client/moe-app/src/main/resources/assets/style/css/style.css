@@ -1,3 +1,14 @@
-div {
-  margin: 0;
+/* Tickets */
+.detail .expanded .controls .field {
+  display: inline-block;
+  margin: 0 15px;
+}
+.detail .expanded .projected-order-totals h4 {
+  display: inline-block;
+  font-size: 14.5px;
+  margin-right: 60px;
+}
+.detail .expanded .projected-order-totals .label-sub-label {
+  display: inline-block;
+  margin: 0 15px;
 }

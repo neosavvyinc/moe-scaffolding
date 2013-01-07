@@ -1,7 +1,17 @@
-<div class="detail">
+<div class="detail" ng-controller="view.tickets.equity.DetailController">
     <div class="expanded">
+        <div class="controls">
+            <div class="field">
+                <label>Time In Force</label>
+                <editable-combo-box items="timeInForceValues"></editable-combo-box>
+            </div>
+            <div class="field">
+                <label>Discretion Enclosed</label>
+                <button-group items="yesNoValues"></button-group>
+            </div>
+        </div>
         <div class="projected-order-totals">
-            <h3>Projected Order Totals</h3>
+            <h4>Projected Order Totals</h4>
             <label-sub-label label="Principal" sub-label="$8,689.38"></label-sub-label>
             <label-sub-label label="Commission" sub-label="-$100"></label-sub-label>
             <label-sub-label label="Fees" sub-label="-$20"></label-sub-label>
