@@ -19,16 +19,6 @@
 
         <div class="container">
 
-            <form class="form-signin">
-                <h2 class="form-signin-heading">Please sign in</h2>
-                <input type="text" class="input-block-level" placeholder="Email address">
-                <input type="password" class="input-block-level" placeholder="Password">
-                <label class="checkbox">
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-                <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-            </form>
-
             <!--<div>-->
                 <div class="accordion" id="accordion2">
                     <div class="accordion-group">
@@ -38,6 +28,8 @@
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
                                         <i class="icon-chevron-down"></i>
                                     </a>
+                                </li>
+                                <li style="display: block; float: left;">
                                     <div id="accountInfo">
                                         <p>John Doe</p>
                                         <p>Active Assets Account</p>
@@ -45,13 +37,17 @@
                                     </div>
                                 </li>
                                 <li style="display: block; float: left;">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                        <i class="icon-chevron-down"></i>
-                                    </a>
-                                    <div id="accountInfo">
-                                        <p>John Doe</p>
-                                        <p>Active Assets Account</p>
-                                        <p>101-023148</p>
+                                    <div class="input-append">
+                                        <input class="span2" id="faNumber" type="text" value="101" style="width: 28px">
+                                        <div class="btn-group">
+                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li>item1</li>
+                                                <li>item2</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
