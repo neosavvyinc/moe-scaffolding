@@ -1,6 +1,11 @@
 moe-scaffolding
 ===============
 
+CSS Tricks:
+http://css-tricks.com/snippets/css/clear-fix/
+http://css.maxdesign.com.au/listamatic/horizontal01.htm
+
+
 In order to compile the .less .css file, you will need to install npm and less for node.
 
 1) $: curl http://npmjs.org/install.sh
