@@ -15,10 +15,6 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 
-        <nav>
-            <ng-include src="'menu/menu-partial.html'"/>
-        </nav>
-
         <!--<ng-view/>-->
 
         <div class="container">
@@ -33,13 +29,37 @@
                 <button class="btn btn-large btn-primary" type="submit">Sign in</button>
             </form>
 
+            <!--<div>-->
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body in collapse" style="height: auto;">
+                            <div class="accordion-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--</div>-->
+
         </div>
+
+        <script src="lib/bootstrap/js/bootstrap-collapse.js"></script>
 
         <script src="lib/angular/angular.js"></script>
         <script src="application/application.js"></script>
         <script src="application/configuration-constants.js"></script>
         <script src="menu/menu-service.js"></script>
-        <script src="details/details-controller.js"></script>
         <script src="error/error-controller.js"></script>
         <script src="menu/menu-controller.js"></script>
         <script src="date-time/to-date-string-filter.js"></script>
