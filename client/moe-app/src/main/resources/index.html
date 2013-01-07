@@ -6,7 +6,7 @@
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-        <title>Angular Seedling</title>
+        <title>MOE Angular Seedling</title>
 
         <link rel="stylesheet" href="application/application.css"/>
 
@@ -58,7 +58,7 @@
                         </div>
                         <div id="collapseOne" style="clear: left;" class="accordion-body in collapse" style="height: auto;">
                             <div class="accordion-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <ng-include src="'/view/tickets/equity/detail-ptl.html'" />
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,10 @@
         <script src="menu/menu-service.js"></script>
         <script src="error/error-controller.js"></script>
         <script src="menu/menu-controller.js"></script>
-        <script src="menu/menu-item-directive.js"></script>
         <script src="date-time/to-date-string-filter.js"></script>
+
+        <!-- Directives -->
+        <script src="menu/menu-item-directive.js"></script>
+        <script src="view/tickets/shared/label-sub-label-directive.js"></script>
     </body>
 </html>
