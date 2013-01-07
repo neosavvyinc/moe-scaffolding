@@ -1,28 +1,83 @@
 <!doctype html>
 <html lang="en" ng-app="moe">
-<head>
-  <meta charset="utf-8">
-  <title>Angular Seedling</title>
-  <link rel="stylesheet" href="application/application.css"/>
-</head>
-<body>
- 	<nav>
-		<ng-include src="'menu/menu-partial.html'"/>
- 	</nav>
-	
-  <ng-view/>
+    <head>
+        <meta charset="utf-8">
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-  -->
-  <script src="../../../lib/angular.js"></script>
-  <script src="application/application.js"></script>
-  <script src="application/configuration-constants.js"></script>
-  <script src="menu/menu-service.js"></script>
-  <script src="details/details-controller.js"></script>
-  <script src="error/error-controller.js"></script>
-  <script src="menu/menu-controller.js"></script>
-  <script src="menu/menu-item-directive.js"></script>
-  <script src="date-time/to-date-string-filter.js"></script>
-</body>
+        <!-- Le styles -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <style type="text/css">
+            body {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-color: #f5f5f5;
+            }
+
+            .form-signin {
+                max-width: 300px;
+                padding: 19px 29px 29px;
+                margin: 0 auto 20px;
+                background-color: #fff;
+                border: 1px solid #e5e5e5;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            }
+            .form-signin .form-signin-heading,
+            .form-signin .checkbox {
+                margin-bottom: 10px;
+            }
+            .form-signin input[type="text"],
+            .form-signin input[type="password"] {
+                font-size: 16px;
+                height: auto;
+                margin-bottom: 15px;
+                padding: 7px 9px;
+            }
+
+        </style>
+        <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <title>Angular Seedling</title>
+
+
+        <link rel="stylesheet" href="application/application.css"/>
+
+    </head>
+    <body>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <nav>
+            <ng-include src="'menu/menu-partial.html'"/>
+        </nav>
+
+        <!--<ng-view/>-->
+
+        <div class="container">
+
+            <form class="form-signin">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <input type="text" class="input-block-level" placeholder="Email address">
+                <input type="password" class="input-block-level" placeholder="Password">
+                <label class="checkbox">
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+                <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+            </form>
+
+        </div>
+
+        <script src="lib/angular/angular.js"></script>
+        <script src="application/application.js"></script>
+        <script src="application/configuration-constants.js"></script>
+        <script src="menu/menu-service.js"></script>
+        <script src="details/details-controller.js"></script>
+        <script src="error/error-controller.js"></script>
+        <script src="menu/menu-controller.js"></script>
+        <script src="menu/menu-item-directive.js"></script>
+        <script src="date-time/to-date-string-filter.js"></script>
+    </body>
 </html>
