@@ -1,3 +1,58 @@
+/* Application css */
+
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+
+.menu li {
+    display: inline;
+}
+
+.menu li {
+    padding-right: 1em;
+}
+
+.equity-ticket-detail {
+    clear: left;
+    height: auto;
+}
+
 /* General */
 .clearfix:after {
   content: ".";
@@ -24,7 +79,75 @@ html[xmlns] .clearfix {
   z-index: 99999;
 }
 
+.container {
+    width: 1280px;
+}
+
 /* Tickets */
+.equity-ticket {
+
+
+    ul, ol {
+        margin: 0 0 10px 0px;
+    }
+    p {
+        margin: 0 0 0 10px;
+    }
+
+    input{
+        height: 10px;
+    }
+
+    .btn-group > .btn {
+        font-size: 10px;
+        padding: 0px 2px 0px 2px;
+    }
+
+    .add-on {
+        height: 10px;
+    }
+
+    i {
+        margin-top: -3px;
+        margin-left: -2px;
+    }
+
+    .equity-ticket-primary, .detail  {
+        .horizontal-list-item {
+            display: block;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .equity-ticket-field {
+            line-height: 10px;
+            height: 10px;
+        }
+
+        .fa-input-field {
+            width: 23px;
+        }
+        .fa-input-dropdown {
+            height: 20px;
+        }
+
+
+        .input-append {
+            .btn-group {
+                .dropdown-toggle{
+                    width: 20px;
+                    padding-right: 0px;
+                    padding-left: 0px;
+                }
+                .caret {
+                    margin-top: 2px;
+                    margin-left: -2px;
+                }
+            }
+        }
+    }
+}
+
 .detail {
   .expanded {
     .controls {

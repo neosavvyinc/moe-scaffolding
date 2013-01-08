@@ -1,21 +1,23 @@
-<ul ng-controller="view.tickets.equity.CollapsedController">
-    <li style="display: block; float: left;">
+<ul class="equity-ticket-primary" ng-controller="view.tickets.equity.CollapsedController">
+    <li class="horizontal-list-item">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
             <i class="icon-chevron-down"></i>
         </a>
     </li>
-    <li style="display: block; float: left;">
+
+    <li class="horizontal-list-item">
         <div id="accountInfo">
             <p>{{accountInfo.name}}</p>
             <p>{{accountInfo.accountType}}</p>
             <p>{{accountInfo.number}}</p>
         </div>
     </li>
-    <li style="display: block; float: left;">
+
+    <li class="horizontal-list-item">
         <div class="input-append">
-            <input id="faNumber" type="text" value="101" style="width: 28px">
+            <input id="faNumber" type="text" value="101" class="equity-ticket-field fa-input-field">
             <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                <button class="fa-input-dropdown btn dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -25,7 +27,7 @@
             </div>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="control-group">
             <div class="controls">
                 <div class="input-prepend">
@@ -35,14 +37,14 @@
             </div>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="btn-group">
             <button class="btn">Buy</button>
             <button class="btn">Sell</button>
             <button class="btn">Sell Short</button>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="input-append">
             <input class="span2" id="shares" type="text">
             <div class="btn-group">
@@ -57,7 +59,7 @@
             </div>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="input-append">
             <input class="span2" id="type" type="text" value="207.00">
             <div class="btn-group">
@@ -72,15 +74,15 @@
             </div>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="btn-group">
             <button class="btn">Cash</button>
             <button class="btn">Margin</button>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="input-append">
-            <input class="span2" id="vspMethod" type="text" value="207.00">
+            <input class="span2" id="vspMethod" type="text" value="FIFO">
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     FIFO
@@ -93,15 +95,15 @@
             </div>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="btn-group">
             <button class="btn">Solicited</button>
             <button class="btn">Unsolicited</button>
         </div>
     </li>
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <div class="input-append">
-            <input class="span2" id="vspMethod" type="text" value="50%">
+            <input class="span2" id="discount" type="text" value="50%">
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     Discount
