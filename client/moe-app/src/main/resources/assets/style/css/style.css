@@ -68,6 +68,11 @@ html[xmlns] .clearfix {
 .container {
   width: 1280px;
 }
+/* Directives */
+.dropdown-with-notes div {
+  display: inline-block;
+  float: left;
+}
 /* Tickets */
 .equity-ticket ul,
 .equity-ticket ol {
