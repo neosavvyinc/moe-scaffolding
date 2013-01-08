@@ -5,5 +5,7 @@ MOE.Controllers.controller('view.tickets.equity.DetailController', ['$scope', '$
     //Initialization
     $scope.timeInForceValues = ["Day", "Week", "Month"];
     $scope.yesNoValues = ["Yes", "No"];
+    $scope.timeReceivedValues = ["Now", "Other"];
+    $scope.dateValue = new Date();
 
 }]);
