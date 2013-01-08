@@ -10,5 +10,8 @@ MOE.Controllers.controller('view.tickets.equity.DetailController',
     $scope.timeReceivedValues = ["Now", "Other"];
     $scope.strategyValues = ["Execution Strategies", "Mediation Strategies", "Lunch Strategies"];
     $scope.dateValue = new Date();
+    $scope.dateValueDateFormat = new DateAndFormat(new Date(), "%m/%d/%Y");
+    $scope.dateValueTimeFormat = new DateAndFormat(new Date(), "%I:%M:%S %p");
+    $scope.clientPositionValues = ["Assures Delivery", "Unassured Delivery", "Pizza Delivery"];
 
 }]);

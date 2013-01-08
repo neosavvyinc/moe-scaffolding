@@ -7,10 +7,24 @@ MOE.Directives
             replace:true,
             templateUrl:"view/tickets/shared/editable-combo-box-template.html",
             scope:{
-                items: '=items'
+                items:'=items',
+                additionalControlClasses: "@additionalControlClasses"
             },
             link:function (scope, element, attrs) {
 
+                scope.$watch('items', function (newValue) {
+                    if (newValue && newValue.length) {
+                        scope.selectedItem = newValue[0];
+                    } else {
+                        scope.selectedItem = "No Value Provided";
+                    }
+
+                });
+
+                //Initialization
+                if (!scope.additionalControlClasses) {
+                    scope.additionalControlClasses = "span2";
+                }
             },
         }
     });
