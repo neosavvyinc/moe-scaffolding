@@ -130,6 +130,14 @@ html[xmlns] .clearfix {
   margin: 0 15px;
   float: left;
 }
+.detail .expanded .controls .check-field input {
+  float: left;
+  margin-right: 6px;
+}
+.detail .expanded .controls .final-checks {
+  clear: both;
+  float: left;
+}
 .detail .expanded .projected-order-totals {
   clear: both;
 }
