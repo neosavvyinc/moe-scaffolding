@@ -46,3 +46,8 @@ body {
 .menu > li {
   padding-right: 1em;
 }
+
+.equity-ticket-detail {
+    clear: left;
+    height: auto;
+}

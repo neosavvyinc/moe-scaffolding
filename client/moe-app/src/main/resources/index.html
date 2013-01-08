@@ -24,129 +24,12 @@
         <div class="container">
 
             <!--<div>-->
-                <div class="accordion" id="accordion2">
+                <div class="accordion" id="equity-ticket">
                     <div class="accordion-group">
                         <div class="accordion-heading">
-                            <ul>
-                                <li style="display: block; float: left;">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                        <i class="icon-chevron-down"></i>
-                                    </a>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div id="accountInfo">
-                                        <p>John Doe</p>
-                                        <p>Active Assets Account</p>
-                                        <p>101-023148</p>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="input-append">
-                                        <input id="faNumber" type="text" value="101" style="width: 28px">
-                                        <div class="btn-group">
-                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>item1</li>
-                                                <li>item2</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <div class="input-prepend">
-                                                <span class="add-on"><i class="icon-search"></i></span>
-                                                <input class="span2" id="inputIcon" type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="btn-group">
-                                        <button class="btn">Buy</button>
-                                        <button class="btn">Sell</button>
-                                        <button class="btn">Sell Short</button>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="input-append">
-                                        <input class="span2" id="shares" type="text">
-                                        <div class="btn-group">
-                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                                Shares
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>Item 1</li>
-                                                <li>Item 2</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="input-append">
-                                        <input class="span2" id="type" type="text" value="207.00">
-                                        <div class="btn-group">
-                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                                Stop/Limit
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>Item 1</li>
-                                                <li>Item 2</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="btn-group">
-                                        <button class="btn">Cash</button>
-                                        <button class="btn">Margin</button>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="input-append">
-                                        <input class="span2" id="vspMethod" type="text" value="207.00">
-                                        <div class="btn-group">
-                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                                FIFO
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>LIFO</li>
-                                                <li>FIFO</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="btn-group">
-                                        <button class="btn">Solicited</button>
-                                        <button class="btn">Unsolicited</button>
-                                    </div>
-                                </li>
-                                <li style="display: block; float: left;">
-                                    <div class="input-append">
-                                        <input class="span2" id="vspMethod" type="text" value="50%">
-                                        <div class="btn-group">
-                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                                Discount
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>Discount</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-
-
-                            </ul>
+                            <ng-include src="'/view/tickets/equity/collapsed-ptl.html'"/>
                         </div>
-                        <div id="collapseOne" style="clear: left;" class="accordion-body in collapse" style="height: auto;">
+                        <div id="collapseOne" class="accordion-body in collapse equity-ticket-detail">
                             <div class="accordion-inner">
                                 <ng-include src="'/view/tickets/equity/detail-ptl.html'" />
                             </div>
@@ -177,5 +60,6 @@
 
         <!-- Controllers -->
         <script src="view/tickets/equity/detail-ctrl.js"></script>
+        <script src="view/tickets/equity/collapsed-ctrl.js"></script>
     </body>
 </html>
