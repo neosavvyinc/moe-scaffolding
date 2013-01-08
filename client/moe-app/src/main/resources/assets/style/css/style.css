@@ -1,7 +1,29 @@
+/* General */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
 /* Tickets */
 .detail .expanded .controls .field {
   display: inline-block;
   margin: 0 15px;
+  float: left;
+}
+.detail .expanded .projected-order-totals {
+  clear: both;
 }
 .detail .expanded .projected-order-totals h4 {
   display: inline-block;
