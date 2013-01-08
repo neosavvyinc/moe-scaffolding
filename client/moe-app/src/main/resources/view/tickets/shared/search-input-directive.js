@@ -1,13 +1,12 @@
 'use strict'
 
 MOE.Directives
-    .directive('buttonGroup', function () {
+    .directive('searchInput', function () {
         return {
             restrict:'E',
             replace:true,
-            template:"<div class='btn-group'><button class='btn' ng-repeat='item in items'>{{ item }}</button></div>",
+            templateUrl:"view/tickets/shared/search-input-template.html",
             scope:{
-                items: '=items'
             },
             link:function (scope, element, attrs) {
 
