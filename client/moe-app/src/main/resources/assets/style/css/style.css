@@ -16,6 +16,9 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
+.z-top {
+  z-index: 99999;
+}
 /* Tickets */
 .detail .expanded .controls .field {
   display: inline-block;
