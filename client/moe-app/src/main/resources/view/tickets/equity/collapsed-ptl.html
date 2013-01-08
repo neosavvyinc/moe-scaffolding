@@ -1,9 +1,10 @@
 <ul class="equity-ticket-primary" ng-controller="view.tickets.equity.CollapsedController">
-    <li style="display: block; float: left;">
+    <li class="horizontal-list-item">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
             <i class="icon-chevron-down"></i>
         </a>
     </li>
+
     <li class="horizontal-list-item">
         <div id="accountInfo">
             <p>{{accountInfo.name}}</p>
@@ -11,6 +12,7 @@
             <p>{{accountInfo.number}}</p>
         </div>
     </li>
+
     <li class="horizontal-list-item">
         <div class="input-append">
             <input id="faNumber" type="text" value="101" class="equity-ticket-field fa-input-field">
@@ -80,7 +82,7 @@
     </li>
     <li class="horizontal-list-item">
         <div class="input-append">
-            <input class="span2" id="vspMethod" type="text" value="207.00">
+            <input class="span2" id="vspMethod" type="text" value="FIFO">
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     FIFO
@@ -101,7 +103,7 @@
     </li>
     <li class="horizontal-list-item">
         <div class="input-append">
-            <input class="span2" id="vspMethod" type="text" value="50%">
+            <input class="span2" id="discount" type="text" value="50%">
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     Discount

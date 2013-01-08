@@ -79,39 +79,73 @@ html[xmlns] .clearfix {
   z-index: 99999;
 }
 
+.container {
+    width: 1280px;
+}
+
 /* Tickets */
-.equity-ticket-primary {
-    .horizontal-list-item {
-        display: block;
-        float: left;
-        margin-right: 20px;
+.equity-ticket {
+
+
+    ul, ol {
+        margin: 0 0 10px 0px;
+    }
+    p {
+        margin: 0 0 0 10px;
     }
 
-    .equity-ticket-field {
-        line-height: 10px;
+    input{
         height: 10px;
     }
 
-    .fa-input-field {
-        width: 23px;
+    .btn-group > .btn {
+        font-size: 10px;
+        padding: 0px 2px 0px 2px;
     }
-    .fa-input-dropdown {
-        height: 20px;
+
+    .add-on {
+        height: 10px;
     }
-    .input-append {
-        .btn-group {
-            .dropdown-toggle{
-                width: 20px;
-                padding-right: 0px;
-                padding-left: 0px;
-            }
-            .caret {
-                margin-top: 2px;
-                margin-left: -2px;
+
+    i {
+        margin-top: -3px;
+        margin-left: -2px;
+    }
+
+    .equity-ticket-primary, .detail  {
+        .horizontal-list-item {
+            display: block;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .equity-ticket-field {
+            line-height: 10px;
+            height: 10px;
+        }
+
+        .fa-input-field {
+            width: 23px;
+        }
+        .fa-input-dropdown {
+            height: 20px;
+        }
+
+
+        .input-append {
+            .btn-group {
+                .dropdown-toggle{
+                    width: 20px;
+                    padding-right: 0px;
+                    padding-left: 0px;
+                }
+                .caret {
+                    margin-top: 2px;
+                    margin-left: -2px;
+                }
             }
         }
     }
-
 }
 
 .detail {
