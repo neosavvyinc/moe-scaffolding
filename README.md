@@ -14,3 +14,22 @@ In order to compile the .less .css file, you will need to install npm and less f
 You need to make sure to add the watch-lessc install folder (bin) to your $PATH variable.
 
 3) In the assets/style folder, run the script ./watchStyles.sh, and your styles should automatically compile.
+
+Running Tests
+-------------
+
+First you need to install Testacular:
+
+    npm install -g testacular@canary
+
+Make sure testacular is in your path:
+
+    which testacular
+    (it should return something like: /usr/local/share/npm/bin/testacular)
+
+Then to run the tests:
+
+    cd moe-scaffolding/client/moe-app
+    testacular start src/test/resources/testacular-unit-config.js
+
+
