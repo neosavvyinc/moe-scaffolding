@@ -3,7 +3,7 @@
         <div class="controls">
             <div class="field">
                 <label>Time In Force</label>
-                <editable-combo-box items="timeInForceValues"></editable-combo-box>
+                <editable-combo-box items="timeInForceValues" additional-control-classes="span1"></editable-combo-box>
             </div>
             <div class="field">
                 <label>Discretion Enclosed</label>
@@ -44,6 +44,18 @@
                 <div class="input">
                     <input class="span4" type="text" placeholder="Misc. Trailer">
                 </div>
+            </div>
+            <div class="field">
+                <label>Trade Date</label>
+                <label>{{ dateValueDateFormat | toDateFormat }}</label>
+            </div>
+            <div class="field">
+                <label>Settle Date</label>
+                <label>{{ dateValueTimeFormat | toDateFormat }}</label>
+            </div>
+            <div class="field">
+                <label>Client Position</label>
+                <editable-combo-box items="clientPositionValues"></editable-combo-box>
             </div>
             <div class="clearfix">&nbsp;</div>
         </div>
