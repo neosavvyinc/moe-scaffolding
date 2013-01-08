@@ -5,7 +5,7 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            template:"<div class='btn-group'><button ng-repeat='item in items'>{{ item }}</button></div>",
+            template:"<div class='btn-group'><button class='btn' ng-repeat='item in items'>{{ item }}</button></div>",
             scope:{
                 items: '=items'
             },
