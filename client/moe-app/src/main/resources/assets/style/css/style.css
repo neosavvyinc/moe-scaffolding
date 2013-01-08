@@ -99,7 +99,7 @@ html[xmlns] .clearfix {
 .equity-ticket .detail .horizontal-list-item {
   display: block;
   float: left;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .equity-ticket .equity-ticket-primary .equity-ticket-field,
 .equity-ticket .detail .equity-ticket-field {
