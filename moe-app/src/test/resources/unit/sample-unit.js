@@ -12,5 +12,5 @@ describe('Simple unit test', function() {
         expect(true).toBe(true);
 
     });
-    
+
 });
