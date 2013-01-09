@@ -20,6 +20,8 @@ files = [
 
     'main/resources/lib/angular/angular-mocks.js',
 
+    'main/resources/lib/strftime-min-1.3.js',
+
     //resource
     'main/resources/application/application.js',
     'main/resources/application/configuration-constants.js',
@@ -33,7 +35,11 @@ files = [
 
 
     //tests
-    'test/resources/unit/sample-unit.js'
+    'test/resources/unit/sample-unit.js',
+
+    //directives
+    'main/resources/core/controls/*.js',
+    'test/resources/unit/core/controls/*.js'
 
 ];
 

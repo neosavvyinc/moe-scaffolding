@@ -5,6 +5,7 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
         ,function ($scope, $rootScope, $routeParams, configuration) {
 
     //Initialization
+    $scope.financialAdvisorNumbers = [101, 102, "WNUA 95.5"];
 
     $scope.accountInfo = {
         name: "John Doe"

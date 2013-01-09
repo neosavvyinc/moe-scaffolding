@@ -21,6 +21,10 @@ MOE.Directives
 
                 });
 
+                scope.onClickItem = function(item) {
+                    scope.selectedItem = item;
+                };
+
             }
         }
     });
