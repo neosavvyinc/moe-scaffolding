@@ -69,6 +69,9 @@ html[xmlns] .clearfix {
   width: 1280px;
 }
 /* Directives */
+.editable-combo-box ul li a {
+  cursor: pointer;
+}
 .dropdown-with-notes div {
   display: inline-block;
   float: left;
@@ -106,8 +109,8 @@ html[xmlns] .clearfix {
   line-height: 10px;
   height: 10px;
 }
-.equity-ticket .equity-ticket-primary .fa-input-field,
-.equity-ticket .detail .fa-input-field {
+.equity-ticket .equity-ticket-primary .fa-number input,
+.equity-ticket .detail .fa-number input {
   width: 23px;
 }
 .equity-ticket .equity-ticket-primary .fa-input-dropdown,

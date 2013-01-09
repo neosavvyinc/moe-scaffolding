@@ -8,25 +8,32 @@
     <li class="horizontal-list-item">
         <div id="accountInfo">
             <p>{{accountInfo.name}}</p>
+
             <p>{{accountInfo.accountType}}</p>
+
             <p>{{accountInfo.number}}</p>
         </div>
     </li>
 
+    <!--<li class="horizontal-list-item">-->
+    <!--<div class="input-append">-->
+    <!--<input id="faNumber" type="text" value="101" class="equity-ticket-field fa-input-field">-->
+    <!--<div class="btn-group">-->
+    <!--<button class="fa-input-dropdown btn dropdown-toggle" data-toggle="dropdown">-->
+    <!--<span class="caret"></span>-->
+    <!--</button>-->
+    <!--<ul class="dropdown-menu">-->
+    <!--<li>item1</li>-->
+    <!--<li>item2</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</li>-->
+
     <li class="horizontal-list-item">
-        <div class="input-append">
-            <input id="faNumber" type="text" value="101" class="equity-ticket-field fa-input-field">
-            <div class="btn-group">
-                <button class="fa-input-dropdown btn dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>item1</li>
-                    <li>item2</li>
-                </ul>
-            </div>
-        </div>
+        <editable-combo-box class="fa-number" items="financialAdvisorNumbers"></editable-combo-box>
     </li>
+
     <li class="horizontal-list-item">
         <div class="control-group">
             <div class="controls">
@@ -47,6 +54,7 @@
     <li class="horizontal-list-item">
         <div class="input-append">
             <input class="span1" id="shares" type="text">
+
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     Shares
@@ -62,6 +70,7 @@
     <li class="horizontal-list-item">
         <div class="input-append">
             <input class="span1" id="type" type="text" value="207.00">
+
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     Stop/Limit
@@ -83,6 +92,7 @@
     <li class="horizontal-list-item">
         <div class="input-append">
             <input class="span1" id="vspMethod" type="text" value="FIFO">
+
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     FIFO
@@ -104,6 +114,7 @@
     <li class="horizontal-list-item">
         <div class="input-append">
             <input class="span1" id="discount" type="text" value="50%">
+
             <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     Discount

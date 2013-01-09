@@ -1,11 +1,14 @@
-<div class="input-append">
-    <input id="faNumber" type="text" ng-model="selectedItem" ng-class="additionalControlClasses">
+<div class="editable-combo-box input-append">
+    <input type="text" ng-model="selectedItem" ng-class="additionalControlClasses">
+
     <div class="btn-group">
         <button class="btn dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            <li ng-repeat="item in items">{{ item }}</li>
+            <li ng-repeat="item in items">
+                <a ng-click="onClickItem(item)">{{ item }}</a>
+            </li>
         </ul>
     </div>
 </div>

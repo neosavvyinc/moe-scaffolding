@@ -21,6 +21,11 @@ MOE.Directives
 
                 });
 
+                //Action Handlers
+                scope.onClickItem = function(item) {
+                    scope.selectedItem = item;
+                };
+
                 //Initialization
                 if (!scope.additionalControlClasses) {
                     scope.additionalControlClasses = "span2";
