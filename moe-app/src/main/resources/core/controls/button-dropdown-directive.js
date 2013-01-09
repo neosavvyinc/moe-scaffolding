@@ -5,7 +5,7 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            templateUrl:"view/tickets/shared/button-dropdown-template.html",
+            templateUrl:"core/controls/button-dropdown-template.html",
             scope:{
                 items: "=items"
             },

@@ -18,8 +18,11 @@ MOE.Controllers = angular.module('moe.controllers', []);
 MOE.Filters = angular.module('moe.filters', []);
 MOE.Directives = angular.module('moe.directives', []);
 
+//Global Accessor For Dependencies
+MOE.Dependencies = ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers.validation'];
 
-angular.module('moe', ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers.validation']).
+//Application Initialization
+angular.module('moe', MOE.Dependencies).
     config(['$routeProvider',
     function ($routeProvider) {
 
