@@ -6,15 +6,20 @@
  */
 
 var MOE = MOE || {};
+MOE.Workers = MOE.Workers || {};
 
 MOE.Constants = angular.module('moe.constants', []);
+
+/* Worker Definitions */
+MOE.Workers.Validation = angular.module('moe.workers.validation', []);
+
 MOE.Services = angular.module('moe.services', []);
 MOE.Controllers = angular.module('moe.controllers', []);
 MOE.Filters = angular.module('moe.filters', []);
 MOE.Directives = angular.module('moe.directives', []);
 
 
-angular.module('moe', ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers']).
+angular.module('moe', ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers.validation']).
     config(['$routeProvider',
     function ($routeProvider) {
 
