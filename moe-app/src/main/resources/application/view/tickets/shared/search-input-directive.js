@@ -1,13 +1,12 @@
 'use strict'
 
 MOE.Directives
-    .directive('minRow', function () {
+    .directive('searchInput', function () {
         return {
             restrict:'E',
             replace:true,
-            templateUrl:'tabs/worklist/min-row-template.html',
+            templateUrl:"application/view/tickets/shared/search-input-template.html",
             scope:{
-
             },
             link:function (scope, element, attrs) {
 

@@ -5,7 +5,7 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            templateUrl:"view/tickets/shared/editable-combo-box-template.html",
+            templateUrl:"application/view/tickets/shared/editable-combo-box-template.html",
             scope:{
                 items:'=items',
                 additionalControlClasses: "@additionalControlClasses"

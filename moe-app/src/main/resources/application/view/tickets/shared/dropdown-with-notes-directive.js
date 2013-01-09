@@ -5,7 +5,7 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            templateUrl:"view/tickets/shared/dropdown-with-notes-template.html",
+            templateUrl:"application/view/tickets/shared/dropdown-with-notes-template.html",
             scope:{
                 items:"=items",
                 note:"=note"

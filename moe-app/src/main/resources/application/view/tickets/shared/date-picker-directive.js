@@ -5,7 +5,7 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            templateUrl:"view/tickets/shared/date-picker-template.html",
+            templateUrl:"application/view/tickets/shared/date-picker-template.html",
             scope:{
                 date: "=date"
             },
