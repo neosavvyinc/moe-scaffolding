@@ -47,4 +47,6 @@ angular.module('moe', MOE.Dependencies).
     run(['$location', '$rootScope',
     function ($location, $rootScope) {
         $rootScope.isMockMode = $location.search().mock || $location.search().mockMode;
+
+        console.log("moe.run() isMockMode=" + $rootScope.isMockMode);
     }]);

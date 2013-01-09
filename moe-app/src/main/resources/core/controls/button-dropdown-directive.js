@@ -26,6 +26,6 @@ MOE.Directives
                 //Initialization
                 scope.selectedItem = null;
                 $(element).find('dropdown-toggle').dropdown();
-            },
+            }
         }
     });

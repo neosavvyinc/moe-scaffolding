@@ -21,6 +21,6 @@ MOE.Directives
 
                 //Initialization
                 scope.dateString = null;
-            },
+            }
         }
     });
