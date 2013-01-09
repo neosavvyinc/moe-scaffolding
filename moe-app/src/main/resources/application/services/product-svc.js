@@ -1,22 +1,18 @@
 'use strict'
 
-/**
- * Defines the service that performs CRUD operations on menu items
- */
-
 MOE.Services.factory('products', function (configuration, $q, $rootScope, $http) {
     return {
 
         /**
          * Retrieves simple products
          * @param {string} id the name of the single menu item to get.
-         * @return {Promise} Resolves to JSON array of menu items.
+         * @return {Promise} Resolves to JSON array of products.
          */
         get:function (id) {
 
-            var items, deferred, serviceUrl;
+            var products, deferred, serviceUrl;
 
-            if( $scope.isMockMode )
+            if( $rootScope.isMockMode )
             {
                 serviceUrl = configuration.PRODUCTS_URL
             }

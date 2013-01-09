@@ -11,6 +11,6 @@ MOE.Directives
             },
             link:function (scope, element, attrs) {
 
-            },
+            }
         }
     });

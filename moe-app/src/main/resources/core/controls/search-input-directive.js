@@ -5,11 +5,11 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            templateUrl:"view/tickets/shared/search-input-template.html",
+            templateUrl:"core/controls/search-input-template.html",
             scope:{
             },
             link:function (scope, element, attrs) {
 
-            },
+            }
         }
     });

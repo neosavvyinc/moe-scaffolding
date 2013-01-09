@@ -1,0 +1,14 @@
+<div class="equity-ticket" ng-controller="view.tickets.equity.EquityTicketController">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <ng-include src="'application/view/tickets/equity/collapsed-ptl.html'"/>
+        </div>
+        <div id="collapseOne" class="accordion-body in collapse equity-ticket-detail">
+            <div class="accordion-inner">
+                <ng-include src="'application/view/tickets/equity/detail-ptl.html'" />
+            </div>
+        </div>
+    </div>
+
+    <button class="btn" ng-click="submitTicket()">Submit Ticket</button>
+</div>
