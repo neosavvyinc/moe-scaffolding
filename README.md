@@ -29,7 +29,7 @@ Make sure testacular is in your path:
 
 Then to run the tests:
 
-    cd moe-scaffolding/client/moe-app
+    cd moe-scaffolding/moe-app
     testacular start src/test/resources/testacular-unit-config.js
 
 
