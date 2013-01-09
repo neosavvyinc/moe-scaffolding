@@ -6,8 +6,12 @@ MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
 
         //Initialization
         $scope.submitTicket = function() {
-            products = products.get()
-            console.log("products are: " + products);
+            var productPromise = products.get()
+            productPromise.then(function( products ) {
+                alert('Successfully retrieved products: ' + products );
+            }, function(reason) {
+                alert('Failed: ' + reason);
+            });
         }
 
     }]);
