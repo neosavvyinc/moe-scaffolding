@@ -7,6 +7,8 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
     //Initialization
     $scope.financialAdvisorNumbers = [101, 102, "WNUA 95.5"];
 
+    $scope.buyValues = ["Buy", "Sell", "Sell Short"];
+
     $scope.accountInfo = {
         name: "John Doe"
         ,accountType: "Active Assets Account"
