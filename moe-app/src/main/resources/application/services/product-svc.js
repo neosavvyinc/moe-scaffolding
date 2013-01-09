@@ -10,7 +10,9 @@ MOE.Services.factory('products', function (configuration, $q, $rootScope, $http)
          */
         get:function (id) {
 
-            var products, deferred, serviceUrl;
+            var deferred, serviceUrl;
+
+            $rootScope.isMockMode = true;
 
             if( $rootScope.isMockMode )
             {
