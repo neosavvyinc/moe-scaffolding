@@ -6,6 +6,6 @@
 
 MOE.Constants.constant('configuration', {
 
-		ITEMS_URL : 'menu/items.json'		
+		PRODUCTS_URL : 'mockData/products.json'
 		
 });

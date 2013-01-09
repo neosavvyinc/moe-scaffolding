@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "symbol" : "AAPL",
+        "description" : "Apple Inc.",
+    },
+    {
+        "id" : "2",
+        "name" : "GOOG",
+        "description" : "Google",
+    }
+]
