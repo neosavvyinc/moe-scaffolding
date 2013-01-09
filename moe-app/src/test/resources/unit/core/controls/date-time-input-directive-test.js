@@ -19,12 +19,12 @@ describe('$Name', function() {
         //Directives fetch their templates with \$http. Since unit tests use the mock \$httpBackend,
         //we must mock a template response. Thie need to dublicate the template code would be eliminated if
         //the unit test httpBackend mock implimented the ".andPassThrough" method as the e2e version does.
-        \$httpBackend.whenGET('menu/menu-item-template.html').respond('<a href="#/{{id}}">{{name}}</a>');
+        \$httpBackend.whenGET('$Template').respond('');
 
         //Applying the rootScope digests and refreshes the ui so our directive renders.
         \$rootScope.\$apply(function(){
             //We compile a directive into an angular element so we canmanipulate it programatically.
-            element = \$compile('<menu-item name="\'testName\'" id="\'testId\'"/>')(\$rootScope);
+            element = \$compile('<angular-directive name="\'testName\'" id="\'testId\'"/>')(\$rootScope);
         });
 
         //Flushing \$httpBackend pushes the mock template to the directive, allowing it to render.
