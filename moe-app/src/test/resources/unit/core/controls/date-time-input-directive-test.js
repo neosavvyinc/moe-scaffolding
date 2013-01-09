@@ -1,44 +1,38 @@
 'use strict';
 
-describe('$Name', function() {
-    var element, \$q, \$rootScope, \$compile, \$httpBackend
+describe('dateTimeInput', function () {
+    var element, $q, $rootScope, $compile, $httpBackend
 
-    beforeEach(function(){
+    beforeEach(function () {
 
         //We laod all the module dependancies up front.
         module.apply(module, MOE.Dependencies);
 
         //Injecting all of our services in the "beforeEach" section allows us to avoid cluttering out tests. 	
-        inject(function($injector){
-            \$q = \$injector.get('\$q')
-            \$rootScope = \$injector.get('\$rootScope');
-            \$compile = \$injector.get('\$compile');
-            \$httpBackend = \$injector.get('\$httpBackend');
+        inject(function ($injector) {
+            $q = $injector.get('$q')
+            $rootScope = $injector.get('$rootScope');
+            $compile = $injector.get('$compile');
+            $httpBackend = $injector.get('$httpBackend');
         });
-
-        //Directives fetch their templates with \$http. Since unit tests use the mock \$httpBackend,
-        //we must mock a template response. Thie need to dublicate the template code would be eliminated if
-        //the unit test httpBackend mock implimented the ".andPassThrough" method as the e2e version does.
-        \$httpBackend.whenGET('$Template').respond('');
 
         //Applying the rootScope digests and refreshes the ui so our directive renders.
-        \$rootScope.\$apply(function(){
+        this.date = $rootScope.date = new Date();
+        this.timeFormat = $rootScope.timeFormat = "%I:%M:%S %p";
+
+        $rootScope.$apply(function () {
             //We compile a directive into an angular element so we canmanipulate it programatically.
-            element = \$compile('<angular-directive name="\'testName\'" id="\'testId\'"/>')(\$rootScope);
+            element = $compile('<date-time-input date="\'this.date\'" format="\'this.timeFormat\'"></date-time-input>')($rootScope);
         });
-
-        //Flushing \$httpBackend pushes the mock template to the directive, allowing it to render.
-        \$httpBackend.flush();
-
 
     });
 
-    it('should display a name and id', function() {
+    it('should display the given date in the time format specified', function () {
 
         //Once an element has been rendered you can perform any of the "angular.element" operations.
-        expect(element.html()).toBe("testName");
-        expect(element.attr('href')).toBe("#/testId");
+        var formattedTime = this.date.strftime(this.timeFormat);
+
+        expect($(element).find('input').val()).toBe(formattedTime);
 
     });
 });
-       
