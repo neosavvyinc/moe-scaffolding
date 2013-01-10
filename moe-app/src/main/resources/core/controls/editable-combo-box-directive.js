@@ -23,21 +23,6 @@ MOE.Directives
 
                 });
 
-                scope.$watch('selectedItem', function(newValue) {
-                    if( !scope.inputValue )
-                    {
-                        scope.inputValue = scope.selectedItem;
-                    }
-                    else
-                    {
-                        if( scope.inputValue != newValue ) {
-                            scope.inputValue = newValue;
-                        }
-                    }
-
-                });
-
-
                 //Action Handlers
                 scope.onClickItem = function(item) {
                     scope.selectedItem = item;
