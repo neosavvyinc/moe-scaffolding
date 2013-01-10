@@ -94,6 +94,9 @@ html[xmlns] .clearfix {
   color: #024578;
 }
 /* Tickets */
+.equity-ticket {
+  margin-top: 30px;
+}
 .equity-ticket ul,
 .equity-ticket ol {
   margin: 0 0 10px 0px;
@@ -140,28 +143,47 @@ html[xmlns] .clearfix {
 .equity-ticket .detail .fa-input-dropdown {
   height: 20px;
 }
-.detail .expanded .controls .field {
+.equity-ticket .detail .expanded .controls .field {
   display: inline-block;
   margin: 0 15px;
   float: left;
 }
-.detail .expanded .controls .check-field input {
+.equity-ticket .detail .expanded .controls .check-field input {
   float: left;
   margin-right: 6px;
 }
-.detail .expanded .controls .final-checks {
+.equity-ticket .detail .expanded .controls .final-checks {
   clear: both;
   float: left;
 }
-.detail .expanded .projected-order-totals {
+.equity-ticket .detail .expanded .projected-order-totals {
   clear: both;
 }
-.detail .expanded .projected-order-totals h4 {
+.equity-ticket .detail .expanded .projected-order-totals h4 {
   display: inline-block;
   font-size: 14.5px;
   margin-right: 60px;
 }
-.detail .expanded .projected-order-totals .label-sub-label {
+.equity-ticket .detail .expanded .projected-order-totals .label-sub-label {
   display: inline-block;
   margin: 0 15px;
+}
+.validation-ptl,
+.sambuca-ptl {
+  margin-top: 30px;
+  border: 1px solid #E5E5E5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.validation-ptl .components,
+.sambuca-ptl .components {
+  padding: 0 40px 20px;
+}
+.validation-ptl .components .row,
+.sambuca-ptl .components .row {
+  clear: both;
+  display: block;
+  width: 100%;
+  padding: 0 0 20px;
 }

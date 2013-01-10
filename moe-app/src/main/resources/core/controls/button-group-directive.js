@@ -5,12 +5,19 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            template:"<div class='btn-group'><button class='btn' ng-repeat='item in items'>{{ item }}</button></div>",
+            template:"<div class='btn-group'><button class='btn' ng-repeat='item in items'>{{ getItemLabel(item) }}</button></div>",
             scope:{
-                items: '=items'
+                items: '=items',
+                labelField: '@labelField'
             },
             link:function (scope, element, attrs) {
-
+                //Getters
+                scope.getItemLabel = function(item) {
+                    if (item && scope.labelField) {
+                        return item[scope.labelField];
+                    }
+                    return item;
+                };
             }
         }
     });

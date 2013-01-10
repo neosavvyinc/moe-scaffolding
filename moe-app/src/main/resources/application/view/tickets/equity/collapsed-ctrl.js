@@ -25,6 +25,8 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
 
     $scope.discountText = "17%";
 
+    $scope.selectedFa = $scope.financialAdvisorNumbers[2];
+
     $scope.accountInfo = {
         name: "John Doe"
         ,accountType: "Active Assets Account"
