@@ -37,10 +37,10 @@ MOE.Directives
                     }
 
                     //Determine how to add the angular directive
-                    if (angularValidationDirectives.indexOf(validator) != -1) {
-                        input.setAttribute(validator, true);
-                    } else if (keyValue && angularValidationDirectives.indexOf(keyValue[0]) != -1) {
+                    if (keyValue) {
                         input.setAttribute(keyValue[0], keyValue[1]);
+                    } else {
+                        input.setAttribute(validator, true);
                     }
                 }
             }

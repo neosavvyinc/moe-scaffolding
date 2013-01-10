@@ -8,6 +8,8 @@ MOE.Controllers.controller('view.validation.ValidationController', ['$scope', '$
 
     $scope.urlValue = "http://www.morganstanley.com";
 
+    $scope.customClientSideOddNumber = 437;
+
     $scope.serverSideModel = null;
 
     $scope.clientAndServerSideModel = null;

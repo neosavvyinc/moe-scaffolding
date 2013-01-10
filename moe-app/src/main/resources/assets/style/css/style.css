@@ -225,6 +225,10 @@ input.error {
 .sambuca-ptl .components .notes input {
   width: 500px;
 }
+.validation-ptl .components.validation form,
+.sambuca-ptl .components.validation form {
+  margin: 0;
+}
 .validation-ptl .components.validation input,
 .sambuca-ptl .components.validation input {
   padding-right: 20px;

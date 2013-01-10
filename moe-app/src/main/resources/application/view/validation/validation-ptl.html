@@ -24,7 +24,11 @@
             </form>
         </div>
         <div class="row">
-            <h4>Custom Client Side Validation</h4>
+            <h4>Custom Client Side Validation (Odd Integers Only)</h4>
+
+            <form novalidate name="custom-client-side">
+                <advanced-text-input data-model="customClientSideOddNumber" input-type="text" validation="odd-number"></advanced-text-input>
+            </form>
         </div>
         <div class="row">
             <h4>Server Side Validation</h4>
@@ -37,7 +41,7 @@
             </form>
         </div>
         <div class="row">
-            <h4>Client & Server Side Validation</h4>
+            <h4>Client & Server Side Validation (Email Only)</h4>
 
             <form novalidate name="client-and-server-side">
                 <div class="item">
