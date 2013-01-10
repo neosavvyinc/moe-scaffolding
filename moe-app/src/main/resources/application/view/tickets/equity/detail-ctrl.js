@@ -1,8 +1,8 @@
 'use strict'
 
 MOE.Controllers.controller('view.tickets.equity.DetailController',
-    ['$scope', '$rootScope', '$routeParams', 'configuration',
-        function ($scope, $rootScope, $routeParams, configuration) {
+    ['$scope', '$rootScope', '$routeParams', 'configuration', "ticketManager",
+        function ($scope, $rootScope, $routeParams, configuration, ticketManager) {
 
             //Initialization
             $scope.timeInForceValues = ["Day", "Week", "Month"];
@@ -16,15 +16,12 @@ MOE.Controllers.controller('view.tickets.equity.DetailController',
             $scope.secondaryClientPositionValues = ["Not sure what goes here"];
             $scope.dispositionValues = ['Holds Proceeds'];
 
-
-            $scope.selectedTimeInForce = '';
-            $scope.selectedClientPosition = '';
-            $scope.secondarySelectedClientPosition = '';
+            $scope.ticket = ticketManager.getTicket();
 
             $scope.testSelected = function(){
-                console.log("timeInForce: " + $scope.selectedTimeInForce);
-                console.log("clientPosition: " + $scope.selectedClientPosition);
-                console.log("secondarySelectedClientPosition: " + $scope.secondarySelectedClientPosition);
+                console.log("timeInForce: " + $scope.ticket.selectedTimeInForce);
+                console.log("clientPosition: " + $scope.ticket.selectedClientPosition);
+                console.log("secondarySelectedClientPosition: " + $scope.ticket.secondarySelectedClientPosition);
             }
 
         }

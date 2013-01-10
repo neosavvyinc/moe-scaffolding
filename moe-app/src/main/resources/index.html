@@ -20,7 +20,10 @@
 
         <div class="container" ng-controller="view.navigation.TopNavbarController">
             <top-navbar route-field="route" label-field="label" title="MOE" items="items"></top-navbar>
-            <ng-view />
+
+            <div class="row">
+                <ng-view />
+            </div>
         </div>
 
         <script src="lib/bootstrap/js/bootstrap-collapse.js"></script>
