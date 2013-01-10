@@ -13,41 +13,49 @@
         </div>
         <div class="row">
             <h4>Date Picker</h4>
-            <div>
+            <div class="item">
                 <label>Default</label>
                 <date-picker data-date="today"></date-picker>
             </div>
-            <div>
+            <div class="item">
                 <label>Pleasant</label>
                 <date-picker data-date="today" format="%b %d, %Y"></date-picker>
             </div>
-            <div>
+            <div class="item">
                 <label>Time</label>
                 <date-picker data-date="today" format="%I:%M:%S %p"></date-picker>
             </div>
-            <div>
+            <div class="item">
                 <label>Military Time</label>
                 <date-picker data-date="today" format="%H:%M:%S"></date-picker>
             </div>
         </div>
         <div class="row">
             <h4>Date / Time Input</h4>
-            <div>
+            <div class="item">
                 <label>Default</label>
                 <date-time-input data-date="today"></date-time-input>
             </div>
-            <div>
+            <div class="item">
                 <label>Pleasant</label>
                 <date-time-input data-date="today" format="%b %d, %Y"></date-time-input>
             </div>
-            <div>
+            <div class="item">
                 <label>Time</label>
                 <date-time-input data-date="today" format="%I:%M:%S %p"></date-time-input>
             </div>
-            <div>
+            <div class="item">
                 <label>Military Time</label>
                 <date-time-input data-date="today" format="%H:%M:%S"></date-time-input>
             </div>
+        </div>
+        <div class="row notes">
+            <h4>Dropdown With Notes</h4>
+            <dropdown-with-notes label-field="name" note-field="note" items="dropdownWithNotesItems" data-selected-item="dropdownWithNotesSelectedItem"></dropdown-with-notes>
+        </div>
+        <div class="row">
+            <h4>Editable Dropdown</h4>
+            <editable-dropdown items="editableDropdownItems" data-selected-item="editableDropdownSelectedItem"></editable-dropdown>
         </div>
     </div>
 </div>

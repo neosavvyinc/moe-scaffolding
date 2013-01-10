@@ -9,4 +9,10 @@ MOE.Controllers.controller('view.sambuca.SambucaController',
             $scope.buttonGroupItems = ["Button Bar", "Red", "Green", "Blue", "Yellow", "Magenta"];
 
             $scope.today = new Date();
+
+            $scope.dropdownWithNotesItems = [{name: "Beef", note: "Steak, burgers, stew"}, {name: "Chicken", note: "Wings, Nuggets, Roasted"}, {name: "Pork", note: "Slow Cooked, Fried, Honey Baked"}];
+            $scope.dropdownWithNotesSelectedItem = $scope.dropdownWithNotesItems[1];
+
+            $scope.editableDropdownItems = ["Editable Dropdown", "Bootstrap", "Angular"];
+            $scope.editableDropdownSelectedItem = $scope.editableDropdownItems[0];
         }]);

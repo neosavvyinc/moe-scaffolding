@@ -14,7 +14,7 @@
     </li>
 
     <li class="horizontal-list-item">
-        <editable-combo-box class="fa-number" items="financialAdvisorNumbers" data-selected-item="ticket.faNumber"></editable-combo-box>
+        <editable-dropdown class="fa-number" items="financialAdvisorNumbers" data-selected-item="ticket.faNumber"></editable-dropdown>
     </li>
     <li class="horizontal-list-item">
         <button ng-click="testSelected()">Test</button>
@@ -28,7 +28,7 @@
         <button-group items="buyValues"></button-group>
     </li>
     <li class="horizontal-list-item">
-        <editable-combo-box class="shares" items="shareValues" data-selected-item="ticket.selectedShareValue"></editable-combo-box>
+        <editable-dropdown class="shares" items="shareValues" data-selected-item="ticket.selectedShareValue"></editable-dropdown>
     </li>
     <li class="horizontal-list-item">
         <input-and-selection items="stopLimitValues" text="stopLimitText"></input-and-selection>
@@ -37,7 +37,7 @@
         <button-group items="cashMarginValues"></button-group>
     </li>
     <li class="horizontal-list-item">
-        <editable-combo-box class="first-last" items="firstLastValues" data-selected-item="ticket.selectedFirstLast"></editable-combo-box>
+        <editable-dropdown class="first-last" items="firstLastValues" data-selected-item="ticket.selectedFirstLast"></editable-dropdown>
     </li>
     <li class="horizontal-list-item">
         <button-group items="solicitedValues"></button-group>
