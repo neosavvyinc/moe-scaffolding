@@ -27,8 +27,8 @@ MOE.Dependencies = ['moe.filters', 'moe.services', 'moe.directives', 'moe.consta
 
 //Application Initialization
 angular.module('moe', MOE.Dependencies).
-    config(['$routeProvider',
-    function ($routeProvider) {
+    config(['$routeProvider', '$locationProvider',
+    function ($routeProvider, $locationProvider) {
 
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -43,10 +43,15 @@ angular.module('moe', MOE.Dependencies).
             }
         }
 
+        //HTML 5 Push States Enabled
+        $locationProvider.html5Mode(true);
+
+        //Init Routes
         $routeProvider.
-            when('/about', {templateUrl:'about/about-partial.html'}).
-            when('/:id/', {templateUrl:'details/details-partial.html'}).
-            otherwise({templateUrl:'error/error-partial.html'});
+            when('/ticket', {templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'}).
+            when('/validation', {templateUrl:'application/view/validation/validation-ptl.html'}).
+            when('/sambuca', {templateUrl: 'application/view/sambuca/sambuca-ptl.html'}).
+            otherwise({templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'});
     }]).
     run(['$location', '$rootScope',
     function ($location, $rootScope) {

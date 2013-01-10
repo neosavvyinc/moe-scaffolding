@@ -1,0 +1,8 @@
+<div class="top-navbar navbar navbar-fixed-top">
+    <a class="brand">{{ title }}</a>
+    <ul class="nav">
+        <li ng-repeat="item in items">
+            <a href="{{ item[routeField] }}">{{ item[labelField] }}</a>
+        </li>
+    </ul>
+</div>

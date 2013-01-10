@@ -76,6 +76,23 @@ html[xmlns] .clearfix {
   display: inline-block;
   float: left;
 }
+.top-navbar {
+  background-color: #000000;
+}
+.top-navbar a.brand {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  padding-left: 30px;
+}
+.top-navbar ul.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+}
+.top-navbar ul.nav a:hover {
+  color: #024578;
+}
 /* Tickets */
 .equity-ticket ul,
 .equity-ticket ol {
