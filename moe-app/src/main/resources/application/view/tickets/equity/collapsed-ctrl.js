@@ -13,6 +13,10 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
 
     $scope.firstLastValues = ["FIFO", "LIFO"];
 
+    $scope.cashMarginValues = ['Cash', 'Margin'];
+
+    $scope.solicitedValues = ['Solicited', 'Unsolicited'];
+
     $scope.stopLimitText = "207.00";
 
     $scope.stopLimitValues = ["Stop/Limit", "Go/Unlimited"];
