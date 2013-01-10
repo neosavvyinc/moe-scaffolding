@@ -17,7 +17,14 @@ MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $
         symbol: "IBM",
         side: 'Buy',
         selectedShareValue: "def",
+        stopLimit: "Stop/Limit",
+        stopLimitAmount: "109.00",
+        cashMargin: "Cash",
         selectedFirstLast: "def",
+        solicited: "Solicited",
+        discountText: "Discount",
+        discountAmount: "50%",
+
 
         /**
          * Details
