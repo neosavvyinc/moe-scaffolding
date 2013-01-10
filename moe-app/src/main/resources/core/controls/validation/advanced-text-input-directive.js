@@ -79,6 +79,7 @@ MOE.Directives
                 //Initialization
                 scope.errorSide = iAttrs.errorSide || "bottom";
                 scope.message = iAttrs.message;
+                scope.placeholder = iAttrs.placeholder;
             };
         }
     }
