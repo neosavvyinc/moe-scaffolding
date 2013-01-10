@@ -7,14 +7,14 @@ MOE.Directives
             replace:true,
             templateUrl:"core/controls/date-picker-template.html",
             scope:{
-                date:"=date",
-                format:"@format"
+                date:"=",
+                format:"@"
             },
             link:function (scope, element, attrs) {
 
                 //jQuery
                 $(element).datepicker().on('changeDate', function (e) {
-                    scope.templateDate = e.date.strftime(scope.format || "%m-%d-%Y")
+                    scope.date = e.date;
                 });
 
                 scope.$watch('date', function (newValue) {
