@@ -1,12 +1,12 @@
 'use strict'
 
 MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
-    ['$scope', '$rootScope', '$routeParams', 'configuration', 'something'
-        ,function ($scope, $rootScope, $routeParams, configuration, something) {
+    ['$scope', '$rootScope', '$routeParams', 'configuration', 'products'
+        ,function ($scope, $rootScope, $routeParams, configuration, products) {
 
         //Initialization
         $scope.submitTicket = function() {
-            var productPromise = something.get()
+            var productPromise = products.get()
             productPromise.then(function( products ) {
             }, function(reason) {
             });
