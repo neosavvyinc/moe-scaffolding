@@ -3,7 +3,7 @@
 MOE.Services.factory('submitService', function (configuration, $q, $rootScope, $http) {
     return {
 
-        sendOrder:function (id) {
+        sendOrder:function ( ticket ) {
 
             var deferred, serviceUrl;
 
@@ -18,20 +18,7 @@ MOE.Services.factory('submitService', function (configuration, $q, $rootScope, $
             $http.get( serviceUrl ).
                 success(function (data, status, headers, config) {
 
-                    var result;
-
-                    if (id) {
-
-                        angular.forEach(data, function (obj, index) {
-                            if (obj.id === id) {
-                                result = obj;
-                            }
-                        });
-
-                    } else {
-                        result = data;
-                    }
-
+                    var result = data;
                     deferred.resolve(result);
 
                 }).
@@ -39,7 +26,6 @@ MOE.Services.factory('submitService', function (configuration, $q, $rootScope, $
 
                     console.error(data, status, headers, config);
                     deferred.reject(data);
-
 
                 });
 

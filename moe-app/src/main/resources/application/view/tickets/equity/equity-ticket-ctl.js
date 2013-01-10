@@ -1,12 +1,12 @@
 'use strict'
 
 MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
-    ['$scope', '$rootScope', '$routeParams', 'configuration', 'submitService'
-        ,function ($scope, $rootScope, $routeParams, configuration, submitService) {
+    ['$scope', '$rootScope', '$routeParams', 'configuration', 'submitService', 'ticketManager'
+        ,function ($scope, $rootScope, $routeParams, configuration, submitService, ticketManager) {
 
         //Initialization
         $scope.submitTicket = function() {
-            var productPromise = submitService.sendOrder()
+            var productPromise = submitService.sendOrder( ticketManager.getTicket() )
             productPromise.then(
                 function( orderStatus ) {
                     console.log("order was successfully submitted with immediate status: " + JSON.stringify(orderStatus));
