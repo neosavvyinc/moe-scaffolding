@@ -10,11 +10,10 @@ MOE.Workers = MOE.Workers || {};
 
 MOE.Constants = angular.module('moe.constants', []);
 
-/*
- * Worker Definitions
- */
+/* Worker Definitions */
 MOE.Workers.Validation = angular.module('moe.workers.validation', []);
 
+/* Manager Definitions */
 MOE.Managers = angular.module('moe.managers', []);
 
 MOE.Services = angular.module('moe.services', []);
@@ -50,7 +49,7 @@ angular.module('moe', MOE.Dependencies).
         $routeProvider.
             when('/ticket', {templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'}).
             when('/validation', {templateUrl:'application/view/validation/validation-ptl.html'}).
-            when('/sambuca', {templateUrl: 'application/view/sambuca/sambuca-ptl.html'}).
+            when('/sambuca', {templateUrl:'application/view/sambuca/sambuca-ptl.html'}).
             otherwise({templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'});
     }]).
     run(['$location', '$rootScope',

@@ -68,6 +68,14 @@ html[xmlns] .clearfix {
 .container {
   width: 1280px;
 }
+/* Angular Styles */
+input.ng-invalid {
+  background-color: #FA787E;
+}
+/* Global Styles */
+input.error {
+  background-color: #FA787E;
+}
 /* Directives */
 .editable-dropdown ul li a {
   cursor: pointer;
@@ -175,6 +183,10 @@ html[xmlns] .clearfix {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+.validation-ptl h3,
+.sambuca-ptl h3 {
+  padding-left: 15px;
 }
 .validation-ptl .components,
 .sambuca-ptl .components {
