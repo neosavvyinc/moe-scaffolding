@@ -14,6 +14,8 @@ MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $
          * Primary
          */
         faNumber: "def",
+        symbol: "IBM",
+        side: 'Buy',
         selectedShareValue: "def",
         selectedFirstLast: "def",
 
