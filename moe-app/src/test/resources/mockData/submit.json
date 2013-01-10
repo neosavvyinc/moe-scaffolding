@@ -1,0 +1,10 @@
+[
+    {
+        "ticketId": 1,
+        "status": "success"
+    },
+    {
+        "ticketId": 2,
+        "status": "rejected"
+    }
+]
