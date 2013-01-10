@@ -27,78 +27,21 @@
         <button-group items="buyValues"></button-group>
     </li>
     <li class="horizontal-list-item">
-        <div class="input-append">
-            <input class="span1" id="shares" type="text">
-
-            <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                    Shares
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                </ul>
-            </div>
-        </div>
+        <editable-combo-box class="shares" items="shareValues"></editable-combo-box>
     </li>
     <li class="horizontal-list-item">
-        <div class="input-append">
-            <input class="span1" id="type" type="text" value="207.00">
-
-            <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                    Stop/Limit
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                </ul>
-            </div>
-        </div>
+        <input-and-selection items="stopLimitValues" text="stopLimitText"></input-and-selection>
     </li>
     <li class="horizontal-list-item">
-        <div class="btn-group">
-            <button class="btn">Cash</button>
-            <button class="btn">Margin</button>
-        </div>
+        <button-group items="['Cash', 'Margin']"></button-group>
     </li>
     <li class="horizontal-list-item">
-        <div class="input-append">
-            <input class="span1" id="vspMethod" type="text" value="FIFO">
-
-            <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                    FIFO
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>LIFO</li>
-                    <li>FIFO</li>
-                </ul>
-            </div>
-        </div>
+        <editable-combo-box class="first-last" items="firstLastValues"></editable-combo-box>
     </li>
     <li class="horizontal-list-item">
-        <div class="btn-group">
-            <button class="btn">Solicited</button>
-            <button class="btn">Unsolicited</button>
-        </div>
+        <button-group items="['Solicited', 'Unsolicited']"></button-group>
     </li>
     <li class="horizontal-list-item">
-        <div class="input-append">
-            <input class="span1" id="discount" type="text" value="50%">
-
-            <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                    Discount
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>Discount</li>
-                </ul>
-            </div>
-        </div>
+        <input-and-selection items="discountValues" text="discountText"></input-and-selection>
     </li>
 </ul>

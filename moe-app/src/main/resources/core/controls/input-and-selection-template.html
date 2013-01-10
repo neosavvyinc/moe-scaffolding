@@ -1,0 +1,15 @@
+<div class="input-and-selection input-append">
+    <input class="span1" id="type" type="text" ng-model="text">
+
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+            {{ selectedItem }}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="item in items">
+                <a ng-click="onClickItem(item)">{{ item }}<a/>
+            </li>
+        </ul>
+    </div>
+</div>
