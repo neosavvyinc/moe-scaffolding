@@ -6,15 +6,15 @@
             <h4>Angular Client Side Validation</h4>
             <form novalidate name="angular-client-side">
                 <div class="item">
-                    <label>Email</label>
+                    <label>Required</label>
                     <input type="email" ng-model="emailValue" />
                 </div>
                 <div class="item">
-                    <label>Url</label>
-                    <advanced-text-input data-model="urlValue" input-type="email" validation="required, min=10, moe-remote"></advanced-text-input>
+                    <label>Email</label>
+                    <advanced-text-input data-model="urlValue" data-error-side="right" input-type="email" validation="required, minlength=10, remote"></advanced-text-input>
                 </div>
                 <div class="item">
-                    <label>Email</label>
+                    <label>Url</label>
                 </div>
             </form>
         </div>

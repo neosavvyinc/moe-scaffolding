@@ -1,9 +1,9 @@
 'use strict'
 
-MOE.Services.factory('validationService', function (configuration, $q, $rootScope, $http) {
+MOE.Services.factory('services.ValidationService', function (configuration, $q, $rootScope, $http) {
     return {
 
-        validate:function ( fields ) {
+        validate:function (fields) {
 
             var deferred, serviceUrl;
 
@@ -11,37 +11,21 @@ MOE.Services.factory('validationService', function (configuration, $q, $rootScop
              * This should be based on isMockMode and after we have
              * real services should be made to depend properly on it
              */
-            serviceUrl = configuration.VALIDATION_URL;
-
+            if ($rootScope.isFailMode) {
+                serviceUrl = configuration.VALIDATION_FAILURE_URL;
+            } else {
+                serviceUrl = configuration.VALIDATION_URL;
+            }
 
             deferred = $q.defer();
 
-            $http.get( serviceUrl ).
+            $http.get(serviceUrl).
                 success(function (data, status, headers, config) {
-
-                    var result;
-
-                    if (id) {
-
-                        angular.forEach(data, function (obj, index) {
-                            if (obj.id === id) {
-                                result = obj;
-                            }
-                        });
-
-                    } else {
-                        result = data;
-                    }
-
-                    deferred.resolve(result);
-
+                    deferred.resolve(data);
                 }).
                 error(function (data, status, headers, config) {
-
                     console.error(data, status, headers, config);
                     deferred.reject(data);
-
-
                 });
 
             return deferred.promise;
