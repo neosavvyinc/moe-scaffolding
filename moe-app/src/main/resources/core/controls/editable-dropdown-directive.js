@@ -9,7 +9,8 @@ MOE.Directives
             scope:{
                 items:'=items',
                 additionalControlClasses: "@additionalControlClasses",
-                selectedItem: "="
+                selectedItem: "=",
+                inputIdValue: "@"
             },
             link:function (scope, element, attrs) {
 

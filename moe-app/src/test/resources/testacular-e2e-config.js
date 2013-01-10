@@ -13,6 +13,7 @@ files = [
     ANGULAR_SCENARIO,
     ANGULAR_SCENARIO_ADAPTER,
 
+    'test/resources/lib/angular-mocks.js',
     'test/resources/e2e/*-e2e.js',
     'test/resources/e2e/*/*-e2e.js'
 ];
@@ -58,5 +59,5 @@ singleRun = false;
 urlRoot = '/__testacular/';
 
 proxies = {
-    '/': 'http://dev.moe.com/'
+    '/': 'http://localhost:9999/'
 };
