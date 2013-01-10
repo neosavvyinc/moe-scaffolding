@@ -1,8 +1,8 @@
 'use strict'
 
 MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
-    ['$scope', '$rootScope', '$routeParams', 'configuration', 'submitService', 'ticketManager'
-        ,function ($scope, $rootScope, $routeParams, configuration, submitService, ticketManager) {
+    ['$scope', 'configuration', 'submitService', 'ticketManager', '$location'
+        ,function ($scope, configuration, submitService, ticketManager, $location) {
 
         //Initialization
         $scope.submitTicket = function() {
@@ -10,6 +10,7 @@ MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
             productPromise.then(
                 function( orderStatus ) {
                     console.log("order was successfully submitted with immediate status: " + JSON.stringify(orderStatus));
+                    $location.path('review');
                 },
                 function(reason) {
                     console.log("order was not successfully submitted: " + reason);

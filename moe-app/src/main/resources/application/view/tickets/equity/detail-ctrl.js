@@ -14,16 +14,9 @@ MOE.Controllers.controller('view.tickets.equity.DetailController',
             $scope.dateValueTimeFormat = new DateAndFormat(new Date(), "%I:%M:%S %p");
             $scope.clientPositionValues = ["Assures Delivery", "Unassured Delivery", "Pizza Delivery"];
             $scope.secondaryClientPositionValues = ["Not sure what goes here"];
-            $scope.dispositionValues = ['Holds Proceeds'];
+            $scope.dispositionValues = [{name: 'Holds Proceeds', note: "Some description"},{name: 'Holds Proceeds', note: "Some description"}];
 
             $scope.ticket = ticketManager.getTicket();
-
-            $scope.testSelected = function(){
-                console.log("timeInForce: " + $scope.ticket.selectedTimeInForce);
-                console.log("clientPosition: " + $scope.ticket.selectedClientPosition);
-                console.log("secondarySelectedClientPosition: " + $scope.ticket.secondarySelectedClientPosition);
-            }
-
         }
     ]
 );

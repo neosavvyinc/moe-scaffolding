@@ -37,8 +37,11 @@ MOE.Directives
                 });
 
                 scope.$watch('note', function(newValue) {
-                    if (newValue != scope.selectedItem[scope.noteField]) {
-                        scope.selectedItem[scope.noteField] = newValue;
+                    if( scope.selectedItem && scope.selectedItem.hasOwnProperty(scope.noteField) )
+                    {
+                        if (newValue != scope.selectedItem[scope.noteField]) {
+                            scope.selectedItem[scope.noteField] = newValue;
+                        }
                     }
                 });
 

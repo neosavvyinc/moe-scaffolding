@@ -2,7 +2,7 @@
 
 MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $http) {
 
-    this.ticket = {
+    var ticket = {
 
         accountInfo: {
             name: "John Doe",
@@ -13,22 +13,24 @@ MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $
         /**
          * Primary
          */
-        faNumber: "",
-        selectedShareValue: "",
-        selectedFirstLast: "",
+        faNumber: "def",
+        selectedShareValue: "def",
+        selectedFirstLast: "def",
 
         /**
          * Details
          */
-        selectedTimeInForce: '',
-        selectedClientPosition: '',
-        secondarySelectedClientPosition: ''
-    }
+        selectedTimeInForce: 'def',
+        selectedClientPosition: 'def',
+        secondarySelectedClientPosition: 'def',
+        selectedDisposition: 'def'
+
+    };
 
     return {
 
         getTicket:function () {
-            return this.ticket;
+            return ticket;
         }
 
     }

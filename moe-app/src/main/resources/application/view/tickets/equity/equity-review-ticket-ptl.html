@@ -1,0 +1,34 @@
+
+<div class="equity-ticket" ng-controller="view.tickets.equity.EquityReviewTicketController">
+
+    <div class="well">
+        <ul class="well">
+            <li>
+               Account Name: {{ticket.accountInfo.name}}
+            </li>
+            <li>
+               Account Type: {{ticket.accountInfo.accountType}}
+            </li>
+            <li>
+               Account Number: {{ticket.accountInfo.number}}
+            </li>
+        </ul>
+        <ul class="well">
+            <li>
+                FA Number: {{ticket.faNumber}}
+            </li>
+            <li>
+                Share Value: {{ticket.selectedShareValue}}
+            </li>
+            <li>
+                First/Last: {{ticket.selectedFirstLast}}
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="span2 pull-right">
+            <button ng-click="testSelected()">Dump Values</button>
+        </div>
+    </div>
+
+</div>
