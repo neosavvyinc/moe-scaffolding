@@ -1,11 +1,11 @@
 'use strict'
 
 MOE.Directives
-    .directive('editableComboBox', function () {
+    .directive('editableDropdown', function () {
         return {
             restrict:'E',
             replace:true,
-            templateUrl:"core/controls/editable-combo-box-template.html",
+            templateUrl:"core/controls/editable-dropdown-template.html",
             scope:{
                 items:'=items',
                 additionalControlClasses: "@additionalControlClasses",

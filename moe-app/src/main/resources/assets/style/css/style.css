@@ -69,7 +69,7 @@ html[xmlns] .clearfix {
   width: 1280px;
 }
 /* Directives */
-.editable-combo-box ul li a {
+.editable-dropdown ul li a {
   cursor: pointer;
 }
 .dropdown-with-notes div {
