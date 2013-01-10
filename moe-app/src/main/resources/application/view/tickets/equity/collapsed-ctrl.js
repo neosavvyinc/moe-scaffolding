@@ -11,6 +11,16 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
 
     $scope.shareValues = ["Shares", "Cash", "Something"];
 
+    $scope.firstLastValues = ["FIFO", "LIFO"];
+
+    $scope.stopLimitText = "207.00";
+
+    $scope.stopLimitValues = ["Stop/Limit", "Go/Unlimited"];
+
+    $scope.discountValues = ["Discount", "Regular", "Extra Crispy", "Overpriced"];
+
+    $scope.discountText = "17%";
+
     $scope.accountInfo = {
         name: "John Doe"
         ,accountType: "Active Assets Account"

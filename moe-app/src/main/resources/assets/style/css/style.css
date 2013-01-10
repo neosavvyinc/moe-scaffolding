@@ -113,6 +113,12 @@ html[xmlns] .clearfix {
 .equity-ticket .detail .fa-number input {
   width: 23px;
 }
+.equity-ticket .equity-ticket-primary .shares input,
+.equity-ticket .detail .shares input,
+.equity-ticket .equity-ticket-primary .first-last input,
+.equity-ticket .detail .first-last input {
+  width: 60px;
+}
 .equity-ticket .equity-ticket-primary .fa-input-dropdown,
 .equity-ticket .detail .fa-input-dropdown {
   height: 20px;
