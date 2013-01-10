@@ -13,6 +13,20 @@ MOE.Controllers.controller('view.tickets.equity.DetailController',
             $scope.dateValueDateFormat = new DateAndFormat(new Date(), "%m/%d/%Y");
             $scope.dateValueTimeFormat = new DateAndFormat(new Date(), "%I:%M:%S %p");
             $scope.clientPositionValues = ["Assures Delivery", "Unassured Delivery", "Pizza Delivery"];
-            $scope.dispositionValues = $scope.strategyValues;
+            $scope.secondaryClientPositionValues = ["Not sure what goes here"];
+            $scope.dispositionValues = ['Holds Proceeds'];
 
-        }]);
+
+            $scope.selectedTimeInForce = '';
+            $scope.selectedClientPosition = '';
+            $scope.secondarySelectedClientPosition = '';
+
+            $scope.testSelected = function(){
+                console.log("timeInForce: " + $scope.selectedTimeInForce);
+                console.log("clientPosition: " + $scope.selectedClientPosition);
+                console.log("secondarySelectedClientPosition: " + $scope.secondarySelectedClientPosition);
+            }
+
+        }
+    ]
+);

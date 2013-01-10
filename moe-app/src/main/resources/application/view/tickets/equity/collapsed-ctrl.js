@@ -1,8 +1,8 @@
 'use strict'
 
 MOE.Controllers.controller('view.tickets.equity.CollapsedController',
-    ['$scope', '$rootScope', '$routeParams', 'configuration'
-        ,function ($scope, $rootScope, $routeParams, configuration) {
+    ['$scope', '$rootScope', '$routeParams', 'configuration', 'ticketManager'
+        ,function ($scope, $rootScope, $routeParams, configuration, ticketManager) {
 
     //Initialization
     $scope.financialAdvisorNumbers = [101, 102, "WNUA 95.5"];
@@ -30,5 +30,15 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
         ,accountType: "Active Assets Account"
         ,number: "101-023148"
     };
+
+    $scope.selectedFA = '';
+    $scope.selectedShareValue = '';
+    $scope.selectedFirstLast = '';
+
+    $scope.testSelected = function(){
+        console.log("fa: " + $scope.selectedFA);
+        console.log("shareValue: " + $scope.selectedShareValue);
+        console.log("firstLast: " + $scope.selectedFirstLast);
+    }
 
 }]);

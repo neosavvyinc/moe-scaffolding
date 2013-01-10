@@ -13,8 +13,6 @@ MOE.Services.factory('submitService', function (configuration, $q, $rootScope, $
              */
             serviceUrl = configuration.SUBMIT_URL;
 
-
-
             deferred = $q.defer();
 
             $http.get( serviceUrl ).

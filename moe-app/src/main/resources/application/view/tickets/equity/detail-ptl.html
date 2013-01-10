@@ -3,7 +3,7 @@
         <div class="controls">
             <div class="field">
                 <label>Time In Force</label>
-                <editable-combo-box items="timeInForceValues" additional-control-classes="span1"></editable-combo-box>
+                <editable-combo-box items="timeInForceValues" additional-control-classes="span1" data-selected-item="selectedTimeInForce"></editable-combo-box>
             </div>
             <div class="field">
                 <label>Discretion Enclosed</label>
@@ -37,7 +37,7 @@
                 <label>&nbsp;</label>
 
                 <div class="input">
-                    <input class="span4" type="text" placeholder="Send To Traider/Trader Instructions">
+                    <input class="span4" type="text" placeholder="Send To Trader/Trader Instructions">
                 </div>
             </div>
             <div class="field">
@@ -57,15 +57,14 @@
             </div>
             <div class="field">
                 <label>Client Position</label>
-                <editable-combo-box items="clientPositionValues"></editable-combo-box>
+                <editable-combo-box items="clientPositionValues" data-selected-item="selectedClientPosition"></editable-combo-box>
             </div>
             <div class="field">
                 <label>&nbsp;</label>
-                <editable-combo-box></editable-combo-box>
+                <editable-combo-box items="secondaryClientPositionValues" data-selected-item="secondarySelectedClientPosition"></editable-combo-box>
             </div>
             <div class="field">
                 <label>&nbsp;</label>
-
                 <div class="input">
                     <input class="span4" type="text" placeholder="Confirm Trailer">
                 </div>
@@ -74,6 +73,11 @@
                 <label>Disposition</label>
                 <dropdown-with-notes items="dispositionValues"></dropdown-with-notes>
             </div>
+            <div class="field">
+                <label>test</label>
+                <button ng-click="testSelected()">Test</button>
+            </div>
+
             <div class="final-checks">
                 <div class="field check-field">
                     <input type="checkbox">
