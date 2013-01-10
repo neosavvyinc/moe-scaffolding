@@ -15,4 +15,9 @@ MOE.Controllers.controller('view.sambuca.SambucaController',
 
             $scope.editableDropdownItems = ["Editable Dropdown", "Bootstrap", "Angular"];
             $scope.editableDropdownSelectedItem = $scope.editableDropdownItems[0];
+
+            $scope.inputAndSelectionItems = ["Input & Selection", "Low Cal", "Med Cal", "Beer Batter Fried"];
+            $scope.inputAndSelectionSelectedItem = $scope.inputAndSelectionItems[0];
+
+            $scope.searchTerm = null;
         }]);

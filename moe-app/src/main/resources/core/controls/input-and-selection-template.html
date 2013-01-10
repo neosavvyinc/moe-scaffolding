@@ -1,14 +1,14 @@
 <div class="input-and-selection input-append">
-    <input class="span1" id="type" type="text" ng-model="text">
+    <input class="span3" id="type" type="text" ng-model="text" placeholder="{{ placeholder }}">
 
     <div class="btn-group">
         <button class="btn dropdown-toggle" data-toggle="dropdown">
-            {{ selectedItem }}
+            {{ getItemLabel(selectedItem) }}
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
             <li ng-repeat="item in items">
-                <a ng-click="onClickItem(item)">{{ item }}<a/>
+                <a ng-click="onClickItem(item)">{{ getItemLabel(item) }}<a/>
             </li>
         </ul>
     </div>

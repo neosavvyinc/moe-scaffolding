@@ -7,6 +7,8 @@ MOE.Directives
             replace:true,
             templateUrl:"core/controls/search-input-template.html",
             scope:{
+                searchTerm: "=",
+                placeholder: "@"
             },
             link:function (scope, element, attrs) {
 
