@@ -7,42 +7,70 @@
 
     <li class="horizontal-list-item">
         <div id="accountInfo">
-            <p>{{accountInfo.name}}</p>
-            <p>{{accountInfo.accountType}}</p>
-            <p>{{accountInfo.number}}</p>
+            <p>{{ticket.accountInfo.name}}</p>
+            <p>{{ticket.accountInfo.accountType}}</p>
+            <p>{{ticket.accountInfo.number}}</p>
         </div>
     </li>
 
     <li class="horizontal-list-item">
-        <editable-dropdown class="fa-number" items="financialAdvisorNumbers" data-selected-item="ticket.faNumber"></editable-dropdown>
-    </li>
-    <li class="horizontal-list-item">
-        <button ng-click="testSelected()">Test</button>
-    </li>
-
-    <li class="horizontal-list-item">
-        <search-input></search-input>
+        <editable-dropdown
+                class="fa-number"
+                items="financialAdvisorNumbers"
+                data-selected-item="ticket.faNumber">
+        </editable-dropdown>
     </li>
 
     <li class="horizontal-list-item">
-        <button-group items="buyValues"></button-group>
+        <search-input data-search-term="ticket.symbol"></search-input>
+    </li>
+
+    <li class="horizontal-list-item">
+        <button-group
+                items="buyValues"
+                data-selected-item="ticket.side">
+        </button-group>
     </li>
     <li class="horizontal-list-item">
-        <editable-dropdown class="shares" items="shareValues" data-selected-item="ticket.selectedShareValue"></editable-dropdown>
+        <editable-dropdown
+                class="shares"
+                items="shareValues"
+                data-selected-item="ticket.selectedShareValue">
+        </editable-dropdown>
     </li>
     <li class="horizontal-list-item">
-        <input-and-selection items="stopLimitValues" text="stopLimitText"></input-and-selection>
+        <input-and-selection
+                items="stopLimitValues"
+                data-text="ticket.stopLimitAmount"
+                data-selected-item="ticket.stopLimit"
+                >
+        </input-and-selection>
     </li>
     <li class="horizontal-list-item">
-        <button-group items="cashMarginValues"></button-group>
+        <button-group
+                items="cashMarginValues"
+                data-selected-item="ticket.cashMargin">
+        </button-group>
     </li>
     <li class="horizontal-list-item">
-        <editable-dropdown class="first-last" items="firstLastValues" data-selected-item="ticket.selectedFirstLast"></editable-dropdown>
+        <editable-dropdown
+                class="first-last"
+                items="firstLastValues"
+                data-selected-item="ticket.selectedFirstLast">
+        </editable-dropdown>
     </li>
     <li class="horizontal-list-item">
-        <button-group items="solicitedValues"></button-group>
+        <button-group
+                items="solicitedValues"
+                data-selected-item="ticket.solicited">
+        </button-group>
     </li>
     <li class="horizontal-list-item">
-        <input-and-selection items="discountValues" text="discountText"></input-and-selection>
+        <input-and-selection
+                items="discountValues"
+                data-text="ticket.discountAmount"
+                data-selected-item="ticket.discountText">
+
+        </input-and-selection>
     </li>
 </ul>

@@ -2,7 +2,7 @@
 
 MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $http) {
 
-    this.ticket = {
+    var ticket = {
 
         accountInfo: {
             name: "John Doe",
@@ -13,22 +13,33 @@ MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $
         /**
          * Primary
          */
-        faNumber: "",
-        selectedShareValue: "",
-        selectedFirstLast: "",
+        faNumber: "def",
+        symbol: "IBM",
+        side: 'Buy',
+        selectedShareValue: "def",
+        stopLimit: "Stop/Limit",
+        stopLimitAmount: "109.00",
+        cashMargin: "Cash",
+        selectedFirstLast: "def",
+        solicited: "Solicited",
+        discountText: "Discount",
+        discountAmount: "50%",
+
 
         /**
          * Details
          */
-        selectedTimeInForce: '',
-        selectedClientPosition: '',
-        secondarySelectedClientPosition: ''
-    }
+        selectedTimeInForce: 'def',
+        selectedClientPosition: 'def',
+        secondarySelectedClientPosition: 'def',
+        selectedDisposition: 'def'
+
+    };
 
     return {
 
         getTicket:function () {
-            return this.ticket;
+            return ticket;
         }
 
     }
