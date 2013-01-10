@@ -9,6 +9,8 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
 
     $scope.buyValues = ["Buy", "Sell", "Sell Short"];
 
+    $scope.shareValues = ["Shares", "Cash", "Something"];
+
     $scope.accountInfo = {
         name: "John Doe"
         ,accountType: "Active Assets Account"
