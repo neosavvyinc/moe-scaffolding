@@ -7,14 +7,14 @@ MOE.Directives
             replace:true,
             template:'<div class="input"><input class="span2" type="text" ng-model="dateString"></div>',
             scope:{
-                date: "=date",
-                format: "@format"
+                date: "=",
+                format: "@"
             },
             link:function (scope, element, attrs) {
 
                 scope.$watch('date', function(newValue) {
                     if (newValue) {
-                        scope.dateString = newValue.strftime(scope.format);
+                        scope.dateString = newValue.strftime(scope.format || "%m-%d-%Y");
                     }
                     return null;
                 });
