@@ -83,7 +83,37 @@ html[xmlns] .clearfix {
   width: 1280px;
 }
 
+/* Angular Styles */
+input.ng-invalid {
+  background-color: #FA787E;
+}
+
+/* Global Styles */
+input.error {
+  background-color: #FA787E;
+}
+
 /* Directives */
+.advanced-text-input {
+  label.message.error {
+    color: red;
+    top: -4px;
+    position: relative;
+  }
+  label.message.top {
+
+  }
+  label.message.right {
+    display: inline-block;
+  }
+  label.message.bottom {
+
+  }
+  label.message.left {
+    display: inline-block;
+  }
+}
+
 .editable-dropdown {
   ul {
     li {
@@ -222,7 +252,7 @@ html[xmlns] .clearfix {
   -moz-border-radius: 4px;
   border-radius: 4px;
   h3 {
-
+    padding-left: 15px;
   }
   .components {
     padding: 0 40px 20px;
@@ -245,6 +275,15 @@ html[xmlns] .clearfix {
       input {
         width: 500px;
       }
+    }
+  }
+  .components.validation {
+    form {
+      margin: 0;
+    }
+    input {
+      padding-right: 20px;
+      width: 250px;
     }
   }
 }

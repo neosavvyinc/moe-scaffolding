@@ -6,24 +6,17 @@
  */
 
 var MOE = MOE || {};
-MOE.Workers = MOE.Workers || {};
 
 MOE.Constants = angular.module('moe.constants', []);
-
-/*
- * Worker Definitions
- */
-MOE.Workers.Validation = angular.module('moe.workers.validation', []);
-
+MOE.Workers = angular.module('moe.workers', []);
 MOE.Managers = angular.module('moe.managers', []);
-
 MOE.Services = angular.module('moe.services', []);
 MOE.Controllers = angular.module('moe.controllers', []);
 MOE.Filters = angular.module('moe.filters', []);
 MOE.Directives = angular.module('moe.directives', []);
 
 //Global Accessor For Dependencies
-MOE.Dependencies = ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers.validation'];
+MOE.Dependencies = ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers', 'moe.managers'];
 
 //Application Initialization
 angular.module('moe', MOE.Dependencies).
@@ -51,12 +44,11 @@ angular.module('moe', MOE.Dependencies).
             when('/ticket', {templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'}).
             when('/review', {templateUrl:'application/view/tickets/equity/equity-review-ticket-ptl.html'}).
             when('/validation', {templateUrl:'application/view/validation/validation-ptl.html'}).
-            when('/sambuca', {templateUrl: 'application/view/sambuca/sambuca-ptl.html'}).
+            when('/sambuca', {templateUrl:'application/view/sambuca/sambuca-ptl.html'}).
             otherwise({templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'});
     }]).
-    run(['$location', '$rootScope',
-    function ($location, $rootScope) {
-        $rootScope.isMockMode = $location.search().mock || $location.search().mockMode;
-
-        console.log("moe.run() isMockMode=" + $rootScope.isMockMode);
+    run(['$location', '$rootScope', '$routeParams',
+    function ($location, $rootScope, $routeParams) {
+        $rootScope.isMockMode = ($location.search().mock === 'true') || ($location.search().mockMode === 'true');
+        $rootScope.isFailMode = ($location.search().fail === 'true') || ($location.search().failMode === 'true');
     }]);

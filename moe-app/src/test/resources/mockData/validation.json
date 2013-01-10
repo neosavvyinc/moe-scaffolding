@@ -1,3 +1,4 @@
 {
-    "validationMessage": "everything worked"
+    "valid": true,
+    "message": "Things are peachy, from a remote validation perspective."
 }
