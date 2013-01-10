@@ -7,7 +7,9 @@ MOE.Directives
             replace:true,
             templateUrl:"core/controls/button-dropdown-template.html",
             scope:{
-                items: "=items"
+                items: "=items",
+                selectedItem: "=selectedItem",
+                labelField: "@labelField"
             },
             link:function (scope, element, attrs) {
                 //Action Handlers
@@ -15,16 +17,20 @@ MOE.Directives
                     scope.selectedItem = item;
                 };
 
-                scope.$watch('items', function(newValue) {
-                    if (newValue && newValue.length) {
-                        scope.selectedItem = newValue[0];
-                    } else {
-                        scope.selectedItem = "No items";
+                //Getters
+                scope.getItemLabel = function(item) {
+                    if (item && scope.labelField) {
+                        return item[scope.labelField];
                     }
+                    return item;
+                };
+
+                //Watchers
+                scope.$watch('selectedItem', function(newValue) {
+                   scope.selectedItemDisplay = scope.getItemLabel(newValue);
                 });
 
                 //Initialization
-                scope.selectedItem = null;
                 $(element).find('dropdown-toggle').dropdown();
             }
         }

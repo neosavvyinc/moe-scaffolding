@@ -1,6 +1,11 @@
 <div class="button-dropdown btn-group">
-    <a class="btn dropdown-toggle" data-toggle="dropdown"> <span>{{ selectedItem }}</span> <span class="caret"></span></a>
+    <a class="btn dropdown-toggle" data-toggle="dropdown">
+        <span>{{ selectedItemDisplay }}</span>
+        <span class="caret"></span>
+    </a>
     <ul class="dropdown-menu">
-        <li ng-repeat="item in items" ng-click="onClickItem(item)"><a>{{ item }}</a></li>
+        <li ng-repeat="item in items" ng-click="onClickItem(item)">
+            <a>{{ getItemLabel(item) }}</a>
+        </li>
     </ul>
 </div>

@@ -94,51 +94,101 @@ html[xmlns] .clearfix {
   color: #024578;
 }
 /* Tickets */
+.equity-ticket,
+.validation-ptl,
+.sambuca-ptl {
+  margin-top: 30px;
+}
 .equity-ticket ul,
-.equity-ticket ol {
+.validation-ptl ul,
+.sambuca-ptl ul,
+.equity-ticket ol,
+.validation-ptl ol,
+.sambuca-ptl ol {
   margin: 0 0 10px 0px;
 }
-.equity-ticket p {
+.equity-ticket p,
+.validation-ptl p,
+.sambuca-ptl p {
   margin: 0 0 0 10px;
 }
-.equity-ticket input {
+.equity-ticket input,
+.validation-ptl input,
+.sambuca-ptl input {
   height: 12px;
 }
-.equity-ticket .btn-group > .btn {
+.equity-ticket .btn-group > .btn,
+.validation-ptl .btn-group > .btn,
+.sambuca-ptl .btn-group > .btn {
   font-size: 10px;
   padding: 0px 2px 0px 2px;
 }
-.equity-ticket .add-on {
+.equity-ticket .add-on,
+.validation-ptl .add-on,
+.sambuca-ptl .add-on {
   height: 12px;
 }
-.equity-ticket i {
+.equity-ticket i,
+.validation-ptl i,
+.sambuca-ptl i {
   margin-top: -3px;
   margin-left: -2px;
 }
 .equity-ticket .equity-ticket-primary .horizontal-list-item,
-.equity-ticket .detail .horizontal-list-item {
+.validation-ptl .equity-ticket-primary .horizontal-list-item,
+.sambuca-ptl .equity-ticket-primary .horizontal-list-item,
+.equity-ticket .detail .horizontal-list-item,
+.validation-ptl .detail .horizontal-list-item,
+.sambuca-ptl .detail .horizontal-list-item {
   display: block;
   float: left;
   margin-right: 10px;
 }
 .equity-ticket .equity-ticket-primary .equity-ticket-field,
-.equity-ticket .detail .equity-ticket-field {
+.validation-ptl .equity-ticket-primary .equity-ticket-field,
+.sambuca-ptl .equity-ticket-primary .equity-ticket-field,
+.equity-ticket .detail .equity-ticket-field,
+.validation-ptl .detail .equity-ticket-field,
+.sambuca-ptl .detail .equity-ticket-field {
   line-height: 10px;
   height: 10px;
 }
 .equity-ticket .equity-ticket-primary .fa-number input,
-.equity-ticket .detail .fa-number input {
+.validation-ptl .equity-ticket-primary .fa-number input,
+.sambuca-ptl .equity-ticket-primary .fa-number input,
+.equity-ticket .detail .fa-number input,
+.validation-ptl .detail .fa-number input,
+.sambuca-ptl .detail .fa-number input {
   width: 23px;
 }
 .equity-ticket .equity-ticket-primary .shares input,
+.validation-ptl .equity-ticket-primary .shares input,
+.sambuca-ptl .equity-ticket-primary .shares input,
 .equity-ticket .detail .shares input,
+.validation-ptl .detail .shares input,
+.sambuca-ptl .detail .shares input,
 .equity-ticket .equity-ticket-primary .first-last input,
-.equity-ticket .detail .first-last input {
+.validation-ptl .equity-ticket-primary .first-last input,
+.sambuca-ptl .equity-ticket-primary .first-last input,
+.equity-ticket .detail .first-last input,
+.validation-ptl .detail .first-last input,
+.sambuca-ptl .detail .first-last input {
   width: 60px;
 }
 .equity-ticket .equity-ticket-primary .fa-input-dropdown,
-.equity-ticket .detail .fa-input-dropdown {
+.validation-ptl .equity-ticket-primary .fa-input-dropdown,
+.sambuca-ptl .equity-ticket-primary .fa-input-dropdown,
+.equity-ticket .detail .fa-input-dropdown,
+.validation-ptl .detail .fa-input-dropdown,
+.sambuca-ptl .detail .fa-input-dropdown {
   height: 20px;
+}
+.validation-ptl,
+.sambuca-ptl {
+  border: 1px solid #E5E5E5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .detail .expanded .controls .field {
   display: inline-block;
