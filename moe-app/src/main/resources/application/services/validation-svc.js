@@ -1,14 +1,9 @@
 'use strict'
 
-MOE.Services.factory('productService', function (configuration, $q, $rootScope, $http) {
+MOE.Services.factory('validationService', function (configuration, $q, $rootScope, $http) {
     return {
 
-        /**
-         * Retrieves simple products
-         * @param {string} id the name of the single menu item to get.
-         * @return {Promise} Resolves to JSON array of products.
-         */
-        get:function (id) {
+        validate:function ( fields ) {
 
             var deferred, serviceUrl;
 
@@ -16,7 +11,8 @@ MOE.Services.factory('productService', function (configuration, $q, $rootScope, 
              * This should be based on isMockMode and after we have
              * real services should be made to depend properly on it
              */
-            serviceUrl = configuration.PRODUCTS_URL;
+            serviceUrl = configuration.VALIDATION_URL;
+
 
             deferred = $q.defer();
 

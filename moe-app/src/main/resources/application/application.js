@@ -10,8 +10,12 @@ MOE.Workers = MOE.Workers || {};
 
 MOE.Constants = angular.module('moe.constants', []);
 
-/* Worker Definitions */
+/*
+ * Worker Definitions
+ */
 MOE.Workers.Validation = angular.module('moe.workers.validation', []);
+
+MOE.Managers = angular.module('moe.managers', []);
 
 MOE.Services = angular.module('moe.services', []);
 MOE.Controllers = angular.module('moe.controllers', []);
