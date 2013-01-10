@@ -191,10 +191,14 @@ html[xmlns] .clearfix {
 .sambuca-ptl .components .row h4 {
   font-size: 14px;
 }
-.validation-ptl .components .row div,
-.sambuca-ptl .components .row div {
+.validation-ptl .components .row div.item,
+.sambuca-ptl .components .row div.item {
   display: inline;
   clear: none;
   float: left;
   padding-right: 10px;
+}
+.validation-ptl .components .notes input,
+.sambuca-ptl .components .notes input {
+  width: 500px;
 }
