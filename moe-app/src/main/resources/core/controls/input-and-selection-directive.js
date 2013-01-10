@@ -7,24 +7,25 @@ MOE.Directives
             replace:true,
             templateUrl:"core/controls/input-and-selection-template.html",
             scope:{
-                text: "=text",
-                items: "=items"
+                text: "=",
+                items: "=",
+                selectedItem: "=",
+                labelField: "@",
+                placeholder: "@"
             },
             link:function (scope, element, attrs) {
+                //Getters
+                scope.getItemLabel = function(item) {
+                    if (item && scope.labelField) {
+                        return item[scope.labelField];
+                    }
+                    return item;
+                };
 
                 //Action Handlers
                 scope.onClickItem = function(item) {
                     scope.selectedItem = item;
                 };
-
-                //Watchers
-                scope.$watch('items', function(newValue) {
-                    if (newValue && newValue.length) {
-                        scope.selectedItem = newValue[0];
-                    } else {
-                        scope.selectedItem = "No items";
-                    }
-                });
             },
         }
     });
