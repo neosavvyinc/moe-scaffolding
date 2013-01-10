@@ -21,11 +21,11 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
      * This needs to move to the ticket manager
      * @type {Object}
      */
-    $scope.accountInfo = {
-        name: "John Doe"
-        ,accountType: "Active Assets Account"
-        ,number: "101-023148"
-    };
+//    $scope.accountInfo = {
+//        name: "John Doe"
+//        ,accountType: "Active Assets Account"
+//        ,number: "101-023148"
+//    };
 
     $scope.ticket = ticketManager.getTicket();
 }]);
