@@ -1,20 +1,25 @@
 <div class="validation-ptl" ng-controller="view.validation.ValidationController">
     <h3>Validation Flows</h3>
 
-    <div class="components">
+    <div class="components validation">
         <div class="row">
             <h4>Angular Client Side Validation</h4>
+
             <form novalidate name="angular-client-side">
                 <div class="item">
                     <label>Required</label>
-                    <input type="email" ng-model="emailValue" />
+                    <advanced-text-input data-model="requiredValue" data-error-side="bottom" input-type="text"
+                                         validation="required"></advanced-text-input>
                 </div>
                 <div class="item">
-                    <label>Email</label>
-                    <advanced-text-input data-model="urlValue" data-error-side="right" input-type="email" validation="required, minlength=10, remote"></advanced-text-input>
+                    <label>Required Email</label>
+                    <advanced-text-input data-model="emailValue" data-error-side="bottom" input-type="email"
+                                         validation="required"></advanced-text-input>
                 </div>
                 <div class="item">
                     <label>Url</label>
+                    <advanced-text-input data-model="urlValue" data-error-side="bottom"
+                                         input-type="url"></advanced-text-input>
                 </div>
             </form>
         </div>
@@ -23,12 +28,49 @@
         </div>
         <div class="row">
             <h4>Server Side Validation</h4>
+
+            <form novalidate name="server-side">
+                <div class="item">
+                    <advanced-text-input data-model="serverSideModel" data-error-side="bottom" input-type="text"
+                                         validation="remote"></advanced-text-input>
+                </div>
+            </form>
         </div>
         <div class="row">
             <h4>Client & Server Side Validation</h4>
+
+            <form novalidate name="client-and-server-side">
+                <div class="item">
+                    <advanced-text-input data-model="clientAndServerSideModel" data-error-side="bottom"
+                                         input-type="email" validation="remote"></advanced-text-input>
+                </div>
+            </form>
         </div>
         <div class="row">
             <h4>Validation Error Display Options</h4>
+
+            <form novalidate name="error-display-options-top">
+                <div class="item">
+                    <advanced-text-input error-side="top" message="Top Error Message" data-model="topErrorMessageModel"
+                                         input-type="text"></advanced-text-input>
+                </div>
+                <div class="item">
+                    <advanced-text-input error-side="right" message="Right Error Message"
+                                         data-model="rightErrorMessageModel" input-type="text"></advanced-text-input>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <form novalidate name="error-display-options-bottom">
+                <div class="item">
+                    <advanced-text-input error-side="bottom" message="Bottom Error Message"
+                                         data-model="bottomErrorMessageModel" input-type="text"></advanced-text-input>
+                </div>
+                <div class="item">
+                    <advanced-text-input error-side="left" message="Left Error Message"
+                                         data-model="leftErrorMessageModel" input-type="text"></advanced-text-input>
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -77,6 +77,17 @@ input.error {
   background-color: #FA787E;
 }
 /* Directives */
+.advanced-text-input label.message.error {
+  color: red;
+  top: -4px;
+  position: relative;
+}
+.advanced-text-input label.message.right {
+  display: inline-block;
+}
+.advanced-text-input label.message.left {
+  display: inline-block;
+}
 .editable-dropdown ul li a {
   cursor: pointer;
 }
@@ -213,4 +224,9 @@ input.error {
 .validation-ptl .components .notes input,
 .sambuca-ptl .components .notes input {
   width: 500px;
+}
+.validation-ptl .components.validation input,
+.sambuca-ptl .components.validation input {
+  padding-right: 20px;
+  width: 250px;
 }

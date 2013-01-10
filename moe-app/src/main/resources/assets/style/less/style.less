@@ -95,17 +95,22 @@ input.error {
 
 /* Directives */
 .advanced-text-input {
+  label.message.error {
+    color: red;
+    top: -4px;
+    position: relative;
+  }
   label.message.top {
 
   }
   label.message.right {
-
+    display: inline-block;
   }
   label.message.bottom {
 
   }
   label.message.left {
-
+    display: inline-block;
   }
 }
 
@@ -270,6 +275,12 @@ input.error {
       input {
         width: 500px;
       }
+    }
+  }
+  .components.validation {
+    input {
+      padding-right: 20px;
+      width: 250px;
     }
   }
 }

@@ -10,7 +10,6 @@ MOE.Directives
         replace:true,
         templateUrl:"core/controls/validation/advanced-text-input-template.html",
         scope:{
-            errorSide:"@",
             model:"=",
             form:"="
         },
@@ -46,9 +45,17 @@ MOE.Directives
                 }
             }
 
+            //Re-configure UI for error message placement
+            var errorSide = tAttrs['errorSide'];
+            if (errorSide && errorSide != "") {
+                if (errorSide.toLowerCase() == "top" || errorSide.toLowerCase() == "left") {
+                    tElement[0].appendChild(tElement[0].removeChild(input));
+                }
+            }
+
             return function (scope, iElement, iAttrs) {
                 //Determines if remote validation is enabled
-                var remoteValidation = (validation.indexOf('remote') != -1);
+                var remoteValidation = (validation && validation.indexOf('remote') != -1);
 
                 //Handlers
                 var handleRemoteValidation = function (result) {
@@ -63,12 +70,15 @@ MOE.Directives
                         if (newValue) {
                             validationService.validate(newValue).
                                 then(handleRemoteValidation);
+                        } else {
+                            scope.message = null;
                         }
                     });
                 }
 
                 //Initialization
-                scope.errorSide = scope.errorSide || "right";
+                scope.errorSide = iAttrs.errorSide || "bottom";
+                scope.message = iAttrs.message;
             };
         }
     }
