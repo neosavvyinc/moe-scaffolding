@@ -2,13 +2,8 @@
 
 MOE.Directives
     .directive('advancedTextInput', function () {
-        var angularValidationTypeMap = {
-            'angular-text':"text", 'angular-number':"number", 'angular-url':"url", 'angular-email':"email", 'angular-radio':"radio", 'angular-checkbox':"checkbox"
-        };
-
-        var angularValidationDirectiveMap = {
-            'angular-required':"required", 'angular-pattern':"pattern", 'angular-minlength':"minlength", 'angular-maxlength':"maxlength", 'angular-min':"min", 'angular-max':"max"
-        }
+        var angularValidationTypes = ["text", "number", "url", "email", "radio", "checkbox"];
+        var angularValidationDirectives = ["required", "pattern", "minlength", "maxlength", "min", "max"];
 
         return {
             restrict:'E',
@@ -31,13 +26,24 @@ MOE.Directives
 
                 var validation = tAttrs['validation'];
                 if (validation && validation != "") {
-                    var validators = validation.split(",");
+                    var validators = validation.replace(" ", "").split(",");
 
                     for (var i = 0; i < validators.length; i++) {
-                        console.log(validators[i]);
+                        var validator = validators[i];
+
+                        //Determine if the validator is in key/value format
+                        var keyValue = null;
+                        if (validator.indexOf("=") != -1) {
+                            keyValue = validator.split("=");
+                        }
+
+                        //Determine how to add the angular directive
+                        if (angularValidationDirectives.indexOf(validator) != -1) {
+                            input.setAttribute(validator, true);
+                        } else if (keyValue && angularValidationDirectives.indexOf(keyValue[0]) != -1) {
+                            input.setAttribute(keyValue[0], keyValue[1]);
+                        }
                     }
-
-
                 }
 
                 return function (scope, iElement, iAttrs) {
@@ -45,7 +51,8 @@ MOE.Directives
                     var input = tElement[0].getElementsByTagName('input')[0];
                     var form = input.form;
 
-
+                    //Initialization
+                    scope.errorSide = scope.errorSide || "right";
                 };
             }
         }
