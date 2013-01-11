@@ -55,6 +55,21 @@ describe('The Equity Ticket', function(){
 
     });
 
+    it('Should verify that buy, sell, sell short should be available in the basic equity ticket', function() {
+
+        browser().navigateTo('/');
+        expect(browser().window().hash()).toMatch('');
+
+        var buyElement = element("#sideButtons button:nth-child(1)"),
+            sellElement = element("#sideButtons button:nth-child(2)"),
+            sellShortElement = element("#sideButtons button:nth-child(3)");
+
+        expect(buyElement.text()).toMatch("Buy");
+        expect(sellElement.text()).toMatch("Sell");
+        expect(sellShortElement.text()).toMatch("Sell Short");
+
+    });
+
     it('Should have a valid review ticket',function(){
         browser().navigateTo('/#review');
         expect(browser().window().hash()).toMatch('/review');
