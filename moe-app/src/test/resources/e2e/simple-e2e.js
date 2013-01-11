@@ -70,6 +70,57 @@ describe('The Equity Ticket', function(){
 
     });
 
+    it('Should verify clicking on buy correctly updates review ticket', function() {
+
+        browser().navigateTo('/');
+        expect(browser().window().hash()).toMatch('');
+
+        var buyElement = element("#sideButtons button:nth-child(1)");
+        buyElement.click();
+
+        var submit = element("#submitOrders");
+        submit.click();
+        expect(browser().window().hash()).toMatch('/review');
+
+        var sideVerifyElement = element("#side", '');
+        expect(sideVerifyElement.text()).toMatch("Side: Buy");
+
+    });
+
+    it('Should verify clicking on sell correctly updates review ticket', function() {
+
+        browser().navigateTo('/');
+        expect(browser().window().hash()).toMatch('');
+
+        var buyElement = element("#sideButtons button:nth-child(2)");
+        buyElement.click();
+
+        var submit = element("#submitOrders");
+        submit.click();
+        expect(browser().window().hash()).toMatch('/review');
+
+        var sideVerifyElement = element("#side", '');
+        expect(sideVerifyElement.text()).toMatch("Side: Sell");
+
+    });
+
+    it('Should verify clicking on sell short correctly updates review ticket', function() {
+
+        browser().navigateTo('/');
+        expect(browser().window().hash()).toMatch('');
+
+        var buyElement = element("#sideButtons button:nth-child(3)");
+        buyElement.click();
+
+        var submit = element("#submitOrders");
+        submit.click();
+        expect(browser().window().hash()).toMatch('/review');
+
+        var sideVerifyElement = element("#side", '');
+        expect(sideVerifyElement.text()).toMatch("Side: Sell Short");
+
+    });
+
     it('Should have a valid review ticket',function(){
         browser().navigateTo('/#review');
         expect(browser().window().hash()).toMatch('/review');
