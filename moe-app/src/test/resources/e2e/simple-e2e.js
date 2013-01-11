@@ -21,18 +21,15 @@ describe('The Equity Ticket', function(){
 
     it('Should have a FA Number Dropdown and support changing values from 101 to 102', function(){
 
-        input('text').enter('102');
-        expect(input('text').val()).toMatch('102');
+        using('#faNumberInput', '');
+        input('selectedItem').enter('105');
 
         var submit = element("#submitOrders");
         submit.click();
         expect(browser().window().hash()).toMatch('/review');
 
         var faNumElem = element("#faNumber");
-        expect(faNumElem.text()).toMatch("FA Number: 102");
-
-
-
+        expect(faNumElem.text()).toMatch("FA Number: 105");
     });
 
     it('Should have a valid review ticket',function(){
@@ -40,7 +37,6 @@ describe('The Equity Ticket', function(){
         expect(browser().window().hash()).toMatch('/review');
         var faNumElem = element('#faNumber');
         expect(faNumElem.text()).toBe("FA Number: def");
-
     })
 
 });

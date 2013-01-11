@@ -187,6 +187,12 @@ input.error {
   display: inline-block;
   margin: 0 15px;
 }
+.equity-ticket-review {
+  font-size: 13pt;
+}
+.equity-ticket-review ul li {
+  list-style-type: none;
+}
 .validation-ptl,
 .sambuca-ptl {
   margin-top: 30px;

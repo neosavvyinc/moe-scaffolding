@@ -1,13 +1,15 @@
 
-<div class="equity-ticket" ng-controller="view.tickets.equity.EquityReviewTicketController">
+<div class="equity-ticket equity-ticket-review" ng-controller="view.tickets.equity.EquityReviewTicketController">
 
     <div class="well">
         <ul class="well">
+            <h4>Account Information</h4>
             <li>Account Name: {{ticket.accountInfo.name}}</li>
             <li>Account Type: {{ticket.accountInfo.accountType}}</li>
             <li>Account Number: {{ticket.accountInfo.number}}</li>
         </ul>
         <ul id="primaryValues" class="well">
+            <h4>Equity Ticket Information</h4>
             <li id="faNumber">FA Number: {{ticket.faNumber}}</li>
             <li>Symbol: {{ticket.symbol}}</li>
             <li>Side: {{ticket.side}}</li>
