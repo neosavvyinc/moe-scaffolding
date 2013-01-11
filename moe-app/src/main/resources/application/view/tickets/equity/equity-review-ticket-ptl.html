@@ -4,53 +4,23 @@
     <div class="well">
         <ul class="well">
             <h4>Account Information</h4>
-            <li>
-               Account Name: {{ticket.accountInfo.name}}
-            </li>
-            <li>
-               Account Type: {{ticket.accountInfo.accountType}}
-            </li>
-            <li>
-               Account Number: {{ticket.accountInfo.number}}
-            </li>
-
+            <li>Account Name: {{ticket.accountInfo.name}}</li>
+            <li>Account Type: {{ticket.accountInfo.accountType}}</li>
+            <li>Account Number: {{ticket.accountInfo.number}}</li>
         </ul>
-
-        <ul class="well">
+        <ul id="primaryValues" class="well">
             <h4>Equity Ticket Information</h4>
-            <li>
-                FA Number: {{ticket.faNumber}}
-            </li>
-            <li>
-                Symbol: {{ticket.symbol}}
-            </li>
-            <li>
-                Side: {{ticket.side}}
-            </li>
-            <li>
-                Share Value: {{ticket.selectedShareValue}}
-            </li>
-            <li>
-                Stop / Limit: {{ticket.stopLimit}}
-            </li>
-            <li>
-                Stop / Limit Amount: {{ticket.stopLimitAmount}}
-            </li>
-            <li>
-                Cash/ Margin: {{ticket.cashMargin}}
-            </li>
-            <li>
-                VSP Method: {{ticket.selectedFirstLast}}
-            </li>
-            <li>
-                Solicited/Unsolicited: {{ticket.solicited}}
-            </li>
-            <li>
-                Discount Text: {{ticket.discountText}}
-            </li>
-            <li>
-                Discount Amount: {{ticket.discountAmount}}
-            </li>
+            <li id="faNumber">FA Number: {{ticket.faNumber}}</li>
+            <li>Symbol: {{ticket.symbol}}</li>
+            <li>Side: {{ticket.side}}</li>
+            <li>Share Value: {{ticket.selectedShareValue}}</li>
+            <li>Stop / Limit: {{ticket.stopLimit}}</li>
+            <li>Stop / Limit Amount: {{ticket.stopLimitAmount}}</li>
+            <li>Cash/ Margin: {{ticket.cashMargin}}</li>
+            <li>VSP Method: {{ticket.selectedFirstLast}}</li>
+            <li>Solicited/Unsolicited: {{ticket.solicited}}</li>
+            <li>Discount Text: {{ticket.discountText}}</li>
+            <li>Discount Amount: {{ticket.discountAmount}}</li>
         </ul>
     </div>
     <div class="row">
