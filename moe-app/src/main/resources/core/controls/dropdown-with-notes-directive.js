@@ -10,7 +10,8 @@ MOE.Directives
                 items:"=",
                 selectedItem: "=",
                 labelField:"@",
-                noteField:"@"
+                noteField:"@",
+                inputIdValue: "@"
             },
             link:function (scope, element, attrs) {
 

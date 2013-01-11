@@ -8,7 +8,8 @@ MOE.Directives
             template:'<div class="input"><input class="span2" type="text" ng-model="dateString"></div>',
             scope:{
                 date: "=",
-                format: "@"
+                format: "@",
+                inputIdValue: "@"
             },
             link:function (scope, element, attrs) {
 
