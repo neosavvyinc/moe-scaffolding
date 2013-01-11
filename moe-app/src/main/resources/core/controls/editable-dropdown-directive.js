@@ -10,7 +10,8 @@ MOE.Directives
                 items:'=items',
                 additionalControlClasses: "@additionalControlClasses",
                 selectedItem: "=",
-                inputIdValue: "@"
+                inputIdValue: "@",
+                dropdownIdValue: "@"
             },
             link:function (scope, element, attrs) {
 

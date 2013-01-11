@@ -121,6 +121,24 @@ describe('The Equity Ticket', function(){
 
     });
 
+    it('Should support selecting cash from the dropdown beside side', function(){
+
+        browser().navigateTo('/');
+        expect(browser().window().hash()).toMatch('');
+
+        var cashItemElement = element("#sharesMenuItems li:nth-child(2) a",'');
+        expect(cashItemElement.text()).toMatch("Cash");
+        cashItemElement.click();
+
+        var submit = element("#submitOrders");
+        submit.click();
+        expect(browser().window().hash()).toMatch('/review');
+
+        var sharesVerifyElement = element("#shareValue", '');
+        expect(sharesVerifyElement.text()).toMatch("Share Value: Cash");
+
+    });
+
     it('Should have a valid review ticket',function(){
         browser().navigateTo('/#review');
         expect(browser().window().hash()).toMatch('/review');
