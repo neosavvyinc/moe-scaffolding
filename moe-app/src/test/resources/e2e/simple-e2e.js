@@ -31,8 +31,28 @@ describe('The Equity Ticket', function(){
         submit.click();
         expect(browser().window().hash()).toMatch('/review');
 
-        var faNumElem = element("#faNumber");
-        expect(faNumElem.text()).toMatch("FA Number: 105");
+        var faVerifyNumElem = element("#faNumber");
+        expect(faVerifyNumElem.text()).toMatch("FA Number: 105");
+    });
+
+    it('Should allow editting the ticket symbol, and reflect it on the review ticket', function() {
+        browser().navigateTo('/');
+        expect(browser().window().hash()).toMatch('');
+
+        var symbolElement = element("#symbolInput", '');
+        expect(symbolElement.val()).toMatch("IBM");
+
+        using('#symbolInput', '');
+        input('searchTerm').enter('AAPL');
+
+        var submit = element("#submitOrders");
+        submit.click();
+        expect(browser().window().hash()).toMatch('/review');
+
+
+        var symbolVerifyElem = element("#symbol", '');
+        expect(symbolVerifyElem.text()).toMatch("Symbol: AAPL");
+
     });
 
     it('Should have a valid review ticket',function(){
