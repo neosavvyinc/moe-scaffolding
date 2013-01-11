@@ -1,27 +1,36 @@
 'use strict';
 
-define(['jquery', 'console', 'angular', 'core/controls/date-time-input-directive',
-    function ($, Console, angular, dateTimeInput) {
-    var body = $('body');
+var body = $('body');
 
-    describe("Date & Time input directive", function() {
-       var scope, $$compile;
+var simpleHtml = '<date-time-input data-date="date" format="%m-%d-%Y"></date-time-input>',
+    htmlWithFormat = '<date-time-input data-date="date" format="%B %d, %Y"></date-time-input>'
 
-        beforeEach(module('dateTimeInput'));
+describe("Date Time input directive", function () {
+    var scope, $$compile;
 
-        beforeEach(inject(function($rootScope, $compile) {
-            scope = $rootScope.$new();
-            $$compile = $compile;
+    beforeEach(module('moe.directives'));
 
-            //Define Everything In Scope For Directive
-            scope.date = new Date(1990, 0, 15); // January 15th, 1990
-            scope.format = "%B %d, %Y";
-        }));
+    beforeEach(inject(function ($rootScope, $compile) {
+        scope = $rootScope.$new();
+        $$compile = $compile;
 
-        afterEach(function() {
-            body.empty();
-        })
+        //Define Everything In Scope For Directive
+        scope.date = new Date(1990, 0, 15); // January 15th, 1990
+    }));
 
+    afterEach(function () {
+        body.empty();
     });
 
-}]);
+    it('should compile the directive', function () {
+        expect(body.find('input').length).toBe(0);
+
+        var mockDateInput = $$compile(simpleHtml)(scope);
+
+        body.append(mockDateInput);
+        scope.$digest();
+
+        expect(mockDateInput.find('input').length).toBe(1);
+        expect(body.find('input').length).toBe(1);
+    });
+});
