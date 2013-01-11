@@ -37,7 +37,7 @@ angular.module('moe', MOE.Dependencies).
         }
 
         //HTML 5 Push States Enabled
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
 
         //Init Routes
         $routeProvider.

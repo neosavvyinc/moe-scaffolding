@@ -11,7 +11,8 @@ MOE.Directives
                 items: "=",
                 selectedItem: "=",
                 labelField: "@",
-                placeholder: "@"
+                placeholder: "@",
+                inputIdValue: "@"
             },
             link:function (scope, element, attrs) {
                 //Getters
