@@ -19,7 +19,10 @@ describe('The Equity Ticket', function(){
         expect(accountNumberEl.text()).toMatch('101-023148');
     });
 
-    it('Should have a FA Number Dropdown and support changing values from 101 to 102', function(){
+    it('Should have a FA Number Dropdown and support changing values to 105', function(){
+
+        var faNumElem = element("#faNumberInput");
+        expect(faNumElem.val()).toMatch("101");
 
         using('#faNumberInput', '');
         input('selectedItem').enter('105');
