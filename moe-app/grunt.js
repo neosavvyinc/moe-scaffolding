@@ -33,11 +33,26 @@ module.exports = function(grunt) {
                 singleRun: true,
                 browsers: ['PhantomJS']
             }
-        }
+        },
+//        markdown: {
+//            all: {
+//                files: ['test/**.md'],
+//                dest: 'test/out',
+//                options: {
+//                    gfm: true,
+//                    highlight: manual
+//                    codeLines: {
+//                        before: '<span>',
+//                        after: '</span>'
+//                    }
+//                }
+//            }
+//        }
 
     });
 
     grunt.loadNpmTasks('gruntacular');
+//    grunt.loadNpmTasks('grunt-markdown');
 
     // Default task.
     grunt.registerTask('default', 'testacular:continuous');
