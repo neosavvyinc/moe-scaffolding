@@ -39,9 +39,15 @@ files = [
 
     //directives
     'main/resources/core/controls/*.js',
+    'main/resources/core/controls/*.html',
     'test/resources/unit/core/controls/*.js'
 
 ];
+
+// generate js files from html templates
+preprocessors = {
+    '**/*.html': 'html2js'
+};
 
 // list of files to exclude
 exclude = [];

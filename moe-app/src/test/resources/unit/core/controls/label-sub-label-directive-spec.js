@@ -1,10 +1,8 @@
 'use strict';
 
-var body = $('body');
-
-var simpleHtml = '<label-sub-label label="Mike" sub-label="Ike"></label-sub-label>';
-
 describe("Label sub label directive", function () {
+    var body = $('body');
+    var simpleHtml = '<label-sub-label label="Mike" sub-label="Ike"></label-sub-label>';
     var scope, $$compile;
 
     beforeEach(module('moe.directives'));
