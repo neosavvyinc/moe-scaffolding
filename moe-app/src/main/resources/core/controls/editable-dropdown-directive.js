@@ -8,25 +8,23 @@ MOE.Directives
             templateUrl:"core/controls/editable-dropdown-template.html",
             scope:{
                 items:'=items',
-                additionalControlClasses: "@additionalControlClasses",
-                selectedItem: "=",
-                inputIdValue: "@",
-                dropdownIdValue: "@"
+                additionalControlClasses:"@additionalControlClasses",
+                selectedItem:"=",
+                inputIdValue:"@",
+                dropdownIdValue:"@"
             },
             link:function (scope, element, attrs) {
 
                 scope.$watch('items', function (newValue) {
-
-                        if (newValue && newValue.length) {
-                            scope.selectedItem = newValue[0];
-                        } else {
-                            scope.selectedItem = "No Value Provided";
-                        }
-
+                    if (newValue && newValue.length) {
+                        scope.selectedItem = newValue[0];
+                    } else {
+                        scope.selectedItem = "No Value Provided";
+                    }
                 });
 
                 //Action Handlers
-                scope.onClickItem = function(item) {
+                scope.onClickItem = function (item) {
                     scope.selectedItem = item;
                 };
 

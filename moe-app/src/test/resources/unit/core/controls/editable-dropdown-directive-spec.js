@@ -3,6 +3,7 @@
 describe("Editable dropdown directive", function () {
     var body = $('body');
     var simpleHtml = '<editable-dropdown data-items="items" data-selected-item="selectedItem"></editable-dropdown>';
+    var complexHtml = '<editable-dropdown data-items="items" data-selected-item="selectedItem"></editable-dropdown>';
     var elm, $$compile, scope;
 
     //Load the angular directives
@@ -31,7 +32,7 @@ describe("Editable dropdown directive", function () {
     });
 
     it('should compile the directive', function () {
-        expect(body.find('div').length).toBe(0);
+        expect(body.find('.editable-dropdown').length).toBe(0);
 
         var mock = $$compile(elm)(scope);
 
@@ -39,5 +40,10 @@ describe("Editable dropdown directive", function () {
         scope.$digest();
 
         expect(mock).not.toBeNull();
+        expect(body.find('.editable-dropdown').length).toBe(1);
+    });
+
+    it('should ', function() {
+
     });
 });

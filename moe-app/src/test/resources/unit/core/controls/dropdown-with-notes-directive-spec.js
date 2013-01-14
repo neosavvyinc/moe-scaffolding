@@ -47,7 +47,7 @@ describe("Dropdown with notes directive", function () {
         expect(body.find('.dropdown-with-notes').length).toBe(1);
     });
 
-    it('should change the displayed item and note when a new item is selected', function() {
+    it('should change the displayed item and note when a new item is selected', function () {
         var mock = $$compile(elm)(scope);
         body.append(mock);
         scope.$digest();
@@ -59,4 +59,16 @@ describe("Dropdown with notes directive", function () {
         expect(mock.find('input').val()).toBe("Steak, burgers, stew")
     });
 
+    //The input is not updating the model the way you would expect, need to reconsider
+    xit("should update the data[note] value in the scope when note is edited by a user", function () {
+        var mock = $$compile(elm)(scope);
+        body.append(mock);
+        scope.$digest();
+
+        mock.find('input').val("Pumpkins, eggs, and beans");
+        scope.$digest();
+
+        expect(scope.selectedItem.note).toBe("Pumpkins, eggs, and beans");
+        expect(scope.items[2].note).toBe("Pumpkins, eggs, and beans");
+    });
 });
