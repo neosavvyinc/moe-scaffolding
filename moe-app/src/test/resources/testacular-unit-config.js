@@ -5,7 +5,7 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = '../../';
+basePath = '../../main/resources/';
 
 // list of files / patterns to load in the browser
 files = [
@@ -14,33 +14,31 @@ files = [
     JASMINE_ADAPTER,
 
     //libraries
-    'main/resources/lib/angular/angular.js',
-    'main/resources/lib/angular/angular-resource.js',
-    'main/resources/lib/jquery/jquery.js',
-
-    'main/resources/lib/angular/angular-mocks.js',
-
-    'main/resources/lib/strftime-min-1.3.js',
+    'lib/angular/angular.js',
+    'lib/angular/angular-resource.js',
+    'lib/jquery/jquery.js',
+    'lib/angular/angular-mocks.js',
+    'lib/strftime-min-1.3.js',
 
     //resource
-    'main/resources/application/application.js',
-    'main/resources/application/configuration-constants.js',
+    'application/application.js',
+    'application/configuration-constants.js',
 
-    'main/resources/application/filters.js',
-    'main/resources/application/objects.js',
+    'application/filters.js',
+    'application/objects.js',
 
     //equity ticket unit tests
-    'main/resources/view/tickets/shared/*.js',
-    'main/resources/view/tickets/equity/*.js',
+    'view/tickets/shared/*.js',
+    'view/tickets/equity/*.js',
 
 
     //tests
-    'test/resources/unit/sample-unit.js',
+    '../../test/resources/unit/sample-unit.js',
 
     //directives
-    'main/resources/core/controls/*.js',
-    'main/resources/core/controls/*.html',
-    'test/resources/unit/core/controls/*.js'
+    'core/controls/*.js',
+    'core/controls/*.html',
+    '../../test/resources/unit/core/controls/*.js'
 
 ];
 

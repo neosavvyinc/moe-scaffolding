@@ -1,15 +1,15 @@
 'use strict';
 
-describe("Dropdown with notes directive", function () {
+describe("Editable dropdown directive", function () {
     var body = $('body');
-    var simpleHtml = '<dropdown-with-notes data-label-field="name" data-note-field="note" data-items="items" data-selected-item="selectedItem"></dropdown-with-notes>';
+    var simpleHtml = '<editable-dropdown data-items="items" data-selected-item="selectedItem"></editable-dropdown>';
     var elm, $$compile, scope;
 
     //Load the angular directives
     beforeEach(module('moe.directives'));
 
     //Load the template
-    beforeEach(module('core/controls/dropdown-with-notes-template.html'));
+    beforeEach(module('core/controls/editable-dropdown-template.html'));
 
     //Create scope
     beforeEach(inject(function ($rootScope, $compile) {
@@ -18,9 +18,7 @@ describe("Dropdown with notes directive", function () {
 
         //Setup Scope
         scope.items = [
-            {name:"Beef", note:"Steak, burgers, stew"},
-            {name:"Chicken", note:"Wings, Nuggets, Roasted"},
-            {name:"Pork", note:"Slow Cooked, Fried, Honey Baked"}
+            "Chicken", "Beef", "Tofu", "Pork"
         ];
         scope.selectedItem = scope.items[2];
 
@@ -33,7 +31,7 @@ describe("Dropdown with notes directive", function () {
     });
 
     it('should compile the directive', function () {
-        expect(body.find('.dropdown-with-notes').length).toBe(0);
+        expect(body.find('div').length).toBe(0);
 
         var mock = $$compile(elm)(scope);
 
@@ -41,9 +39,5 @@ describe("Dropdown with notes directive", function () {
         scope.$digest();
 
         expect(mock).not.toBeNull();
-
-        //Check for the ul element of the dropdown
-        expect(mock.find('ul').length).toBe(1);
-        expect(body.find('.dropdown-with-notes').length).toBe(1);
     });
 });
