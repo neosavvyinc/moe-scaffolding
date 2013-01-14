@@ -1,6 +1,6 @@
 'use strict';
 
-describe('dateTimeInput', function () {
+xdescribe('dateTimeInput', function () {
     var element, $q, $rootScope, $compile, $httpBackend
 
     beforeEach(function () {

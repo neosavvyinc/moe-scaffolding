@@ -12,8 +12,6 @@ describe("Label sub label directive", function () {
     beforeEach(inject(function ($rootScope, $compile) {
         scope = $rootScope.$new();
         $$compile = $compile;
-
-        //Define Everything In Scope For Directive
     }));
 
     afterEach(function () {
