@@ -1,7 +1,7 @@
 <div class="dropdown-with-notes">
     <div class="input-prepend">
         <div class="button-dropdown btn-group">
-            <a class="btn dropdown-toggle" data-toggle="dropdown"> <span>{{ getItemLabel(selectedItem) }}</span> <span
+            <a class="btn dropdown-toggle" data-toggle="dropdown"> <span class="selected-item-label">{{ getItemLabel(selectedItem) }}</span> <span
                     class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li ng-repeat="item in items" ng-click="onClickItem(item)"><a>{{ getItemLabel(item) }}</a></li>

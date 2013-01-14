@@ -46,4 +46,17 @@ describe("Dropdown with notes directive", function () {
         expect(mock.find('ul').length).toBe(1);
         expect(body.find('.dropdown-with-notes').length).toBe(1);
     });
+
+    it('should change the displayed item and note when a new item is selected', function() {
+        var mock = $$compile(elm)(scope);
+        body.append(mock);
+        scope.$digest();
+
+        //Simulate click action
+        mock.find('ul').find('li')[0].click();
+
+        expect(scope.selectedItem['name']).toBe("Beef")
+        expect(mock.find('input').val()).toBe("Steak, burgers, stew")
+    });
+
 });
