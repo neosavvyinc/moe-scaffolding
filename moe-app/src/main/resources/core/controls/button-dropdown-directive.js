@@ -7,9 +7,10 @@ MOE.Directives
             replace:true,
             templateUrl:"core/controls/button-dropdown-template.html",
             scope:{
-                items: "=items",
-                selectedItem: "=selectedItem",
-                labelField: "@labelField"
+                items: "=",
+                selectedItem: "=",
+                labelField: "@",
+                labelFunction: "&"
             },
             link:function (scope, element, attrs) {
                 //Action Handlers
@@ -19,7 +20,10 @@ MOE.Directives
 
                 //Getters
                 scope.getItemLabel = function(item) {
-                    if (item && scope.labelField) {
+                    if (scope.labelFunction) {
+                        return scope.labelFunction({ticket: item});
+                    }
+                    else if (item && scope.labelField) {
                         return item[scope.labelField];
                     }
                     return item;
