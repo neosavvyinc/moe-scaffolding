@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                     cwd: 'src/main/resources/**/*'
                 },
                 files: {
-                    'target/': [
+                    'target/moe/': [
                         'src/main/resources/*.html',
                         'src/main/resources/*.ico',
                         'src/main/resources/**/*.html',
@@ -23,41 +23,29 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['src/main/resources/application/**/*.js', 'src/main/resources/core/**/*.js'],
-                dest: 'target/built.js'
+                dest: 'target/moe/built.js'
             }
         },
         min: {
             dist: {
-                src: ['target/built.js'],
-                dest: 'target/built.min.js'
+                src: ['target/moe/built.js'],
+                dest: 'target/moe/built.min.js'
             }
         },
         less: {
             development: {
                 files: {
-                    "target/assets/style/css/style.css": "src/main/resources/assets/style/less/style.less"
+                    "target/moe/assets/style/css/style.css": "src/main/resources/assets/style/less/style.less"
                 }
-            }//,
-//            production: {
-//                options: {
-//                    paths: ["assets/css"],
-//                    yuicompress: true
-//                },
-//                files: {
-//                    "path/to/result.css": "path/to/source.less"
-//                }
-//            }
+            }
         },
         htmlrefs: {
             dist: {
-                /** @required  - string including grunt glob variables */
-                src: 'target/index.html',
-                /** @optional  - string directory name*/
-                dest: 'target/',
-                /** @optional  - references external files to be included */
-                /** any other parameter included on the options will be passed for template evaluation */
+
+                src: 'target/moe/index.html',
+                dest: 'target/moe/',
                 options: {
-                    buildNumber: 47878
+                    buildNumber: 1
                 }
             }
         },
@@ -82,6 +70,9 @@ module.exports = function(grunt) {
                     highlight: 'auto'
                 }
             }
+        },
+        zip: {
+            'target/moe.zip': ['target/moe/**/*']
         }
 
     });
@@ -92,8 +83,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-htmlrefs');
+    grunt.loadNpmTasks('grunt-zip');
 
     // Default task.
-    grunt.registerTask('default', 'clean less:development copy concat min testacular:endToEnd testacular:unit htmlrefs:dist');
+    grunt.registerTask('default', 'clean less:development copy concat min testacular:endToEnd testacular:unit htmlrefs:dist zip');
 
 };
