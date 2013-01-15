@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-MOE.Services.factory('productService', function (configuration, $q, $rootScope, $http) {
+MOE.Services.factory('productService',
+    ['configuration','$q','$rootScope','$http'
+        ,function (configuration, $q, $rootScope, $http) {
     return {
 
         /**
@@ -51,4 +53,4 @@ MOE.Services.factory('productService', function (configuration, $q, $rootScope, 
             return deferred.promise;
         }
     }
-});
+}]);

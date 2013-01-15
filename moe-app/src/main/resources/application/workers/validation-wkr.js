@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 
 MOE.Workers.factory('workers.ValidationWorker', ['configuration', '$rootScope', function (configuration, $rootScope) {
@@ -7,4 +7,4 @@ MOE.Workers.factory('workers.ValidationWorker', ['configuration', '$rootScope', 
 
         }
     }
-});
+}]);

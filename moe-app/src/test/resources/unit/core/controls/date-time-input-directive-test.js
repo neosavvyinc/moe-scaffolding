@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 xdescribe('dateTimeInput', function () {
     var element, $q, $rootScope, $compile, $httpBackend

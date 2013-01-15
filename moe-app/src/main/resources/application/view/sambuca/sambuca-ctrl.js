@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 MOE.Controllers.controller('view.sambuca.SambucaController',
     ['$scope', '$rootScope', '$routeParams', 'configuration',

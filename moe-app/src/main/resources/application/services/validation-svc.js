@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-MOE.Services.factory('services.ValidationService', function (configuration, $q, $rootScope, $http) {
+MOE.Services.factory('services.ValidationService',
+    ['configuration','$q','$rootScope','$http',
+    function (configuration, $q, $rootScope, $http) {
     return {
 
         validate:function (fields) {
@@ -31,4 +33,4 @@ MOE.Services.factory('services.ValidationService', function (configuration, $q, 
             return deferred.promise;
         }
     }
-});
+}]);

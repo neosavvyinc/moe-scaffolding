@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 describe('Menu service', function() {
   var items, menu, configuration, scope, $q, $rootScope, $httpBackend

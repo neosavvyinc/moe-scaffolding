@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 MOE.Controllers.controller('view.navigation.TopNavbarController',
     ['$scope', '$rootScope', '$routeParams', 'configuration',

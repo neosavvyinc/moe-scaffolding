@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $http) {
+MOE.Services.factory('ticketManager',
+    ['configuration','$q','$rootScope','$http',
+    function (configuration, $q, $rootScope, $http) {
 
     var ticket = {
 
@@ -43,4 +45,4 @@ MOE.Services.factory('ticketManager', function (configuration, $q, $rootScope, $
         }
 
     }
-});
+}]);

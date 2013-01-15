@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 describe("Editable dropdown directive", function () {
     var body = $('body');

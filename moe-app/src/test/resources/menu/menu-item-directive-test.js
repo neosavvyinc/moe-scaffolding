@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 describe('Menu item directive', function() {
   var element, $q, $rootScope, $compile, $httpBackend

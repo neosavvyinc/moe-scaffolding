@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 describe('Menu controller', function() {
   var mockMenu, controller, items, scope, $q, $rootScope, $compile, $httpBackend

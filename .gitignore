@@ -1,4 +1,7 @@
 .idea
 .idea/*
 .DS_store
+moe-app/node_modules
+moe-app/target
+
 

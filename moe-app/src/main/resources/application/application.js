@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /**
  * The application file bootstraps the angular app by  initializing the main module and

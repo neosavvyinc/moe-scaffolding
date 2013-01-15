@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 MOE.Controllers.controller('view.tickets.equity.DetailController',
     ['$scope', '$rootScope', '$routeParams', 'configuration', "ticketManager",

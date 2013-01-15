@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 describe("Label sub label directive", function () {
     var body = $('body');

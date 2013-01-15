@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 MOE.Filters.filter('toDateFormat', function () {
     return function (dateAndFormat) {

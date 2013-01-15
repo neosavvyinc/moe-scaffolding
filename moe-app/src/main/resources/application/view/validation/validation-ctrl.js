@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-MOE.Controllers.controller('view.validation.ValidationController', ['$scope', '$rootScope', '$routeParams', 'configuration', function ($scope, $rootScope, $routeParams, configuration) {
+MOE.Controllers.controller('view.validation.ValidationController',
+    ['$scope', '$rootScope', '$routeParams', 'configuration',
+        function ($scope, $rootScope, $routeParams, configuration) {
 
     $scope.requiredValue = "Required";
 

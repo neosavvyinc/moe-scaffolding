@@ -1,4 +1,4 @@
-'use strict';
+'use strict';;
 
 describe('Simple unit test', function() {
 

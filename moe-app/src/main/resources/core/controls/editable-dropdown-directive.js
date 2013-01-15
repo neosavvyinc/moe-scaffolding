@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 MOE.Directives
     .directive('editableDropdown', function () {

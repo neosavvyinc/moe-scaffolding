@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-MOE.Services.factory('submitService', function (configuration, $q, $rootScope, $http) {
+MOE.Services.factory('submitService',
+    ['configuration','$q','$rootScope','$http',
+    function (configuration, $q, $rootScope, $http) {
     return {
 
         sendOrder:function ( ticket ) {
@@ -32,4 +34,4 @@ MOE.Services.factory('submitService', function (configuration, $q, $rootScope, $
             return deferred.promise;
         }
     }
-});
+}]);

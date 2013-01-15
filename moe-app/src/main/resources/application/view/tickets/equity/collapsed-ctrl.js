@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 MOE.Controllers.controller('view.tickets.equity.CollapsedController',
     ['$scope', '$rootScope', '$routeParams', 'configuration', 'ticketManager'
