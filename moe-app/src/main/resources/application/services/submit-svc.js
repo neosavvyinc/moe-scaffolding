@@ -5,7 +5,7 @@ MOE.Services.factory('submitService',
     function (configuration, $q, $rootScope, $http) {
     return {
 
-        sendOrder:function ( ticket ) {
+        sendOrders:function ( tickets ) {
 
             var deferred, serviceUrl;
 

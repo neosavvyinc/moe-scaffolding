@@ -1,18 +1,22 @@
-<div class="equity-ticket" ng-controller="view.tickets.equity.EquityTicketController">
+<div class="equity-ticket" id="accordian2" ng-controller="view.tickets.equity.EquityTicketController">
     <div class="accordion-group" ng-repeat="ticket in tickets">
         <div class="accordion-heading">
             <ng-include src="'application/view/tickets/equity/collapsed-ptl.html'"/>
         </div>
-        <div id="collapse{{$index + 1}}" class="accordion-body in collapse equity-ticket-detail">
+        <div id="collapse{{$index + 1}}" class="accordion-body collapse equity-ticket-detail" ng-class="{{openClass($index)}}">
             <div class="accordion-inner">
-                <ng-include src="'application/view/tickets/equity/detail-ptl.html'" />
+                <!--<ng-include src="'application/view/tickets/equity/detail-ptl.html'" />-->
             </div>
         </div>
     </div>
 
     <div class="row">
+        <div class="pull-right">
+            <button id="addTicket" class="btn pull-right" ng-click="addTicket()">Add Ticket</button>
+        </div>
         <div class="span2 pull-right">
-            <input id="submitOrders" class="btn pull-right" ng-click="submitTicket()" value="Submit Ticket"/>
+            <button id="submitOrders" class="btn pull-right" ng-click="submitTicket()">Submit Ticket</button>
         </div>
     </div>
+
 </div>

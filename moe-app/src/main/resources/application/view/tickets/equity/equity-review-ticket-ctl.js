@@ -4,7 +4,7 @@ MOE.Controllers.controller('view.tickets.equity.EquityReviewTicketController',
     ['$scope', 'ticketManager'
         ,function ($scope, ticketManager) {
 
-        $scope.ticket = ticketManager.getTicket();
+        $scope.tickets = ticketManager.getTickets();
 
         $scope.testSelected = function(){
             console.log("fa: " + $scope.ticket.faNumber);
