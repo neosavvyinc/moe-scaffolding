@@ -14,6 +14,4 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
     $scope.stopLimitValues = ["Stop/Limit", "Go/Unlimited"];
     $scope.discountValues = ["Discount", "Regular", "Extra Crispy", "Overpriced"];
 
-
-    $scope.ticket = ticketManager.getTicket();
 }]);

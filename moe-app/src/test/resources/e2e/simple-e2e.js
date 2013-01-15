@@ -31,7 +31,7 @@ describe('The Equity Ticket', function(){
         submit.click();
         expect(browser().window().hash()).toMatch('/review');
 
-        var faVerifyNumElem = element("#faNumber");
+        var faVerifyNumElem = element("#reviewTicket0 #faNumber");
         expect(faVerifyNumElem.text()).toMatch("FA Number: 105");
     });
 
@@ -116,7 +116,7 @@ describe('The Equity Ticket', function(){
         submit.click();
         expect(browser().window().hash()).toMatch('/review');
 
-        var sideVerifyElement = element("#side", '');
+        var sideVerifyElement = element("#reviewTicket0 #side", '');
         expect(sideVerifyElement.text()).toMatch("Side: Sell Short");
 
     });
@@ -142,7 +142,7 @@ describe('The Equity Ticket', function(){
     it('Should have a valid review ticket',function(){
         browser().navigateTo('/#review');
         expect(browser().window().hash()).toMatch('/review');
-        var faNumElem = element('#faNumber');
+        var faNumElem = element('#reviewTicket0 #faNumber');
         expect(faNumElem.text()).toBe("FA Number: def");
     })
 
