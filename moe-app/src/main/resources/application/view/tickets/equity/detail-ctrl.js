@@ -16,7 +16,6 @@ MOE.Controllers.controller('view.tickets.equity.DetailController',
             $scope.secondaryClientPositionValues = ["Not sure what goes here"];
             $scope.dispositionValues = [{name: 'Holds Proceeds', note: "Some description"},{name: 'Holds Proceeds', note: "Some description"}];
 
-            $scope.ticket = ticketManager.getTicket();
         }
     ]
 );

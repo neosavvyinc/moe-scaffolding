@@ -4,6 +4,8 @@ MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
     ['$scope', 'configuration', 'submitService', 'ticketManager', '$location'
         ,function ($scope, configuration, submitService, ticketManager, $location) {
 
+        $scope.tickets = ticketManager.getTickets();
+
         //Initialization
         $scope.submitTicket = function() {
             var productPromise = submitService.sendOrder( ticketManager.getTicket() )
