@@ -1,7 +1,7 @@
 {
   "name": "moe-app",
   "description": "Multiple Order Entry Application for MSSB",
-  "version": "sprint1",
+  "version": "1.1.62",
   "homepage": "http://www.neosavvy.com",
   "author": {
     "name": "Neosavvy, Inc.",
@@ -20,14 +20,15 @@
       "url": "https://github.com/cowboy/javascript-hooker/blob/master/LICENSE-MIT"
     }
   ],
-  "dependencies": {
+"dependencies": {
       "grunt": "0.3.17",
       "grunt-clean": "0.3.0",
       "grunt-contrib-less": "0.3.0",
       "grunt-contrib-copy": "0.3.0",
-      "grunt-string-replace": "0.1.1-1",
+      "grunt-htmlrefs": "0.2.3",
       "grunt-markdown": "0.1.2",
-      "gruntacular": "0.1.1"
+      "gruntacular": "0.1.1",
+      "grunt-zip": "0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.3.17",
