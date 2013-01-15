@@ -195,7 +195,8 @@ input.error {
 }
 .validation-ptl,
 .sambuca-ptl,
-.worklists {
+.worklists .header,
+.worklists .content {
   margin-top: 30px;
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 4px;
@@ -204,17 +205,24 @@ input.error {
 }
 .validation-ptl h3,
 .sambuca-ptl h3,
-.worklists h3 {
-  padding-left: 15px;
+.worklists .header h3,
+.worklists .content h3,
+.validation-ptl .control,
+.sambuca-ptl .control,
+.worklists .header .control,
+.worklists .content .control {
+  padding: 15px 15px 0;
 }
 .validation-ptl .components,
 .sambuca-ptl .components,
-.worklists .components {
+.worklists .header .components,
+.worklists .content .components {
   padding: 0 40px 20px;
 }
 .validation-ptl .components .row,
 .sambuca-ptl .components .row,
-.worklists .components .row {
+.worklists .header .components .row,
+.worklists .content .components .row {
   clear: both;
   display: block;
   width: 100%;
@@ -222,12 +230,14 @@ input.error {
 }
 .validation-ptl .components .row h4,
 .sambuca-ptl .components .row h4,
-.worklists .components .row h4 {
+.worklists .header .components .row h4,
+.worklists .content .components .row h4 {
   font-size: 14px;
 }
 .validation-ptl .components .row div.item,
 .sambuca-ptl .components .row div.item,
-.worklists .components .row div.item {
+.worklists .header .components .row div.item,
+.worklists .content .components .row div.item {
   display: inline;
   clear: none;
   float: left;
@@ -235,17 +245,24 @@ input.error {
 }
 .validation-ptl .components .notes input,
 .sambuca-ptl .components .notes input,
-.worklists .components .notes input {
+.worklists .header .components .notes input,
+.worklists .content .components .notes input {
   width: 500px;
 }
 .validation-ptl .components.validation form,
 .sambuca-ptl .components.validation form,
-.worklists .components.validation form {
+.worklists .header .components.validation form,
+.worklists .content .components.validation form {
   margin: 0;
 }
 .validation-ptl .components.validation input,
 .sambuca-ptl .components.validation input,
-.worklists .components.validation input {
+.worklists .header .components.validation input,
+.worklists .content .components.validation input {
   padding-right: 20px;
   width: 250px;
+}
+.worklists .header .row,
+.worklists .content .row {
+  padding: 10px 40px;
 }

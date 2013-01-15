@@ -5,12 +5,11 @@ MOE.Directives
         return {
             restrict:'E',
             replace:true,
-            template:"<div id='{{buttonGroupId}}' class='btn-group'><button class='btn' ng-click='onClickItem(item)' ng-repeat='item in items'>{{ getItemLabel(item) }}</button></div>",
+            template:"<div class='btn-group'><a class='btn' ng-repeat='item in items' ng-click='onClickItem(item)'>{{ getItemLabel(item) }}</a></div>",
             scope:{
-                items: '=items',
-                labelField: '@labelField',
-                selectedItem: '=',
-                buttonGroupId: '@'
+                items: '=',
+                labelField: '@',
+                selectedItem: '='
             },
             link:function (scope, element, attrs) {
                 scope.onClickItem = function(item) {

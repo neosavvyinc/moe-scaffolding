@@ -1,7 +1,18 @@
 <div class="worklists" ng-controller="view.worklists.WorklistController">
-    <ng-include src="'application/view/worklists/tabs/tabs-template.html'"></ng-include>
+    <div class="header">
+        <h3>Worklists</h3>
 
-    <div>
-        <label>{{ worklist.name || "&nbsp;" }}</label>
+        <ng-include src="'application/view/worklists/tabs/tabs-template.html'"></ng-include>
+
+        <div class="control">
+            <label>{{ worklist.name }}</label>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <label>Name <b>{{ worklist.accountInfo.name }}</b></label>
+            <label>Acct. Type <b>{{ worklist.accountInfo.accountType }}</b></label>
+            <label>Acct. Number <b>{{ worklist.accountInfo.number }}</b></label>
+        </div>
     </div>
 </div>
