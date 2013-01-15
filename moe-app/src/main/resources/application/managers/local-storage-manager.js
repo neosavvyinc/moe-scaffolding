@@ -1,6 +1,8 @@
 'use strict'
 
-MOE.Managers.factory('managers.LocalStorageManager', function (configuration, $q, $rootScope, $http) {
+MOE.Managers.factory('managers.LocalStorageManager',
+    ['configuration','$q','$rootScope','$http',
+    function (configuration, $q, $rootScope, $http) {
 
     //Temporarily stubbing value
     window.localStorage.setItem('worklists', JSON.stringify([{name: "Schwan"}, {name: "Doo"}, {name: "Tree"}]));
@@ -13,4 +15,4 @@ MOE.Managers.factory('managers.LocalStorageManager', function (configuration, $q
             window.localStorage.setItem("worklists", JSON.stringify(value));
         }
     }
-});
+}]);

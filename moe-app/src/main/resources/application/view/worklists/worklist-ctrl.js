@@ -1,6 +1,8 @@
 'use strict'
 
-MOE.Controllers.controller('view.worklists.WorklistController', ['$scope', '$rootScope', '$routeParams', 'configuration', 'managers.LocalStorageManager', function ($scope, $rootScope, $routeParams, configuration, localStorageManager) {
+MOE.Controllers.controller('view.worklists.WorklistController',
+    ['$scope', '$rootScope', '$routeParams', 'configuration', 'managers.LocalStorageManager',
+        function ($scope, $rootScope, $routeParams, configuration, localStorageManager) {
 
     $scope.worklist = null;
 
