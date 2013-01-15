@@ -1,7 +1,7 @@
 
 <div class="equity-ticket equity-ticket-review" ng-controller="view.tickets.equity.EquityReviewTicketController">
 
-    <div class="well row" ng-repeat="ticket in tickets">
+    <div class="well row" id="reviewTicket{{$index}}" ng-repeat="ticket in tickets">
         <ul class="well">
             <h4>Account Information</h4>
             <li>Account Name: {{ticket.accountInfo.name}}</li>
