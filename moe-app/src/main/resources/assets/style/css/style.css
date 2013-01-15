@@ -194,7 +194,8 @@ input.error {
   list-style-type: none;
 }
 .validation-ptl,
-.sambuca-ptl {
+.sambuca-ptl,
+.worklists {
   margin-top: 30px;
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 4px;
@@ -202,41 +203,49 @@ input.error {
   border-radius: 4px;
 }
 .validation-ptl h3,
-.sambuca-ptl h3 {
+.sambuca-ptl h3,
+.worklists h3 {
   padding-left: 15px;
 }
 .validation-ptl .components,
-.sambuca-ptl .components {
+.sambuca-ptl .components,
+.worklists .components {
   padding: 0 40px 20px;
 }
 .validation-ptl .components .row,
-.sambuca-ptl .components .row {
+.sambuca-ptl .components .row,
+.worklists .components .row {
   clear: both;
   display: block;
   width: 100%;
   padding: 0 0 20px;
 }
 .validation-ptl .components .row h4,
-.sambuca-ptl .components .row h4 {
+.sambuca-ptl .components .row h4,
+.worklists .components .row h4 {
   font-size: 14px;
 }
 .validation-ptl .components .row div.item,
-.sambuca-ptl .components .row div.item {
+.sambuca-ptl .components .row div.item,
+.worklists .components .row div.item {
   display: inline;
   clear: none;
   float: left;
   padding-right: 10px;
 }
 .validation-ptl .components .notes input,
-.sambuca-ptl .components .notes input {
+.sambuca-ptl .components .notes input,
+.worklists .components .notes input {
   width: 500px;
 }
 .validation-ptl .components.validation form,
-.sambuca-ptl .components.validation form {
+.sambuca-ptl .components.validation form,
+.worklists .components.validation form {
   margin: 0;
 }
 .validation-ptl .components.validation input,
-.sambuca-ptl .components.validation input {
+.sambuca-ptl .components.validation input,
+.worklists .components.validation input {
   padding-right: 20px;
   width: 250px;
 }

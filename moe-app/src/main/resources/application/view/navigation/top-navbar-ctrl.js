@@ -8,6 +8,7 @@ MOE.Controllers.controller('view.navigation.TopNavbarController',
     $scope.items = [
         {label: "Equity Ticket", route: "/"}
         , {label: "Validation", route: "#/validation"}
-        , {label: "Sambuca Additions", route: "#/sambuca"}];
+        , {label: "Sambuca Additions", route: "#/sambuca"}
+        , {label: "Worklists", route: "#/worklists"}];
 
 }]);

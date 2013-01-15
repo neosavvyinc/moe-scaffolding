@@ -45,6 +45,7 @@ angular.module('moe', MOE.Dependencies).
             when('/review', {templateUrl:'application/view/tickets/equity/equity-review-ticket-ptl.html'}).
             when('/validation', {templateUrl:'application/view/validation/validation-ptl.html'}).
             when('/sambuca', {templateUrl:'application/view/sambuca/sambuca-ptl.html'}).
+            when('/worklists', {templateUrl:'application/view/worklists/worklist-ptl.html'}).
             otherwise({templateUrl:'application/view/tickets/equity/equity-ticket-ptl.html'});
     }]).
     run(['$location', '$rootScope', '$routeParams',
