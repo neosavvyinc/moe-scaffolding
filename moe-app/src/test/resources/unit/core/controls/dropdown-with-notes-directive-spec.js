@@ -1,4 +1,4 @@
-'use strict';;
+'use strict';
 
 describe("Dropdown with notes directive", function () {
     var body = $('body');
