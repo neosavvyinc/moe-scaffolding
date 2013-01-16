@@ -91,6 +91,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-zip');
 
     // Default task.
-    grunt.registerTask('default', 'clean less:development copy concat min testacular:endToEnd testacular:unit testacular:endToEndBuilt htmlrefs:dist zip');
+    grunt.registerTask('default', 'clean less:development copy concat min htmlrefs:dist testacular:endToEnd testacular:unit testacular:endToEndBuilt zip');
 
 };
