@@ -15,4 +15,9 @@ MOE.Controllers.controller('view.worklists.WorklistController',
                 }
             });
 
+            //Action Handlers
+            $scope.onSaveWorklist = function() {
+                localStorageManager.updateWorklist($scope.worklist);
+            };
+
         }]);

@@ -52,4 +52,8 @@ angular.module('moe', MOE.Dependencies).
     function ($location, $rootScope, $routeParams) {
         $rootScope.isMockMode = ($location.search().mock === 'true') || ($location.search().mockMode === 'true');
         $rootScope.isFailMode = ($location.search().fail === 'true') || ($location.search().failMode === 'true');
+
+        if ($location.search().clearLocalStorage === 'true') {
+            window.localStorage.removeAll();
+        }
     }]);

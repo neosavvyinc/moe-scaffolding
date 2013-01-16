@@ -22,8 +22,16 @@ MOE.Controllers.controller('views.worklists.tabs.TabsController', ['$scope', '$r
         });
 
         //Initialization
-        worklistService.get().then(function(result) {
-            $scope.worklists = result;
-            $scope.selectedWorklist = result[0];
-        });
+        $scope.worklists = localStorageManager.getWorklists();
+
+        //If local storage fails, get it from the service
+        if (!$scope.worklists || !$scope.worklists.length) {
+            worklistService.get().then(function (result) {
+                $scope.worklists = result;
+                $scope.selectedWorklist = result[0];
+                localStorageManager.setWorklists($scope.worklists);
+            });
+        } else {
+            $scope.selectedWorklist = $scope.worklists[0];
+        }
     }]);
