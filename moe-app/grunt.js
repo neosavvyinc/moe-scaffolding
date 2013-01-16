@@ -23,13 +23,13 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['src/main/resources/application/**/*.js', 'src/main/resources/core/**/*.js'],
-                dest: 'target/moe/built.js'
+                dest: 'target/moe/moe.js'
             }
         },
         min: {
             dist: {
-                src: ['target/moe/built.js'],
-                dest: 'target/moe/built.min.js'
+                src: ['target/moe/moe.js'],
+                dest: 'target/moe/moe.min.js'
             }
         },
         less: {
@@ -59,6 +59,11 @@ module.exports = function(grunt) {
                 configFile: 'src/test/resources/testacular-unit-config.js',
                 singleRun: true,
                 browsers: ['Chrome']
+            },
+            endToEndBuilt: {
+                configFile: 'src/test/resources/testacular-e2e-built-config.js',
+                singleRun: true,
+                browsers: ['Chrome']
             }
         },
         markdown: {
@@ -86,6 +91,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-zip');
 
     // Default task.
-    grunt.registerTask('default', 'clean less:development copy concat min testacular:endToEnd testacular:unit htmlrefs:dist zip');
+    grunt.registerTask('default', 'clean less:development copy concat min testacular:endToEnd testacular:unit testacular:endToEndBuilt htmlrefs:dist zip');
 
 };

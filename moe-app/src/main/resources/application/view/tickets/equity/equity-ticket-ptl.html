@@ -1,5 +1,5 @@
 <div class="equity-ticket" id="accordian2" ng-controller="view.tickets.equity.EquityTicketController">
-    <div class="accordion-group" ng-repeat="ticket in tickets">
+    <div class="accordion-group" ng-repeat="ticket in tickets" id="ticket{{$index}}">
         <div class="accordion-heading">
             <ng-include src="'application/view/tickets/equity/collapsed-ptl.html'"/>
         </div>
