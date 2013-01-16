@@ -1,13 +1,14 @@
-<div class="equity-ticket accordian" id="accordion2" ng-controller="view.tickets.equity.EquityTicketController">
-    <div class="accordion-group" ng-repeat="ticket in tickets" id="ticket{{$index}}">
-            <div class="accordion-heading">
-                <ng-include src="'application/view/tickets/equity/collapsed-ptl.html'"/>
-            </div>
-            <div id="collapse{{$index + 1}}" class="accordion-body collapse equity-ticket-detail">
-                <div class="accordion-inner">
-                    <ng-include src="'application/view/tickets/equity/detail-ptl.html'" />
+<div ng-controller="view.tickets.equity.EquityTicketController">
+    <div class="equity-ticket accordian" id="accordion2">
+        <div class="accordion-group" ng-repeat="ticket in tickets" id="ticket{{$index}}">
+                <div class="accordion-heading">
+                    <ng-include src="'application/view/tickets/equity/collapsed-ptl.html'"/>
                 </div>
-            </div>
+                <div id="collapse{{$index + 1}}" class="accordion-body collapse equity-ticket-detail">
+                    <div class="accordion-inner">
+                        <ng-include src="'application/view/tickets/equity/detail-ptl.html'" />
+                    </div>
+                </div>
         </div>
     </div>
 
