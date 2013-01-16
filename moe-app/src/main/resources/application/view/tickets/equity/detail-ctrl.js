@@ -1,7 +1,7 @@
 'use strict';
 
 MOE.Controllers.controller('view.tickets.equity.DetailController',
-    ['$scope', '$rootScope', '$routeParams', 'configuration', "ticketManager",
+    ['$scope', '$rootScope', '$routeParams', 'configuration', "managers.TicketManager",
         function ($scope, $rootScope, $routeParams, configuration, ticketManager) {
 
             //Initialization

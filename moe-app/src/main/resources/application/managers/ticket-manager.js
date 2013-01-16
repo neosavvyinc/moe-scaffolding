@@ -1,40 +1,40 @@
 'use strict';
 
-MOE.Services.factory('ticketManager',
+MOE.Services.factory('managers.TicketManager',
     ['configuration', '$q', '$rootScope', '$http',
         function (configuration, $q, $rootScope, $http) {
 
             var templateTicket = {
 
-                accountInfo: {
-                    name: "John Doe",
-                    accountType: "Active Assets Account",
-                    number: "101-023148"
+                accountInfo:{
+                    name:"John Doe",
+                    accountType:"Active Assets Account",
+                    number:"101-023148"
                 },
 
                 /**
                  * Primary
                  */
-                faNumber: "def",
-                symbol: "IBM",
-                side: 'Buy',
-                selectedShareValue: "def",
-                stopLimit: "Stop/Limit",
-                stopLimitAmount: "109.00",
-                cashMargin: "Cash",
-                selectedFirstLast: "def",
-                solicited: "Solicited",
-                discountText: "Discount",
-                discountAmount: "50%",
+                faNumber:"def",
+                symbol:"IBM",
+                side:'Buy',
+                selectedShareValue:"def",
+                stopLimit:"Stop/Limit",
+                stopLimitAmount:"109.00",
+                cashMargin:"Cash",
+                selectedFirstLast:"def",
+                solicited:"Solicited",
+                discountText:"Discount",
+                discountAmount:"50%",
 
 
                 /**
                  * Details
                  */
-                selectedTimeInForce: 'def',
-                selectedClientPosition: 'def',
-                secondarySelectedClientPosition: 'def',
-                selectedDisposition: 'def'
+                selectedTimeInForce:'def',
+                selectedClientPosition:'def',
+                secondarySelectedClientPosition:'def',
+                selectedDisposition:'def'
 
             };
 
@@ -144,11 +144,14 @@ MOE.Services.factory('ticketManager',
                 getTickets:function () {
                     return tickets;
                 },
+                setTickets:function (value) {
+                    tickets = value;
+                    $rootScope.$broadcast(configuration.EVENTS.MANAGER.TICKETS_UPDATED);
+                },
                 addTicket:function () {
                     tickets[tickets.length] = templateTicket;
+                    $rootScope.$broadcast(configuration.EVENTS.MANAGER.TICKETS_UPDATED);
                 }
-
-
             }
         }]);
 

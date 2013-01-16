@@ -1,23 +1,15 @@
 'use strict';
 
 MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
-    ['$scope', 'configuration', 'submitService', 'ticketManager', '$location'
+    ['$scope', 'configuration', 'submitService', 'managers.TicketManager', '$location'
         ,function ($scope, configuration, submitService, ticketManager, $location) {
 
-        $scope.tickets = ticketManager.getTickets();
+        //Event Listeners
+        $scope.$on(configuration.EVENTS.MANAGER.TICKETS_UPDATED, function(e) {
+            $scope.tickets = ticketManager.getTickets();
+        });
 
-        $scope.openClass = function( id ) {
-            if( id == 1 )
-            {
-                return "in";
-            }
-            else
-            {
-                return "";
-            }
-        }
-
-        //Initialization
+        //Action Handlers
         $scope.submitTicket = function() {
             var productPromise = submitService.sendOrders( ticketManager.getTickets() )
             productPromise.then(
@@ -29,11 +21,26 @@ MOE.Controllers.controller('view.tickets.equity.EquityTicketController',
                     console.log("order was not successfully submitted: " + reason);
                 }
             );
-        }
+        };
 
         $scope.addTicket = function() {
             ticketManager.addTicket();
-        }
+        };
+
+        //Getters
+        $scope.openClass = function( id ) {
+            if( id == 1 )
+            {
+                return "in";
+            }
+            else
+            {
+                return "";
+            }
+        };
+
+        //Initialization
+        $scope.tickets = ticketManager.getTickets();
 
     }]
 );

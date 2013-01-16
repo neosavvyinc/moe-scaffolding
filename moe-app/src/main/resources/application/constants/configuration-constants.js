@@ -8,8 +8,13 @@ MOE.Constants.constant('configuration', {
     SUBMIT_URL:'mockData/submit.json',
     VALIDATION_URL:'mockData/validation.json',
     VALIDATION_FAILURE_URL:'mockData/validation-failure.json',
-    EVENTS: {
-        WORKLISTS_UPDATED: "worklistsUpdated",
-        WORKLIST_SELECTED: "worklistSelected"
+    EVENTS:{
+        CONTROLLER:{
+            WORKLISTS_UPDATED:"worklistsUpdatedCtrl",
+            WORKLIST_SELECTED:"worklistSelectedCtrl"
+        },
+        MANAGER: {
+            TICKETS_UPDATED: "ticketsUpdatedMgr"
+        }
     }
 });

@@ -1,7 +1,7 @@
 'use strict';
 
 MOE.Controllers.controller('view.tickets.equity.EquityReviewTicketController',
-    ['$scope', 'ticketManager'
+    ['$scope', 'managers.TicketManager'
         ,function ($scope, ticketManager) {
 
         $scope.tickets = ticketManager.getTickets();

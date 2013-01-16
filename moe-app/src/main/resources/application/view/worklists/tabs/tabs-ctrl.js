@@ -1,6 +1,6 @@
 'use strict'
 
-MOE.Controllers.controller('views.worklists.tabs.TabsController', ['$scope', '$rootScope', 'configuration', 'managers.LocalStorageManager', 'ticketManager', 'services.WorklistService',
+MOE.Controllers.controller('views.worklists.tabs.TabsController', ['$scope', '$rootScope', 'configuration', 'managers.LocalStorageManager', 'managers.TicketManager', 'services.WorklistService',
     function ($scope, $rootScope, configuration, localStorageManager, ticketManager, worklistService) {
 
         //Initialization
@@ -18,7 +18,7 @@ MOE.Controllers.controller('views.worklists.tabs.TabsController', ['$scope', '$r
 
         //Watchers
         $scope.$watch('selectedWorklist', function (newValue) {
-            $rootScope.$broadcast(configuration.EVENTS.WORKLIST_SELECTED, newValue);
+            $rootScope.$broadcast(configuration.EVENTS.CONTROLLER.WORKLIST_SELECTED, newValue);
         });
 
         //Initialization
@@ -26,6 +26,4 @@ MOE.Controllers.controller('views.worklists.tabs.TabsController', ['$scope', '$r
             $scope.worklists = result;
             $scope.selectedWorklist = result[0];
         });
-
-
     }]);
