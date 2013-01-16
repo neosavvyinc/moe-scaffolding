@@ -1,84 +1,97 @@
 <!doctype html>
 <html lang="en" ng-app="moe">
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="lib/bootstrap/css/datepicker.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="lib/bootstrap/css/datepicker.css" rel="stylesheet">
 
-        <title>Multiple Order Entry Platform</title>
+    <title>Multiple Order Entry Platform</title>
 
-        <link href="assets/style/css/style.css" rel="stylesheet"  media="screen"/>
+    <link href="assets/style/css/style.css" rel="stylesheet" media="screen"/>
 
-    </head>
-    <body>
-        <script src="lib/jquery/jquery.js"></script>
-        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-        <script src="lib/bootstrap/js/bootstrap-datepicker.js"></script>
-        <script src="lib/strftime-min-1.3.js"></script>
+</head>
+<body>
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap-datepicker.js"></script>
+<script src="lib/strftime-min-1.3.js"></script>
 
-        <div class="container" ng-controller="view.navigation.TopNavbarController">
-            <top-navbar route-field="route" label-field="label" title="MOE" items="items"></top-navbar>
+<div class="container" ng-controller="view.navigation.TopNavbarController">
+    <top-navbar route-field="route" label-field="label" title="MOE" items="items"></top-navbar>
 
-            <div class="row">
-                <ng-view />
-            </div>
-        </div>
+    <div class="row">
+        <ng-view/>
+    </div>
+</div>
 
-        <script src="lib/bootstrap/js/bootstrap-collapse.js"></script>
+<script src="lib/bootstrap/js/bootstrap-collapse.js"></script>
 
-        <script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular.js"></script>
 
-        <!-- build:js /moe.min.js -->
-        <script src="application/application.js"></script>
-        <script src="application/constants/configuration-constants.js"></script>
-        <script src="application/constants/equity-ticket-constants.js"></script>
+<!-- build:js /moe.min.js -->
+<script src="application/application.js"></script>
+<script src="application/constants/configuration-constants.js"></script>
+<script src="application/constants/equity-ticket-constants.js"></script>
 
-        <!-- Application -->
-        <script src="application/objects.js"></script>
-        <script src="application/filters.js"></script>
-        <script src="application/events.js"></script>
-        <script src="application/utils.js"></script>
+<!-- Application -->
+<script src="application/objects.js"></script>
+<script src="application/filters.js"></script>
+<script src="application/events.js"></script>
+<script src="application/utils.js"></script>
 
-        <!-- Services -->
-        <script src="application/services/product-svc.js"></script>
-        <script src="application/services/submit-svc.js"></script>
-        <script src="application/services/validation-svc.js"></script>
-        <script src="application/services/worklist-svc.js"></script>
+<!-- Services -->
+<script src="application/services/product-svc.js"></script>
+<script src="application/services/submit-svc.js"></script>
+<script src="application/services/validation-svc.js"></script>
+<script src="application/services/worklist-svc.js"></script>
 
-        <!-- Managers -->
-        <script src="application/managers/ticket-manager.js"></script>
-        <script src="application/managers/local-storage-manager.js"></script>
+<!-- Managers -->
+<script src="application/managers/ticket-manager.js"></script>
+<script src="application/managers/local-storage-manager.js"></script>
 
-        <!-- Core / Controls -->
-        <script src="core/controls/date-picker-directive.js"></script>
-        <script src="core/controls/date-time-input-directive.js"></script>
-        <script src="core/controls/button-dropdown-directive.js"></script>
-        <script src="core/controls/button-group-directive.js"></script>
-        <script src="core/controls/dropdown-with-notes-directive.js"></script>
-        <script src="core/controls/label-sub-label-directive.js"></script>
-        <script src="core/controls/editable-dropdown-directive.js"></script>
-        <script src="core/controls/search-input-directive.js"></script>
-        <script src="core/controls/input-and-selection-directive.js"></script>
-        <script src="core/controls/top-navbar-directive.js"></script>
+<!-- Core / Controls -->
+<script src="core/controls/date-picker-directive.js"></script>
+<script src="core/controls/date-time-input-directive.js"></script>
+<script src="core/controls/button-dropdown-directive.js"></script>
+<script src="core/controls/button-group-directive.js"></script>
+<script src="core/controls/dropdown-with-notes-directive.js"></script>
+<script src="core/controls/label-sub-label-directive.js"></script>
+<script src="core/controls/editable-dropdown-directive.js"></script>
+<script src="core/controls/search-input-directive.js"></script>
+<script src="core/controls/input-and-selection-directive.js"></script>
+<script src="core/controls/top-navbar-directive.js"></script>
 
-        <!-- Core / Controls / Validation -->
-        <script src="core/controls/validation/advanced-text-input-directive.js"></script>
+<!-- Core / Controls / Validation -->
+<script src="core/controls/validation/advanced-text-input-directive.js"></script>
 
-        <!-- Core / Controls / Validation / Validators -->
-        <script src="core/controls/validation/validators/odd-number-validator.js"></script>
+<!-- Core / Controls / Validation / Validators -->
+<script src="core/controls/validation/validators/odd-number-validator.js"></script>
 
-        <!-- Controllers -->
-        <script src="application/view/navigation/top-navbar-ctrl.js"></script>
-        <script src="application/view/tickets/equity/equity-ticket-ctl.js"></script>
-        <script src="application/view/tickets/equity/equity-review-ticket-ctl.js"></script>
-        <script src="application/view/tickets/equity/detail-ctrl.js"></script>
-        <script src="application/view/tickets/equity/collapsed-ctrl.js"></script>
-        <script src="application/view/sambuca/sambuca-ctrl.js"></script>
-        <script src="application/view/validation/validation-ctrl.js"></script>
-        <script src="application/view/worklists/worklist-ctrl.js"></script>
-        <script src="application/view/worklists/tabs/tabs-ctrl.js"></script>
-        <!-- endbuild -->
-    
-    </body>
+<!-- Controllers -->
+<script src="application/view/navigation/top-navbar-ctrl.js"></script>
+<script src="application/view/tickets/equity/equity-ticket-ctl.js"></script>
+<script src="application/view/tickets/equity/equity-review-ticket-ctl.js"></script>
+<script src="application/view/tickets/equity/detail-ctrl.js"></script>
+<script src="application/view/tickets/equity/collapsed-ctrl.js"></script>
+<script src="application/view/sambuca/sambuca-ctrl.js"></script>
+<script src="application/view/validation/validation-ctrl.js"></script>
+<script src="application/view/worklists/worklist-ctrl.js"></script>
+<script src="application/view/worklists/tabs/tabs-ctrl.js"></script>
+<!-- endbuild -->
+
+<!-- build:remove -->
+<script type="text/javascript">
+    window.angularLoaded = function () {
+        $('[id]').each(function () {
+            var ids = $('[id=\'' + this.id + '\']');
+            if (ids.length > 1 && ids[0] == this) {
+                throw ('Multiple IDs #' + this.id);
+            }
+        });
+    };
+</script>
+<!-- endbuild -->
+
+</body>
 </html>

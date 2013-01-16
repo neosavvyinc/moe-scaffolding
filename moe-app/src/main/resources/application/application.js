@@ -56,4 +56,11 @@ angular.module('moe', MOE.Dependencies).
         if ($location.search().clearLocalStorage === 'true') {
             window.localStorage.removeAll();
         }
+
+        //Global angular loaded handler
+        $rootScope.$on('$viewContentLoaded', function() {
+            if (window.angularLoaded) {
+                window.angularLoaded();
+            }
+        });
     }]);

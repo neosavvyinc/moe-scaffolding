@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe('Should display the account info of the newly selected worklist', function () {
+xdescribe('Should display the account info of the newly selected worklist', function () {
 
     it('Should display the first account as selected by default', function () {
         browser().navigateTo('/');
