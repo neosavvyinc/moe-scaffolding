@@ -1,17 +1,13 @@
 'use strict';
 
-MOE.Services.factory('service.WorklistService',
+MOE.Services.factory('services.WorklistService',
     ['configuration', '$q', '$rootScope', '$http',
         function (configuration, $q, $rootScope, $http) {
             return {
 
-                get:function (param) {
-
-                    var deferred, serviceUrl;
-
-                    deferred = $q.defer();
-
-                    $http.get(serviceUrl).
+                get:function () {
+                    var deferred = $q.defer();
+                    $http.get(configuration.WORKLISTS_URL).
                         success(function (data, status, headers, config) {
                             deferred.resolve(data);
                         }).
@@ -19,7 +15,6 @@ MOE.Services.factory('service.WorklistService',
                             console.error(data, status, headers, config);
                             deferred.reject(data);
                         });
-
                     return deferred.promise;
                 }
             }

@@ -4,6 +4,7 @@ MOE.Controllers.controller('view.worklists.WorklistController',
     ['$scope', '$rootScope', '$routeParams', 'configuration', 'managers.LocalStorageManager',
         function ($scope, $rootScope, $routeParams, configuration, localStorageManager) {
 
+    //Scope Variables
     $scope.worklist = null;
 
     //Event Listeners

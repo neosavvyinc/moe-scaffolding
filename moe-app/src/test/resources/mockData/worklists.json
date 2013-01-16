@@ -1,187 +1,164 @@
 [
     {
-        accountInfo:{
-            name:"John Doe",
-            accountType:"Active Assets Account",
-            number:"101-023148"
+        "accountInfo":{
+            "name":"John Doe",
+            "accountType":"Active Assets Account",
+            "number":"101-023148"
         },
-        tickets:[
+        "tickets":[
             {
-                faNumber:"def",
-                symbol:"IBM",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
+                "faNumber":"def",
+                "symbol":"IBM",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
 
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
 
             },
             {
-                accountInfo:{
-                    name:"Jane Doe",
-                    accountType:"Index, Hedged Account",
-                    number:"138-787891"
-                },
-
-                faNumber:"def",
-                symbol:"AAPL",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
+                "faNumber":"def",
+                "symbol":"AAPL",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
 
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
 
             },
             {
+                "faNumber":"def",
+                "symbol":"GOOG",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
-                faNumber:"def",
-                symbol:"GOOG",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
 
-
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
 
             }
         ]
     },
     {
-        accountInfo:{
-            name:"Dove Doe",
-            accountType:"Passive Assets Account",
-            number:"246-987146"
+        "accountInfo":{
+            "name":"Dove Doe",
+            "accountType":"Passive Assets Account",
+            "number":"246-987146"
         },
-        tickets:[
+        "tickets":[
             {
-                faNumber:"def",
-                symbol:"KCG",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
+                "faNumber":"def",
+                "symbol":"KCG",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
-
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
 
             },
             {
-                accountInfo:{
-                    name:"Jane Doe",
-                    accountType:"Index, Hedged Account",
-                    number:"138-787891"
-                },
-
-                faNumber:"def",
-                symbol:"AAPL",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
+                "faNumber":"def",
+                "symbol":"GS",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
 
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
 
             }
         ]
     },
     {
-        accountInfo:{
-            name:"Jane Doe",
-            accountType:"Index, Hedged Account",
-            number:"138-787891"
+        "accountInfo":{
+            "name":"Jane Doe",
+            "accountType":"Index, Hedged Account",
+            "number":"138-787891"
         },
-        tickets:[
+        "tickets":[
             {
-                faNumber:"def",
-                symbol:"IBM",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
+                "faNumber":"def",
+                "symbol":"JCP",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
-
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
 
             },
             {
-                accountInfo:{
-                    name:"Jane Doe",
-                    accountType:"Index, Hedged Account",
-                    number:"138-787891"
-                },
+                "faNumber":"def",
+                "symbol":"JPM",
+                "side":"Buy",
+                "selectedShareValue":"def",
+                "stopLimit":"Stop/Limit",
+                "stopLimitAmount":"109.00",
+                "cashMargin":"Cash",
+                "selectedFirstLast":"def",
+                "solicited":"Solicited",
+                "discountText":"Discount",
+                "discountAmount":"50%",
 
-                faNumber:"def",
-                symbol:"AAPL",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
-
-
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
-
+                "selectedTimeInForce":"def",
+                "selectedClientPosition":"def",
+                "secondarySelectedClientPosition":"def",
+                "selectedDisposition":"def"
             }
         ]
     }
