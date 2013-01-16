@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe('The Equity Ticket', function(){
+describe('The Equity Ticket', function(){
 
     it('should be an accordian and each item should be expandable', function(){
 
@@ -10,11 +10,11 @@ ddescribe('The Equity Ticket', function(){
         var ticketBeforeClickElement = element('#ticket0');
         expect(ticketBeforeClickElement.outerHeight()).toEqual(72);
 
-        var row0collapseElement = element('#ticket0//a');
+        var row0collapseElement = element('#accordianToggle1');
         row0collapseElement.click();
-        sleep(10);
+        sleep(2); //wait for the animation to complete
         var ticketAfterClickElement = element('#ticket0');
-        expect(ticketAfterClickElement.outerHeight()).toEqual(408);
+        expect(ticketAfterClickElement.outerHeight()).toEqual(410);
 
     })
 
