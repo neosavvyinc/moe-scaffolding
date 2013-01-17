@@ -1,42 +1,8 @@
 'use strict';
 
 MOE.Services.factory('managers.TicketManager',
-    ['configuration', '$q', '$rootScope', '$http',
-        function (configuration, $q, $rootScope, $http) {
-
-            var templateTicket = {
-
-                accountInfo:{
-                    name:"John Doe",
-                    accountType:"Active Assets Account",
-                    number:"101-023148"
-                },
-
-                /**
-                 * Primary
-                 */
-                faNumber:"def",
-                symbol:"IBM",
-                side:'Buy',
-                selectedShareValue:"def",
-                stopLimit:"Stop/Limit",
-                stopLimitAmount:"109.00",
-                cashMargin:"Cash",
-                selectedFirstLast:"def",
-                solicited:"Solicited",
-                discountText:"Discount",
-                discountAmount:"50%",
-
-
-                /**
-                 * Details
-                 */
-                selectedTimeInForce:'def',
-                selectedClientPosition:'def',
-                secondarySelectedClientPosition:'def',
-                selectedDisposition:'def'
-
-            };
+    ['configuration', '$q', '$rootScope', '$http', 'domain.TicketFactory',
+        function (configuration, $q, $rootScope, $http, ticketFactory) {
 
             var tickets = [
                 {
@@ -149,7 +115,7 @@ MOE.Services.factory('managers.TicketManager',
                     $rootScope.$broadcast(configuration.EVENTS.MANAGER.TICKETS_UPDATED);
                 },
                 addTicket:function () {
-                    tickets[tickets.length] = templateTicket;
+                    tickets[tickets.length] = ticketFactory.newTicket();
                     $rootScope.$broadcast(configuration.EVENTS.MANAGER.TICKETS_UPDATED);
                 }
             }
