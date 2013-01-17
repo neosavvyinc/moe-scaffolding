@@ -49,11 +49,11 @@
             </div>
             <div class="field">
                 <label>Trade Date</label>
-                <label>{{ dateValueDateFormat | toDateFormat }}</label>
+                <label>{{ tradeDate | toDateFormat:'%m/%d/%Y' }}</label>
             </div>
             <div class="field">
                 <label>Settle Date</label>
-                <label>{{ dateValueTimeFormat | toDateFormat }}</label>
+                <label>{{ settleDate | toDateFormat:'%I:%M:%S %p' }}</label>
             </div>
             <div class="field">
                 <label>Client Position</label>
