@@ -28,19 +28,14 @@ files = [
     'application/filters.js',
     'application/objects.js',
 
-    //equity ticket unit tests
-    'view/tickets/shared/*.js',
-    'view/tickets/equity/*.js',
-
+    //requirements
+    "application/**/*.js",
+    "application/**/*.html",
+    "core/**/*.js",
+    "core/**/*.html",
 
     //tests
-    '../../test/resources/unit/sample-unit.js',
-
-    //directives
-    'core/controls/*.js',
-    'core/controls/*.html',
-    '../../test/resources/unit/core/controls/*.js'
-
+    '../../test/resources/unit/**/*-unit.js',
 ];
 
 // generate js files from html templates
