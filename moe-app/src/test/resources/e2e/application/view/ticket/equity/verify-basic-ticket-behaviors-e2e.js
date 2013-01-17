@@ -10,9 +10,9 @@ describe('The Equity Ticket', function(){
             ,accountTypeEl
             ,accountNumberEl;
 
-        accountNameEl= element('#accountInfo p:nth-child(1)');
-        accountTypeEl = element('#accountInfo p:nth-child(2)');
-        accountNumberEl = element('#accountInfo p:nth-child(3)');
+        accountNameEl= element('#accountInfo0 p:nth-child(1)');
+        accountTypeEl = element('#accountInfo0 p:nth-child(2)');
+        accountNumberEl = element('#accountInfo0 p:nth-child(3)');
 
         expect(accountNameEl.text()).toMatch('John Doe');
         expect(accountTypeEl.text()).toMatch('Active Assets Account');
