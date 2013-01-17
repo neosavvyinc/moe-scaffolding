@@ -1,4 +1,4 @@
-ddescribe('The non-jquery date formatter filter in MOE.Filters', function () {
+describe('The non-jquery date formatter filter in MOE.Filters', function () {
     'use strict';
 
     var runTest = ' ',
