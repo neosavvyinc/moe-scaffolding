@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe('Should display the account info of the newly selected worklist', function () {
+describe('Should display the account info of the newly selected worklist', function () {
 
     it('Should display the first account as selected by default', function () {
         browser().navigateTo('/');
@@ -21,7 +21,7 @@ ddescribe('Should display the account info of the newly selected worklist', func
         browser().navigateTo('/#worklists');
         expect(browser().window().hash()).toMatch('/worklists');
 
-        element("#worklists-dropdown-menu li:nth-child(2)").click();
+        element("#worklists-dropdown-menu li:nth-child(3)").click();
 
         var nameLabel = element("#worklists-account-info-name");
         var accountTypeLabel = element("#worklists-account-info-account-type");
