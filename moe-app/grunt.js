@@ -15,7 +15,8 @@ module.exports = function(grunt) {
                         'src/main/resources/*.html',
                         'src/main/resources/*.ico',
                         'src/main/resources/**/*.html',
-                        'src/main/resources/lib/**/*'
+                        'src/main/resources/lib/**/*',
+                        'src/main/resources/**/*.json'
                         ]
                 }
             }
