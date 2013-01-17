@@ -10,9 +10,9 @@
     </div>
     <div class="content">
         <div class="row">
-            <label>Name <b>{{ worklist.accountInfo.name }}</b></label>
-            <label>Acct. Type <b>{{ worklist.accountInfo.accountType }}</b></label>
-            <label>Acct. Number <b>{{ worklist.accountInfo.number }}</b></label>
+            <label>Name <b id="worklists-account-info-name">{{ worklist.accountInfo.name }}</b></label>
+            <label>Acct. Type <b id="worklists-account-info-account-type">{{ worklist.accountInfo.accountType }}</b></label>
+            <label>Acct. Number <b id="worklists-account-info-account-number">{{ worklist.accountInfo.number }}</b></label>
 
             <ng-include src="'application/view/tickets/equity/equity-ticket-ptl.html'"></ng-include>
         </div>

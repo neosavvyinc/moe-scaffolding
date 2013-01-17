@@ -1,20 +1,35 @@
 'use strict';
 
-xdescribe('Should display the account info of the newly selected worklist', function () {
+ddescribe('Should display the account info of the newly selected worklist', function () {
 
     it('Should display the first account as selected by default', function () {
         browser().navigateTo('/');
         expect(browser().window().hash()).toMatch('');
-        //browser().navigateTo('/#worklists');
-        //expect(browser().window().hash()).toMatch('/worklists');
+        browser().navigateTo('/#worklists');
+        expect(browser().window().hash()).toMatch('/worklists');
 
-        sleep(100);
+        var nameLabel = element("#worklists-account-info-name");
+        var accountTypeLabel = element("#worklists-account-info-account-type");
+        var accountNumberLabel = element("#worklists-account-info-account-number");
 
-        var accountRow = $($('.worklists').find('.content').find('.row')[0]);
+        expect(nameLabel.text()).toBe("John Doe");
+        expect(accountTypeLabel.text()).toBe("Active Assets Account");
+        expect(accountNumberLabel.text()).toBe("101-023148");
+    });
 
-        expect(accountRow.find('label')[0].innerHTML.indexOf("John Doe") == -1).toBeFalsy();
-        expect(accountRow.find('label')[1].innerHTML.indexOf("Active Assets Account") == -1).toBeFalsy();
-        expect(accountRow.find('label')[2].innerHTML.indexOf("101-023148") == -1).toBeFalsy();
+    it('Should change the account info displayed when the worklist is changed', function () {
+        browser().navigateTo('/#worklists');
+        expect(browser().window().hash()).toMatch('/worklists');
+
+        element("#worklists-dropdown-menu li:nth-child(2)").click();
+
+        var nameLabel = element("#worklists-account-info-name");
+        var accountTypeLabel = element("#worklists-account-info-account-type");
+        var accountNumberLabel = element("#worklists-account-info-account-number");
+
+        expect(nameLabel.text()).toBe("Jane Doe");
+        expect(accountTypeLabel.text()).toBe("Index, Hedged Account");
+        expect(accountNumberLabel.text()).toBe("138-787891");
     });
 
 });

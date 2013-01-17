@@ -3,7 +3,7 @@
         <span>{{ selectedItemDisplay }}</span>
         <span class="caret"></span>
     </a>
-    <ul class="dropdown-menu">
+    <ul id="{{ parentId }}-menu" class="dropdown-menu">
         <li ng-repeat="item in items" ng-click="onClickItem(item)">
             <a>{{ getItemLabel(item) }}</a>
         </li>

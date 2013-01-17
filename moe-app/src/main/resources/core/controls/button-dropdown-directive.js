@@ -36,6 +36,9 @@ MOE.Directives
 
                 //Initialization
                 $(element).find('dropdown-toggle').dropdown();
+
+                //Get id from parent
+                scope.parentId = attrs.id;
             }
         }
     });

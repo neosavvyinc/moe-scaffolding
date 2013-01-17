@@ -12,9 +12,8 @@ files = [
 
     ANGULAR_SCENARIO,
     ANGULAR_SCENARIO_ADAPTER,
-
     'main/resources/lib/jquery/jquery.js',
-
+    'test/resources/test-utils.js',
     'test/resources/lib/angular-mocks.js',
     'test/resources/e2e/*-e2e.js',
     'test/resources/e2e/**/*-e2e.js'
