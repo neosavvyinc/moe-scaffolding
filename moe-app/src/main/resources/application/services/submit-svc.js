@@ -19,10 +19,7 @@ MOE.Services.factory('submitService',
 
             $http.get( serviceUrl ).
                 success(function (data, status, headers, config) {
-
-                    var result = data;
-                    deferred.resolve(result);
-
+                    deferred.resolve(data);
                 }).
                 error(function (data, status, headers, config) {
 

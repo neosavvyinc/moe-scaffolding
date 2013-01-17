@@ -78,8 +78,17 @@ module.exports = function(grunt) {
         },
         zip: {
             'target/moe.zip': ['target/moe/**/*']
+        },
+        complexity: {
+            generic: {
+                src: ['src/main/resources/application/**/*.js','src/main/resources/core/**/*.js'],
+                options: {
+                    cyclomatic: 10,
+                    halstead: 20,
+                    maintainability: 80
+                }
+            }
         }
-
     });
 
     grunt.loadNpmTasks('gruntacular');
@@ -89,8 +98,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-htmlrefs');
     grunt.loadNpmTasks('grunt-zip');
+    grunt.loadNpmTasks('grunt-complexity');
 
     // Default task.
-    grunt.registerTask('default', 'clean less:development copy concat min htmlrefs:dist testacular:endToEnd testacular:unit testacular:endToEndBuilt zip');
+    grunt.registerTask('default', 'clean less:development copy concat min htmlrefs:dist testacular:endToEnd testacular:unit testacular:endToEndBuilt zip complexity');
+
 
 };

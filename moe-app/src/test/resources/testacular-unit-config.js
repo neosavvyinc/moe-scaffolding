@@ -24,9 +24,6 @@ files = [
 
     //resource
     'application/application.js',
-    'application/configuration-constants.js',
-
-    'application/filters.js',
     'application/objects.js',
 
     //requirements

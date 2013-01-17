@@ -24,23 +24,7 @@ MOE.Services.factory('productService',
 
             $http.get( serviceUrl ).
                 success(function (data, status, headers, config) {
-
-                    var result;
-
-                    if (id) {
-
-                        angular.forEach(data, function (obj, index) {
-                            if (obj.id === id) {
-                                result = obj;
-                            }
-                        });
-
-                    } else {
-                        result = data;
-                    }
-
-                    deferred.resolve(result);
-
+                    deferred.resolve(data);
                 }).
                 error(function (data, status, headers, config) {
 
