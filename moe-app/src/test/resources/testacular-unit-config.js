@@ -12,6 +12,7 @@ files = [
 
     JASMINE,
     JASMINE_ADAPTER,
+    '../../test/resources/lib/jasmine_json_fixtures.js',
 
     //libraries
     'lib/angular/angular.js',
