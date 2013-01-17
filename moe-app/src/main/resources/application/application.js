@@ -7,6 +7,7 @@
 
 var MOE = MOE || {};
 
+MOE.Domain = angular.module('moe.domain', []);
 MOE.Constants = angular.module('moe.constants', []);
 MOE.Workers = angular.module('moe.workers', []);
 MOE.Managers = angular.module('moe.managers', []);
@@ -16,7 +17,7 @@ MOE.Filters = angular.module('moe.filters', []);
 MOE.Directives = angular.module('moe.directives', []);
 
 //Global Accessor For Dependencies
-MOE.Dependencies = ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers', 'moe.managers'];
+MOE.Dependencies = ['moe.filters', 'moe.services', 'moe.directives', 'moe.constants', 'moe.controllers', 'moe.workers', 'moe.managers', 'moe.domain'];
 
 //Application Initialization
 angular.module('moe', MOE.Dependencies).

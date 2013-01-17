@@ -117,6 +117,10 @@ MOE.Services.factory('managers.TicketManager',
                 addTicket:function () {
                     tickets[tickets.length] = ticketFactory.newTicket();
                     $rootScope.$broadcast(configuration.EVENTS.MANAGER.TICKETS_UPDATED);
+                },
+                cloneTicket:function( id ) {
+                    var clone = ticketFactory.cloneTicket( tickets[id] );
+                    tickets.splice(1,0,clone);
                 }
             }
         }]);

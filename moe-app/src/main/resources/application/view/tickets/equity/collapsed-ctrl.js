@@ -14,4 +14,13 @@ MOE.Controllers.controller('view.tickets.equity.CollapsedController',
             $scope.stopLimitValues = equityTicketConstants.PRICE_TYPE_VALUES;
             $scope.discountValues = equityTicketConstants.COMMISSION_TYPE_VALUES;
 
-        }]);
+
+            $scope.cloneTicket = function( id ) {
+
+                ticketManager.cloneTicket( id )
+
+            }
+
+        }
+    ]
+);

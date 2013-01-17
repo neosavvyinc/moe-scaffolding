@@ -1,6 +1,6 @@
 'use strict';
 
-MOE.Services.factory('domain.TicketFactory',
+MOE.Domain.factory('domain.TicketFactory',
     ['configuration', '$q', '$rootScope', '$http',
         function (configuration, $q, $rootScope, $http) {
 
@@ -43,6 +43,12 @@ MOE.Services.factory('domain.TicketFactory',
 
                     var newObj = JSON.parse(JSON.stringify( templateTicket ));
                     return newObj;
+
+                },
+                cloneTicket: function( sourceTicket ) {
+
+                    var clone = JSON.parse(JSON.stringify( sourceTicket ));
+                    return clone;
 
                 }
             }
