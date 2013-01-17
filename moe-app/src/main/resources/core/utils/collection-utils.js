@@ -6,11 +6,12 @@ MOE.Utils.CollectionUtils = (function () {
     function propertyChain(item, chainOrProperty) {
         if (item && chainOrProperty && chainOrProperty.length) {
             if (angular.isArray(chainOrProperty)) {
-                return propertyChain(item[chainOrProperty.shift()], chainOrProperty);
+                var ar = chainOrProperty.concat();
+                return propertyChain(item[ar.shift()], ar);
             }
             return item[chainOrProperty];
         }
-        return null;
+        return item;
     };
 
     return {
