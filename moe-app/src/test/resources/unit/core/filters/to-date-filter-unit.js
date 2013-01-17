@@ -2,18 +2,18 @@ ddescribe('The non-jquery date formatter filter in MOE.Filters', function () {
     'use strict';
 
     var runTest = ' ',
-        input = new Date(),
-        inputFormat = '%I:%M:%S %p',
-        prettyDate = 'Sep 1, 2011',
+        input = new Date("January 17, 2013"),
+        inputFormat = '%m/%d/%Y',
+        prettyDate = '01/17/2013',
         testDateFormatter;
 
-//    beforeEach(module('go'));
+    beforeEach(module('moe'));
 
     beforeEach(inject (function ($filter) {
         testDateFormatter = $filter('toDateFormat');
     }));
 
-    iit('converts the raw date string "' + input + '" to a localized date with the specified format: ' +
+    it('converts the raw date string "' + input + '" to a localized date with the specified format: ' +
         inputFormat + '.', function () {
 
         console.log("prettyDate: " + prettyDate);

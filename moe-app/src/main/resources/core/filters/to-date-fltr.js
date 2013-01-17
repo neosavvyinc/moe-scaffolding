@@ -9,6 +9,11 @@ MOE.Filters.filter('toDateFormat',
                     return;
                 }
 
+                if( !angular.isDate( input ) )
+                {
+                    return;
+                }
+
                 return input.strftime(format);
 
             }
