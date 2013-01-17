@@ -1,12 +1,12 @@
 <ul class="equity-ticket-primary" ng-controller="view.tickets.equity.CollapsedController">
     <li class="horizontal-list-item">
-            <a id="accordianToggle{{$index + 1}}" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse{{$index + 1}}">
+            <a id="accordianToggle{{$index}}" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse{{$index}}">
                 <i class="icon-chevron-down"></i>
             </a>
     </li>
 
     <li class="horizontal-list-item">
-        <div id="accountInfo">
+        <div id="accountInfo{{$index}}">
             <p>{{ticket.accountInfo.name}}</p>
             <p>{{ticket.accountInfo.accountType}}</p>
             <p>{{ticket.accountInfo.number}}</p>
