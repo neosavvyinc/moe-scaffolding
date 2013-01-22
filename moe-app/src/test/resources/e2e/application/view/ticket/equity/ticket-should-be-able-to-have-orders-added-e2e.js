@@ -2,7 +2,7 @@
 
 describe('The Equity Ticket', function(){
 
-    iit('should support adding one order at the bottom of the orders list', function(){
+    it('should support adding one order at the bottom of the orders list', function(){
         browser().navigateTo('/');
         expect(browser().window().hash()).toMatch('');
 
