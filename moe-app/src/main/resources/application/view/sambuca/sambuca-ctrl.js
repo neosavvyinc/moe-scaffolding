@@ -18,6 +18,12 @@ MOE.Controllers.controller('view.sambuca.SambucaController',
 
             $scope.inputAndSelectionItems = ["Input & Selection", "Low Cal", "Med Cal", "Beer Batter Fried"];
             $scope.inputAndSelectionSelectedItem = $scope.inputAndSelectionItems[0];
+            $scope.inputAndSelectionText = null;
 
             $scope.searchTerm = null;
+
+            //Watchers
+            $scope.$watch('inputAndSelectionText', function(newValue) {
+                console.log("Input and selection: " + newValue);
+            })
         }]);

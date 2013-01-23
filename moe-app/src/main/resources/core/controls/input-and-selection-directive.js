@@ -12,12 +12,16 @@ MOE.Directives
                 selectedItem: "=",
                 labelField: "@",
                 placeholder: "@",
-                inputIdValue: "@"
+                inputIdValue: "@",
+                labelFunction: "&"
             },
             link:function (scope, element, attrs) {
                 //Getters
                 scope.getItemLabel = function(item) {
-                    if (item && scope.labelField) {
+                    if (hasLabelFunction) {
+                        return scope.labelFunction({item: item});
+                    }
+                    else if (item && scope.labelField) {
                         return item[scope.labelField];
                     }
                     return item;
@@ -27,6 +31,9 @@ MOE.Directives
                 scope.onClickItem = function(item) {
                     scope.selectedItem = item;
                 };
+
+                //A solution to deal with Angular's standard closures on passed in functions
+                var hasLabelFunction = attrs.labelFunction ? true : false;
             }
         }
     });

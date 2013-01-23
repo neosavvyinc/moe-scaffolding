@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe("Button dropdown directive", function () {
+describe("Button dropdown directive", function () {
     var body = $('body');
     var simpleHtml = '<button-dropdown data-items="items" data-selected-item="selectedItem" data-label-field="name"></button-dropdown>';
     var labelFunctionHtml = '<button-dropdown data-items="items" data-selected-item="selectedItem" data-label-function="getLabel(item)"></button-dropdown>';

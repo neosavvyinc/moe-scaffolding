@@ -1,6 +1,6 @@
 <div class="button-dropdown btn-group">
     <a class="btn dropdown-toggle" data-toggle="dropdown">
-        <span class="selected-item">{{ selectedItemDisplay }}</span>
+        <span class="selected-item">{{ getItemLabel(selectedItem) }}</span>
         <span class="caret"></span>
     </a>
     <ul id="{{ parentId }}-menu" class="dropdown-menu">

@@ -29,11 +29,6 @@ MOE.Directives
                     return item;
                 };
 
-                //Watchers
-                scope.$watch('selectedItem', function(newValue) {
-                   scope.selectedItemDisplay = scope.getItemLabel(newValue);
-                });
-
                 //Initialization
                 $(element).find('dropdown-toggle').dropdown();
 
