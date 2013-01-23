@@ -10,7 +10,7 @@ describe('The Equity Ticket', function(){
         var ticketBeforeClickElement = element('#ticket0');
         expect(ticketBeforeClickElement.outerHeight()).toEqual(72);
 
-        var row0collapseElement = element('#accordianToggle1');
+        var row0collapseElement = element('#accordianToggle0');
         row0collapseElement.click();
         sleep(2); //wait for the animation to complete
         var ticketAfterClickElement = element('#ticket0');
