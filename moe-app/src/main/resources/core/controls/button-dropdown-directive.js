@@ -21,7 +21,7 @@ MOE.Directives
                 //Getters
                 scope.getItemLabel = function(item) {
                     if (scope.labelFunction) {
-                        return scope.labelFunction({ticket: item});
+                        return scope.labelFunction({item: item});
                     }
                     else if (item && scope.labelField) {
                         return item[scope.labelField];

@@ -18,6 +18,7 @@ files = [
     'lib/angular/angular.js',
     'lib/angular/angular-resource.js',
     'lib/jquery/jquery.js',
+    'lib/bootstrap/js/bootstrap.min.js',
     'lib/angular/angular-mocks.js',
     'test/resources/test-utils.js',
     'lib/strftime-min-1.3.js',
