@@ -1,6 +1,6 @@
 'use strict';
 
-describe("Button dropdown directive", function () {
+ddescribe("Button dropdown directive", function () {
     var body = $('body');
     var simpleHtml = '<button-dropdown data-items="items" data-selected-item="selectedItem" data-label-field="name"></button-dropdown>';
     var elm, $$compile, scope;
@@ -41,5 +41,27 @@ describe("Button dropdown directive", function () {
         scope.$digest();
 
         expect(mock).not.toBeNull();
+        expect(body.find('.button-dropdown').length).toBe(1);
+    });
+
+    it('should display the names (labelField) of the items passed in', function () {
+        //Standard setup
+        var mock = $$compile(elm)(scope);
+        scope.$digest();
+
+        var listElements = $(mock).find('ul').find('li');
+
+        expect(listElements.length).toBe(3);
+        expect($(listElements[0]).find('.item')[0].innerHTML).toBe("Beef");
+        expect($(listElements[1]).find('.item')[0].innerHTML).toBe("Chicken");
+        expect($(listElements[2]).find('.item')[0].innerHTML).toBe("Pork");
+    });
+
+    it("should display the labelField of the selectedItem", function () {
+        //Standard setup
+        var mock = $$compile(elm)(scope);
+        scope.$digest();
+
+        expect($(mock).find('.selected-item')[0].innerHTML).toBe("Pork");
     });
 });

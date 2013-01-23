@@ -20,7 +20,7 @@ MOE.Directives
 
                 //Getters
                 scope.getItemLabel = function(item) {
-                    if (scope.labelFunction) {
+                    if (hasLabelFunction) {
                         return scope.labelFunction({item: item});
                     }
                     else if (item && scope.labelField) {
@@ -39,6 +39,9 @@ MOE.Directives
 
                 //Get id from parent
                 scope.parentId = attrs.id;
+
+                //Deals with an issue of the function closure given from Angular
+                var hasLabelFunction = attrs.labelFunction ? true : false;
             }
         }
     });
