@@ -265,3 +265,8 @@ input.error {
 .worklists .content .row {
   padding: 10px 40px;
 }
+
+.focused {
+    background-color: #d9edf7;
+}
+

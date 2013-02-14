@@ -1,11 +1,14 @@
 <ul class="equity-ticket-primary" ng-controller="view.tickets.equity.CollapsedController">
-    <li class="horizontal-list-item">
+
+    <focus-group-manager data-managed-group></focus-group-manager>
+
+    <li id="1.{{$index}}" class="horizontal-list-item" focus-group>
             <a id="accordianToggle{{$index}}" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse{{$index}}">
                 <i class="icon-chevron-down"></i>
             </a>
     </li>
 
-    <li class="horizontal-list-item">
+    <li id="2.{{$index}}" class="horizontal-list-item">
         <div id="accountInfo{{$index}}">
             <p>{{ticket.accountInfo.name}}</p>
             <p>{{ticket.accountInfo.accountType}}</p>
@@ -13,7 +16,7 @@
         </div>
     </li>
 
-    <li class="horizontal-list-item">
+    <li id="3.{{$index}}" class="horizontal-list-item" focus-group>
         <editable-dropdown
                 id="faNumber"
                 name="faNumber"
@@ -24,7 +27,7 @@
         </editable-dropdown>
     </li>
 
-    <li class="horizontal-list-item">
+    <li id="4.{{$index}}" class="horizontal-list-item" focus-group>
         <search-input
                 data-search-term="ticket.symbol"
                 data-input-id-value="symbolInput"
@@ -32,14 +35,14 @@
         </search-input>
     </li>
 
-    <li class="horizontal-list-item">
+    <li id="5.{{$index}}" class="horizontal-list-item" focus-group>
         <button-group
                 items="buyValues"
                 data-selected-item="ticket.side"
                 data-button-group-id="sideButtons">
         </button-group>
     </li>
-    <li class="horizontal-list-item">
+    <li id="6.{{$index}}" class="horizontal-list-item" focus-group>
         <editable-dropdown
                 class="shares"
                 items="shareValues"
@@ -48,7 +51,7 @@
                 data-dropdown-id-value="sharesMenuItems">
         </editable-dropdown>
     </li>
-    <li class="horizontal-list-item">
+    <li id="7.{{$index}}" class="horizontal-list-item" focus-group>
         <input-and-selection
                 items="stopLimitValues"
                 data-text="ticket.stopLimitAmount"
@@ -56,26 +59,26 @@
                 >
         </input-and-selection>
     </li>
-    <li class="horizontal-list-item">
+    <li id="8.{{$index}}" class="horizontal-list-item" focus-group>
         <button-group
                 items="cashMarginValues"
                 data-selected-item="ticket.cashMargin">
         </button-group>
     </li>
-    <li class="horizontal-list-item">
+    <li id="9.{{$index}}" class="horizontal-list-item" focus-group>
         <editable-dropdown
                 class="first-last"
                 items="firstLastValues"
                 data-selected-item="ticket.selectedFirstLast">
         </editable-dropdown>
     </li>
-    <li class="horizontal-list-item">
+    <li id="10.{{$index}}" class="horizontal-list-item" focus-group>
         <button-group
                 items="solicitedValues"
                 data-selected-item="ticket.solicited">
         </button-group>
     </li>
-    <li class="horizontal-list-item">
+    <li id="11.{{$index}}" class="horizontal-list-item" focus-group>
         <input-and-selection
                 items="discountValues"
                 data-text="ticket.discountAmount"
@@ -84,9 +87,11 @@
         </input-and-selection>
     </li>
 
-    <li class="horizontal-list-item">
+    <li id="12.{{$index}}" class="horizontal-list-item" focus-group>
         <a id="cloneBtn{{$index + 1}}" ng-click="cloneTicket( $index )">
             <i class="icon-plus-sign"></i>
         </a>
     </li>
+
+
 </ul>

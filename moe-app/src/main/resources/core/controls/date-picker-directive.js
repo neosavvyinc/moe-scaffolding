@@ -18,7 +18,7 @@ MOE.Directives
                 });
 
                 scope.$watch('date', function (newValue) {
-                    scope.templateDate = newValue.strftime(scope.format || "%m-%d-%Y");
+//                    scope.templateDate = newValue.strftime(scope.format || "%m-%d-%Y");
                 });
 
                 //Initialization
